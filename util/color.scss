@@ -1,0 +1,29 @@
+.cp { color: $color-primary; }
+.cs { color: $color-secondary; }
+.ct { color: $teriary; }
+
+.cbgp { background-color: $color-primary; }
+.cbgs { background-color: $color-secondary; }
+.cbgt { background-color: $color-tertiary; }
+
+// Greyscale font color.
+.cg-black { color: $black; }
+.cg-1 { color: $grey-1; }
+.cg-2 { color: $grey-2; }
+.cg-3 { color: $grey-3; }
+.cg-4 { color: $grey-4; }
+.cg-5 { color: $grey-5; }
+.cg-6 { color: $grey-6; }
+.cg-7 { color: $grey-7; }
+.cg-white { color: $white; }
+
+// Greyscale backgrounds.
+.cbgg-black { background-color: $black; }
+.cbgg-1 { background-color: $grey-1; }
+.cbgg-2 { background-color: $grey-2; }
+.cbgg-3 { background-color: $grey-3; }
+.cbgg-4 { background-color: $grey-4; }
+.cbgg-5 { background-color: $grey-5; }
+.cbgg-6 { background-color: $grey-6; }
+.cbgg-7 { background-color: $grey-7; }
+.cbgg-white { background-color: $white; }

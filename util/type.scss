@@ -1,0 +1,45 @@
+$rem_base: 16px !default;
+$ratio: 1.5 !default;
+
+@for $i from -3 to 14 {
+  $value: $ratio;
+
+  @if $i == 0 { $value: 1; }
+  @if $i < 0 {
+      @for $n from -1 to -1*($i) {
+          $value: $value/$ratio;
+      }
+  }
+  @if $i > 0 {
+      @for $n from 1 to $i {
+          $value: $value * $ratio;
+      }
+  }
+
+  $rem_value: $value + 0rem;
+
+  // Apply the value to the classname.
+  .t#{$i} { font-size: $rem_value; }
+  .t-sm-#{$i} { 
+      @media #{$breakpoint-sm} { font-size: $rem_value; } 
+  }
+  .t-md-#{$i} { 
+      @media #{$breakpoint-md} { font-size: $rem_value; } 
+  }
+  .t-lg-#{$i} { 
+      @media #{$breakpoint-lg} { font-size: $rem_value; } 
+  }
+  .t-xl-#{$i} { 
+      @media #{$breakpoint-xl} { font-size: $rem_value; } 
+  }
+}
+
+.tw-bold { font-weight: $fw_bold; }
+.tw-semibold { font-weight: $fw_semibold; }
+.tw-medium { font-weight: $fw_medium; }
+.tw-book { font-weight: $fw_book; }
+
+.strikethrough { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+
+.italic { font-style: italic; }
