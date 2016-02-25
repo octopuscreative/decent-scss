@@ -1,0 +1,79 @@
+$rem_base: 16px !default;
+$ratio: 1.5 !default;
+
+$default-type-family: 'Proxima Nova', 'Helvetica', sans-serif !default;
+
+body,
+html {
+  font-family: $default-type-family;
+}
+
+
+@for $i from -3 to 14 {
+  $value: $ratio;
+
+  @if $i == 0 { 
+    .t-#{$i} { font-size: 1rem; }
+  }
+
+  @if $i < 0 {
+    @for $n from -1 to -1*($i) {
+      $value: $value/$ratio;
+    }
+
+    $rem-value: $value + 0rem;
+
+    .tn-#{$i*-1} { font-size: $rem-value; }
+    .tn-sm-#{$i*-1} { 
+        @media #{$breakpoint-sm} { font-size: $rem-value; } 
+    }
+    .tn-md-#{$i*-1} { 
+        @media #{$breakpoint-md} { font-size: $rem-value; } 
+    }
+    .tn-lg-#{$i*-1} { 
+        @media #{$breakpoint-lg} { font-size: $rem-value; } 
+    }
+    .tn-xl-#{$i*-1} { 
+        @media #{$breakpoint-xl} { font-size: $rem-value; } 
+    }
+  }
+  @if $i > 0 {
+    @for $n from 1 to $i {
+      $value: $value * $ratio;
+    }
+
+    $rem-value: $value + 0rem;
+
+    .t-#{$i} { font-size: $rem-value; }
+    .t-sm-#{$i} { 
+        @media #{$breakpoint-sm} { font-size: $rem-value; } 
+    }
+    .t-md-#{$i} { 
+        @media #{$breakpoint-md} { font-size: $rem-value; } 
+    }
+    .t-lg-#{$i} { 
+        @media #{$breakpoint-lg} { font-size: $rem-value; } 
+    }
+    .t-xl-#{$i} { 
+        @media #{$breakpoint-xl} { font-size: $rem-value; } 
+    }
+  }
+}
+
+.tw-bold { font-weight: $fw_bold; }
+.tw-semibold { font-weight: $fw_semibold; }
+.tw-medium { font-weight: $fw_medium; }
+.tw-book { font-weight: $fw_book; }
+
+.strikethrough { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+
+.italic { font-style: italic; }
+
+.caps { 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1, h2, h3, h4 { display: block; }
+span { display: inline-block; }

@@ -5,7 +5,7 @@ $ratio: 1.5 !default;
 
 // Whitespace scale calculator.
 // Note: This is different from the typeface scale calculator.
-@for $i from -3 to 14 {
+@for $i from -3 to 15 {
   $value: $ratio;
 
   @if $i == 0 { $value: 0; } // Start at 0 for whitespace. 

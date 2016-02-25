@@ -1,13 +1,12 @@
-
 // Rem base.
-$rem-base: 14px;
+$rem-base: 16px;
 
 // Modular scale ration.
-$ratio: 1.2; // 5:6 Minor Third http://www.modularscale.com/?14&px&1.2&sass&text
+$ratio: 1.333;
 
 // Grid settings.
-$container-width: 102.85714286rem;
-$columns: 16;
+$container-width: 90rem;
+$columns: 12;
 
 // Breakpoints.
 $breakpoint-sm: '(min-width: 42.857142857rem)'; // 600
@@ -15,26 +14,16 @@ $breakpoint-md: '(min-width: 54.857142857rem)'; // 768
 $breakpoint-lg: '(min-width: 91.428571429rem)'; // 1280
 $breakpoint-xl: '(min-width: 102.85714286rem)'; // 1440
 
-// Change these to primary/secondary/tertiary/success/error/warning.
-$pomegranate: #e84b26;
-$jasper: #d93f3e;
-
-$color-primary: #e86041;
-$color-secondary: '';
+// Colors.
+$color-primary: #00bbff;
+$color-secondary: #ff8740;
 $color-success: #60aa53;
-$color-error: '';
-$color-warning: '';
+$color-error: #ff0000;
+$color-warning: #e89414;
 
 // Greyscale.
 $black: #010101;
-$grey-1: #313233;
-$grey-2: #595a5c;
-$grey-3: #646566;
-$grey-4: #87888a;
-$grey-5: #bec0c2;
-$grey-6: #d7d8da;
-$grey-7: #e8e9eb;
-$grey-8: #f2f4f5;
+$greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5;
 $white: #fefefe;
 
 // Font weights.
@@ -43,11 +32,14 @@ $fw-medium: 400;
 $fw-semibold: 500;
 $fw-bold: 600;
 
+// Defaults.
 
-// Style defaults.
-$default-type-color: $grey-1;
-
+// Tyopgraphy.
+$default-type-family: 'Proxima Nova', 'Helvetica', sans-serif;
+$default-type-color: #313233;
 $default-line-height: 1.5;
 
+// Borders.
 $default-border-radius: 2px;
 $default-border-weight: 1px;
+$default-border-color: #e8e9eb;
