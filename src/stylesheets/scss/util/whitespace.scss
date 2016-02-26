@@ -4,9 +4,7 @@ $rem_base: 16px !default;
 $ratio: 1.5 !default;
 
 
-@function calculator($ratio, $i){
-
-    // @return $some-number + $another-number;
+@function whitespace_calculator($ratio, $i){
 
     $value: $ratio;
 
@@ -41,7 +39,7 @@ $ratio: 1.5 !default;
 
 @for $i from -3 to 15 {
   
-  $rem-value: calculator($ratio, $i);
+  $rem-value: whitespace_calculator($ratio, $i);
 
   @if $i < 0 {}
   @if $i >= 0 {
@@ -66,7 +64,7 @@ $ratio: 1.5 !default;
 }
 
 @for $i from -3 to 15 {
-  $rem-value: calculator($ratio, $i);
+  $rem-value: whitespace_calculator($ratio, $i);
 
   @if $i < 0 {}
   @if $i >= 0 {
@@ -91,7 +89,7 @@ $ratio: 1.5 !default;
 }
 
 @for $i from -3 to 15 {
-  $rem-value: calculator($ratio, $i);
+  $rem-value: whitespace_calculator($ratio, $i);
 
   @if $i < 0 {}
   @if $i >= 0 {
@@ -116,7 +114,7 @@ $ratio: 1.5 !default;
 }
 
 @for $i from -3 to 15 {
-  $rem-value: calculator($ratio, $i);
+  $rem-value: whitespace_calculator($ratio, $i);
 
   @if $i < 0 {}
   @if $i >= 0 {
@@ -141,7 +139,7 @@ $ratio: 1.5 !default;
 }
 
 @for $i from -3 to 15 {
-  $rem-value: calculator($ratio, $i);
+  $rem-value: whitespace_calculator($ratio, $i);
 
   @if $i < 0 {}
   @if $i >= 0 {
@@ -165,14 +163,62 @@ $ratio: 1.5 !default;
   }
 }
 
-
-
 // Clear padding/margin.
 .p-0 { padding: 0 !important; }
 .m-0 { margin: 0 !important; }
+
+@media #{$breakpoint-sm} {
+  .p-0 { padding: 0 !important; }
+  .m-0 { margin: 0 !important; }
+}
+
+@media #{$breakpoint-md} {
+  .p-0 { padding: 0 !important; }
+  .m-0 { margin: 0 !important; }
+}
+
+@media #{$breakpoint-lg} {
+  .p-0 { padding: 0 !important; }
+  .m-0 { margin: 0 !important; }
+}
+
+@media #{$breakpoint-xl} {
+  .p-0 { padding: 0 !important; }
+  .m-0 { margin: 0 !important; }
+}
+
+
 
 // Margin auto.
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media #{$breakpoint-sm} {
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media #{$breakpoint-md} {
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media #{$breakpoint-lg} {
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media #{$breakpoint-xl} {
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
