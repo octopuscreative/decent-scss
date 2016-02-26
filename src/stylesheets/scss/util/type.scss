@@ -70,6 +70,10 @@ html {
 
 .italic { font-style: italic; }
 
+.ta-center { text-align: center; }
+.ta-left { text-align: left; }
+.ta-right { text-align: center; }
+
 .caps { 
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -77,3 +81,14 @@ html {
 
 h1, h2, h3, h4 { display: block; }
 span { display: inline-block; }
+a { 
+  display: inline-block;
+  text-decoration: none; 
+}
+pre, code {
+  @extend .tn-1;
+
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  line-height: $default-line-height;
+}

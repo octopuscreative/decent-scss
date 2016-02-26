@@ -9,10 +9,10 @@ $container-width: 90rem;
 $columns: 12;
 
 // Breakpoints.
-$breakpoint-sm: '(min-width: 42.857142857rem)'; // 600
-$breakpoint-md: '(min-width: 54.857142857rem)'; // 768
-$breakpoint-lg: '(min-width: 91.428571429rem)'; // 1280
-$breakpoint-xl: '(min-width: 102.85714286rem)'; // 1440
+$breakpoint-sm: '(min-width: 600px)'; // 600
+$breakpoint-md: '(min-width: 768px)'; // 768
+$breakpoint-lg: '(min-width: 1280px)'; // 1280
+$breakpoint-xl: '(min-width: 1440px)'; // 1440
 
 // Colors.
 $color-primary: #00bbff;
