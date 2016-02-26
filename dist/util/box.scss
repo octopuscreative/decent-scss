@@ -4,9 +4,11 @@
 .inline-block { display: inline-block; }
 .block { display: block; }
 
+.h-100 { height: 100%; }
+.h-50 { height: 50%; }
 
 .w-100 { width: 100%; }
-.w-90 { width: 90%; }
+.w-50 { width: 50%; }
 // And so on.
 
 
@@ -20,7 +22,7 @@
 		display: block;
 	}
 
-	& > * {
+	& > *:not([class*='absolute']) {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -38,7 +40,6 @@
 [class^='crop-'],
 [class*=' crop-'] {
 	overflow: hidden;
-	pointer-events: none;
 
 	img { width: 100%; }
 

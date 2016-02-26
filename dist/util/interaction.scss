@@ -1,0 +1,84 @@
+[class^='hover-'],
+[class*=' hover-'] {
+
+	&[class*='opacity'] {
+  	overflow: hidden;
+
+    &[class*='target'],
+    [class*='opacity-target'] {
+      transition: opacity 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='opacity-target'] {
+      opacity: 0.5;
+    }
+  }
+
+  &[class*='fadeInUp'] {
+  	overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeInUp-target'] {
+      opacity: 0;
+      transform: translate3d(0,10px,0);
+
+      transition: opacity 0.18s ease-in,
+        transform 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='fadeInUp-target'] {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &[class*='flip'] {
+  	overflow: hidden;
+
+    &[class*='target'],
+    [class*='flip-target'] {
+      transform: translate3d(0,0,0);
+    }
+
+    &[class*='target']:hover,
+		&:hover [class*='flip-target'] {
+		  animation: flip 0.18s ease-in;
+		}
+  }
+
+
+  // To update.
+  &[class*='fadeOverlayIn'] {
+    [class*='fadeOverlayIn-target'] {
+      opacity: 0;
+      transition: opacity 0.18s ease-in;
+    }
+
+    &:hover [class*='fadeOverlayIn-target'] {
+      opacity: 0.88;
+    }
+  }
+
+  // To update.
+  &[class*='scale'] {
+
+    [class*='scale-target'] {
+      transform: scale(1) translade3d(0,0,0);
+      transition: transform 0.18s ease-in;
+    }
+
+    &:hover [class*='scale-target'] {
+      transform: scale(0.9);
+    }
+  }
+
+}
+
+@keyframes flip {
+  0% { transform: translate3d(0,0,0); }
+  50% { transform: translate3d(0,-100%,0)}
+  51% { transform: translate3d(0,100%,0)}
+  100% { transform: translate3d(0,0,0); }
+}
