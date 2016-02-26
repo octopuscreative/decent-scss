@@ -3,7 +3,7 @@
 [class*=' debug-'] {
 
 	&[class*='bg'] {
-		background-color: rgba(255,9,206,0.5);
+		background-color: $debug-color-primary;
 	}
 
 	&[class*='min-height'] {
