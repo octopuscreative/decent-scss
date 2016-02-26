@@ -15,6 +15,22 @@
     }
   }
 
+  &[class*='fadeIn'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeIn-target'] {
+      opacity: 0;
+
+      transition: opacity 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='fadeIn-target'] {
+      opacity: 1;
+    }
+  }
+
   &[class*='fadeInUp'] {
   	overflow: hidden;
 
@@ -34,6 +50,56 @@
     }
   }
 
+  &[class*='fadeInDown'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeInDown-target'] {
+      opacity: 0;
+      transform: translate3d(0,-10px,0);
+
+      transition: opacity 0.18s ease-in,
+        transform 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='fadeInDown-target'] {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &[class*='slideInDown'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='slideInDown-target'] {
+      transform: translate3d(0,-100%,0);
+      transition: transform 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='slideInDown-target'] {
+      transform: translate3d(0,0,0);
+    }
+  }
+
+  &[class*='slideInUp'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='slideInUp-target'] {
+      transform: translate3d(0,100%,0);
+      transition: transform 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='slideInUp-target'] {
+      transform: translate3d(0,0,0);
+    }
+  }
+
+
   &[class*='flip'] {
   	overflow: hidden;
 
@@ -44,31 +110,19 @@
 
     &[class*='target']:hover,
 		&:hover [class*='flip-target'] {
-		  animation: flip 0.18s ease-in;
+		  animation: flip 0.27s ease-in;
 		}
   }
 
-
-  // To update.
-  &[class*='fadeOverlayIn'] {
-    [class*='fadeOverlayIn-target'] {
-      opacity: 0;
-      transition: opacity 0.18s ease-in;
-    }
-
-    &:hover [class*='fadeOverlayIn-target'] {
-      opacity: 0.88;
-    }
-  }
-
-  // To update.
   &[class*='scale'] {
 
+    &[class*='target'],
     [class*='scale-target'] {
       transform: scale(1) translade3d(0,0,0);
       transition: transform 0.18s ease-in;
     }
 
+    &[class*='target']:hover,
     &:hover [class*='scale-target'] {
       transform: scale(0.9);
     }

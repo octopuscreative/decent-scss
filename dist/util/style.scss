@@ -18,3 +18,5 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
   .bl-#{$i}	{ border: $default-border-weight solid $grey; }
   .b-thick-#{$i} { border: $default-border-weight*3 solid $grey; }
 }
+
+.shadow { box-shadow: $default-box-shadow; }
