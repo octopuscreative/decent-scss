@@ -31,14 +31,20 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .flex-grow { flex: 1 0 auto; }
 .flex-item-right { margin-left: auto; }
 
+
 @media #{$breakpoint-sm} {
-  .sm-flex { display: flex }
+  .flex-sm { display: flex }
 }
 
 @media #{$breakpoint-md} {
-  .md-flex { display: flex }
+  .flex-md { display: flex }
 }
 
 @media #{$breakpoint-lg} {
-  .lg-flex { display: flex }
+  .flex-lg { display: flex }
 }
+
+@media #{$breakpoint-xl} {
+  .flex-lg { display: flex }
+}
+

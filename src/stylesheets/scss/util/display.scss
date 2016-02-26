@@ -1,17 +1,16 @@
-
-
 // Display properties.
 .inline-block { display: inline-block; }
 .block { display: block; }
 
-.h-100 { height: 100%; }
-.h-50 { height: 50%; }
 
-.w-100 { width: 100%; }
-.w-50 { width: 50%; }
-// And so on.
+// Width adjustments.
+@for $i from 0 to 11 {
+	.h-#{$i*10} { height: $i*10 + 0%; }
+	.w-#{$i*10} { width: $i*10 + 0%; }
+}
 
 
+// Aspect ratios.
 [class^='ratio-'],
 [class*=' ratio-'] {
 	width: 100%;
@@ -36,6 +35,7 @@
 	// Thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
 }
 
+// Use an element to crop an image.
 .crop,
 [class^='crop-'],
 [class*=' crop-'] {
