@@ -1,6 +1,24 @@
 // Display properties.
 .inline-block { display: inline-block; }
-.block { display: block; }
+.d-block { display: block; }
+.d-none { display: none; }
+
+@media #{$breakpoint-sm} {
+	.d-sm-block { display: block; }
+	.d-sm-none { display: none; }
+}
+@media #{$breakpoint-md} {
+	.d-md-block { display: block; }
+	.d-md-none { display: none; }
+} 
+@media #{$breakpoint-lg} {
+	.d-lg-block { display: block; }
+	.d-lg-none { display: none; }
+} 
+@media #{$breakpoint-xl} {
+	.d-xl-block { display: block; }
+	.d-xl-none { display: none; }
+}
 
 
 // Width adjustments.
