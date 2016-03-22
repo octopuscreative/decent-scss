@@ -22,11 +22,11 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .items-end { align-items: flex-end; }
 
 // Self Alignment
-.self-center { align-items: center; }
-.self-baseline { align-items: baseline; }
-.self-stretch { align-items: stretch; }
-.self-start { align-items: flex-start; }
-.self-end { align-items: flex-end; }
+.self-center { align-self: center; }
+.self-baseline { align-self: baseline; }
+.self-stretch { align-self: stretch; }
+.self-start { align-self: flex-start; }
+.self-end { align-self: flex-end; }
 
 // Content Alignment
 .content-start { align-content: flex-start; }
