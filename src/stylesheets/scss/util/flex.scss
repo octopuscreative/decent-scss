@@ -2,17 +2,37 @@ $breakpoint-sm: '(min-width: 40em)' !default;
 $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
-// Container settings.
+// Container settings
 .flex { display: flex }
 .flex-column { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
 
-// Item alignment.
+// Item alignment - Maybe remove eventually since these are covered by Item Alignment
 .flex-center { align-items: center; }
 .flex-baseline { align-items: baseline; }
 .flex-stretch { align-items: stretch; }
 .flex-start { align-items: flex-start; }
 .flex-end { align-items: flex-end; }
+
+// Item alignment
+.items-center { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch { align-items: stretch; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+
+// Self Alignment
+.self-center { align-items: center; }
+.self-baseline { align-items: baseline; }
+.self-stretch { align-items: stretch; }
+.self-start { align-items: flex-start; }
+.self-end { align-items: flex-end; }
+
+// Content Alignment
+.content-start { align-content: flex-start; }
+.content-end { align-content: flex-end; }
+.content-center { align-content: center; }
+.content-stretch { align-content: stretch; }
 
 .flex-justify { justify-content: space-between; }
 
@@ -27,10 +47,9 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .flex-first { order: -1; }
 .flex-last { order: 99999; }
 
-// Item settings.
+// Item settings
 .flex-grow { flex: 1 0 auto; }
 .flex-item-right { margin-left: auto; }
-
 
 @media #{$breakpoint-sm} {
   .flex-sm { display: flex }
