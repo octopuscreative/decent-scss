@@ -6,7 +6,6 @@ var gulp          = require('gulp'),
     uglify        = require('gulp-uglify'),
     sass          = require('gulp-sass'),
     sassGlob      = require('gulp-sass-glob'),
-    sourceMaps    = require('gulp-sourcemaps'),
     minifyCSS     = require('gulp-minify-css'),
     browserSync   = require('browser-sync'),
     autoprefixer  = require('gulp-autoprefixer'),
@@ -31,7 +30,6 @@ gulp.task('styles', function() {
         this.emit('end');
       }
     }))
-    .pipe(sourceMaps.init())
     .pipe(sassGlob())
     .pipe(sass({
       errLogToConsole: true,
@@ -43,7 +41,6 @@ gulp.task('styles', function() {
     }))
     .on('error', gutil.log)
     .pipe(concat('styles.css'))
-    .pipe(sourceMaps.write())
     .pipe(gulp.dest('src'))
     .pipe(browserSync.reload({stream: true}));
 });
@@ -63,7 +60,7 @@ gulp.task('clean-dist', shell.task([
 // Copy the util stylesheets to a distribution folder.
 gulp.task('copy-util', ['clean-dist'], function() {
   gulp.src([
-    './src/scss/**/*'
+    './src/*.css'
   ])
   .pipe(gulp.dest('./dist'));
 });
