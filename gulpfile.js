@@ -78,5 +78,5 @@ gulp.task('default', ['styles', 'browserSync', 'copy-util'], function() {
   gulp.watch('src/scss/**', ['styles', 'copy-util']);
   gulp.watch('src/images/**', ['images']);
   gulp.watch('src/*.html', ['html']);
-  gulp.watch()
+  gulp.watch();
 });
