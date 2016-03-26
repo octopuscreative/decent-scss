@@ -7,14 +7,20 @@ $color-warning: #e89414 !default;
 $greys: lighten(#000, 10%) lighten(#000, 24%) lighten(#000, 38%) lighten(#000, 52%) lighten(#000, 64%) lighten(#000, 78%) lighten(#000, 92%) lighten(#000, 98%) !default;
 
 
-.cp { color: $color-primary; }
-.cs { color: $color-secondary; }
+.c-primary { color: $color-primary; }
+.c-secondary { color: $color-secondary; }
+.c-success { color: $color-success; }
+.c-warning { color: $color-warning; }
+.c-error { color: $color-error; }
+
+.cbg-primary { background-color: $color-primary; }
+.cbg-secondary { background-color: $color-secondary; }
+.cbg-success { background-color: $color-success; }
+.cbg-warning { background-color: $color-warning; }
+.cbg-error { background-color: $color-error; }
 
 .cg-black { color: $black; }
 .cg-white { color: $white; }
-
-.cbgp { background-color: $color-primary; }
-.cbgs { background-color: $color-secondary; }
 
 .cbgg-black { background-color: $black; }
 .cbgg-white { background-color: $white; }

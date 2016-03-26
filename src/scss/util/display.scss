@@ -1,7 +1,20 @@
+$length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+
 // Display properties.
-.inline-block { display: inline-block; }
+.d-inline-block { 
+	display: inline-block; 
+	vertical-align: middle;
+}
 .d-block { display: block; }
 .d-none { display: none; }
+
+// Keep elements in DOM for accessibility but hidden from view.
+.hidden { 
+	visibility: hidden;
+	pointer-events: none;
+	position: absolute;
+	left: -300%;
+}
 
 @media #{$breakpoint-sm} {
 	.d-sm-block { display: block; }
@@ -21,10 +34,38 @@
 }
 
 
-// Width adjustments.
-@for $i from 0 to 11 {
-	.h-#{$i*10} { height: $i*10 + 0%; }
-	.w-#{$i*10} { width: $i*10 + 0%; }
+// Percentage lengths.
+@each $increment in $length-increments {
+	.h-#{$increment} { height: $increment + 0%; }
+	.w-#{$increment} { width: $increment + 0%; }
+}
+
+@media #{$breakpoint-sm} {
+	@each $increment in $length-increments {
+		.h-sm-#{$increment} { height: $increment + 0%; }
+		.w-sm-#{$increment} { width: $increment + 0%; }
+	}
+}
+
+@media #{$breakpoint-md} {
+	@each $increment in $length-increments {
+		.h-md-#{$increment} { height: $increment + 0%; }
+		.w-md-#{$increment} { width: $increment + 0%; }
+	}
+}
+
+@media #{$breakpoint-lg} {
+	@each $increment in $length-increments {
+		.h-lg-#{$increment} { height: $increment + 0%; }
+		.w-lg-#{$increment} { width: $increment + 0%; }
+	}
+}
+
+@media #{$breakpoint-xl} {
+	@each $increment in $length-increments {
+		.h-xl-#{$increment} { height: $increment + 0%; }
+		.w-xl-#{$increment} { width: $increment + 0%; }
+	}
 }
 
 
@@ -48,7 +89,11 @@
 	&[class*='1_1']:before { padding-top: 100%; }
 	&[class*='1_2']:before { padding-top: 200%; }
 	&[class*='4_3']:before { padding-top: 75%; }
+	&[class*='5_3']:before { padding-top: 60%; }
 	&[class*='16_9']:before { padding-top: 56.25%; }
+	&[class*='21_9']:before { padding-top: 42.86%; }
+	&[class*='28_9']:before { padding-top: 32.14%; }
+	&[class*='36_9']:before { padding-top: 25%; }
 
 	// Thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
 }
