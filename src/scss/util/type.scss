@@ -1,10 +1,15 @@
-$rem_base: 16px !default;
 $ratio: 1.5 !default;
+
+$fw-bold: 800 !default;
+$fw-semibold: 600 !default;
+$fw-medium: 500 !default;
+$fw-book: 300 !default;
 
 $default-type-family: 'Proxima Nova', 'Helvetica', sans-serif !default;
 
 body,
 html {
+  font-size: $rem-base;
   font-family: $default-type-family;
 }
 
@@ -60,10 +65,10 @@ html {
   }
 }
 
-.tw-bold { font-weight: $fw_bold; }
-.tw-semibold { font-weight: $fw_semibold; }
-.tw-medium { font-weight: $fw_medium; }
-.tw-book { font-weight: $fw_book; }
+.tw-bold { font-weight: $fw-bold; }
+.tw-semibold { font-weight: $fw-semibold; }
+.tw-medium { font-weight: $fw-medium; }
+.tw-book { font-weight: $fw-book; }
 
 .strikethrough { text-decoration: line-through; }
 .underline { text-decoration: underline; }
