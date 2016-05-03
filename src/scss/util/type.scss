@@ -27,7 +27,7 @@ html {
       $value: $value/$ratio;
     }
 
-    $rem-value: $value + 'rem';
+    $rem-value: $value + rem;
 
     .tn-#{$i*-1} { font-size: $rem-value; }
     .tn-sm-#{$i*-1} {
@@ -49,7 +49,7 @@ html {
       $value: $value * $ratio;
     }
 
-    $rem-value: $value + 'rem';
+    $rem-value: $value + rem;
 
     .t-#{$i} { font-size: $rem-value; }
     .t-sm-#{$i} {
