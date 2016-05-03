@@ -1,11 +1,13 @@
+$rem-base: 16px !default;
 $ratio: 1.5 !default;
 
-$fw-bold: 800 !default;
-$fw-semibold: 600 !default;
-$fw-medium: 500 !default;
-$fw-book: 300 !default;
+$body-type-family: 'Proxima Nova', serif !default;
+$body-type-weight: 400 !default;
+$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$default-type-color: #010101 !default;
+$default-line-height: 1.5 !default;
 
-$default-type-family: 'Proxima Nova', 'Helvetica', sans-serif !default;
+$caps-type-tracking: 0.1em !default;
 
 body,
 html {
@@ -79,13 +81,26 @@ html {
 .ta-left { text-align: left; }
 .ta-right { text-align: center; }
 
-.caps { 
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+.display { 
+  font-family: $display-type-family;
+  font-weight: $fw-bold;
 }
 
-h1, h2, h3, h4 { display: block; }
+.body {
+  font-family: $body-type-family;
+}
+
+.caps { 
+  text-transform: uppercase;
+  letter-spacing: $caps-type-tracking;
+}
+
+h1, h2, h3, h4 { display: block; line-height: 1.25; }
 span { display: inline-block; }
+
+ol, li, blockquote { line-height: $default-line-height; }
+ol { list-style-type: decimal; }
+
 a { 
   display: inline-block;
   text-decoration: none; 

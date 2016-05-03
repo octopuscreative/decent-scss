@@ -3,7 +3,6 @@ $modifier: 0.75;
 $rem_base: 16px !default;
 $ratio: 1.5 !default;
 
-
 @function whitespace_calculator($ratio, $i){
 
     $value: $ratio;
@@ -35,45 +34,37 @@ $ratio: 1.5 !default;
     @return $value + 0rem;
 }
 
-@for $i from -3 to 15 {
-
+@for $i from 0 to 19 {
   $rem-value: whitespace_calculator($ratio, $i);
+  .p-#{$i} { padding: #{$rem-value}; }
+  .pt-#{$i} { padding-top: #{$rem-value}; }
+  .pr-#{$i} { padding-right: #{$rem-value}; }
+  .pb-#{$i} { padding-bottom: #{$rem-value}; }
+  .pl-#{$i} { padding-left: #{$rem-value}; }
+  .px-#{$i} { padding-left: #{$rem-value}; padding-right: #{$rem-value}; }
+  .py-#{$i} { padding-top: #{$rem-value}; padding-bottom: #{$rem-value}; }
 
-  @if $i < 0 {}
-  @if $i >= 0 {
-
-    .p-#{$i} { padding: #{$rem-value}; }
-    .pt-#{$i} { padding-top: #{$rem-value}; }
-    .pr-#{$i} { padding-right: #{$rem-value}; }
-    .pb-#{$i} { padding-bottom: #{$rem-value}; }
-    .pl-#{$i} { padding-left: #{$rem-value}; }
-    .px-#{$i} { padding-left: #{$rem-value}; padding-right: #{$rem-value}; }
-    .py-#{$i} { padding-top: #{$rem-value}; padding-bottom: #{$rem-value}; }
-
-    .m-#{$i} { margin: #{$rem-value}; }
-    .mn-#{$i} { margin: -#{$rem-value}; }
-    .mt-#{$i} { margin-top: #{$rem-value}; }
-    .mtn-#{$i} { margin-top: -#{$rem-value}; }
-    .mr-#{$i} { margin-right: #{$rem-value}; }
-    .mrn-#{$i} { margin-right: -#{$rem-value}; }
-    .mb-#{$i} { margin-bottom: #{$rem-value}; }
-    .mbn-#{$i} { margin-bottom: -#{$rem-value}; }
-    .ml-#{$i} { margin-left: #{$rem-value}; }
-    .mln-#{$i} { margin-left: -#{$rem-value}; }
-    .mx-#{$i} { margin-left: #{$rem-value}; margin-right: #{$rem-value}; }
-    .mxn-#{$i} { margin-left: -#{$rem-value}; margin-right: -#{$rem-value}; }
-    .my-#{$i} { margin-top: #{$rem-value}; margin-bottom: #{$rem-value}; }
-    .myn-#{$i} { margin-top: -#{$rem-value}; margin-bottom: -#{$rem-value}; }
-
-  }
+  .m-#{$i} { margin: #{$rem-value}; }
+  .mn-#{$i} { margin: -#{$rem-value}; }
+  .mt-#{$i} { margin-top: #{$rem-value}; }
+  .mtn-#{$i} { margin-top: -#{$rem-value}; }
+  .mr-#{$i} { margin-right: #{$rem-value}; }
+  .mrn-#{$i} { margin-right: -#{$rem-value}; }
+  .mb-#{$i} { margin-bottom: #{$rem-value}; }
+  .mbn-#{$i} { margin-bottom: -#{$rem-value}; }
+  .ml-#{$i} { margin-left: #{$rem-value}; }
+  .mln-#{$i} { margin-left: -#{$rem-value}; }
+  .mx-#{$i} { margin-left: #{$rem-value}; margin-right: #{$rem-value}; }
+  .mxn-#{$i} { margin-left: -#{$rem-value}; margin-right: -#{$rem-value}; }
+  .my-#{$i} { margin-top: #{$rem-value}; margin-bottom: #{$rem-value}; }
+  .myn-#{$i} { margin-top: -#{$rem-value}; margin-bottom: -#{$rem-value}; }
 }
 
-@for $i from -3 to 15 {
-  $rem-value: whitespace_calculator($ratio, $i);
+@media #{$breakpoint-sm} {
+  @for $i from 0 to 19 {
+    $rem-value: whitespace_calculator($ratio, $i);
 
-  @if $i < 0 {}
-  @if $i >= 0 {
-    @media #{$breakpoint-sm} {
+    @if $i >= 0 {
       .p-sm-#{$i} { padding: #{$rem-value}; }
       .pt-sm-#{$i} { padding-top: #{$rem-value}; }
       .pr-sm-#{$i} { padding-right: #{$rem-value}; }
@@ -100,12 +91,11 @@ $ratio: 1.5 !default;
   }
 }
 
-@for $i from -3 to 15 {
-  $rem-value: whitespace_calculator($ratio, $i);
+@media #{$breakpoint-md} {
+  @for $i from 0 to 19 {
+    $rem-value: whitespace_calculator($ratio, $i);
 
-  @if $i < 0 {}
-  @if $i >= 0 {
-    @media #{$breakpoint-md} {
+    @if $i >= 0 {
       .p-md-#{$i} { padding: #{$rem-value}; }
       .pt-md-#{$i} { padding-top: #{$rem-value}; }
       .pr-md-#{$i} { padding-right: #{$rem-value}; }
@@ -132,12 +122,11 @@ $ratio: 1.5 !default;
   }
 }
 
-@for $i from -3 to 15 {
-  $rem-value: whitespace_calculator($ratio, $i);
+@media #{$breakpoint-lg} {
+  @for $i from 0 to 19 {
+    $rem-value: whitespace_calculator($ratio, $i);
 
-  @if $i < 0 {}
-  @if $i >= 0 {
-    @media #{$breakpoint-lg} {
+    @if $i >= 0 {
       .p-lg-#{$i} { padding: #{$rem-value}; }
       .pt-lg-#{$i} { padding-top: #{$rem-value}; }
       .pr-lg-#{$i} { padding-right: #{$rem-value}; }
@@ -164,12 +153,11 @@ $ratio: 1.5 !default;
   }
 }
 
-@for $i from -3 to 15 {
-  $rem-value: whitespace_calculator($ratio, $i);
+@media #{$breakpoint-xl} {
+  @for $i from 0 to 19 {
+    $rem-value: whitespace_calculator($ratio, $i);
 
-  @if $i < 0 {}
-  @if $i >= 0 {
-    @media #{$breakpoint-xl} {
+    @if $i >= 0 {
       .p-xl-#{$i} { padding: #{$rem-value}; }
       .pt-xl-#{$i} { padding-top: #{$rem-value}; }
       .pr-xl-#{$i} { padding-right: #{$rem-value}; }
