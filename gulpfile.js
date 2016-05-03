@@ -11,7 +11,8 @@ var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     gulpSequence  = require('gulp-sequence').use(gulp),
     shell         = require('gulp-shell'),
-    plumber       = require('gulp-plumber');
+    plumber       = require('gulp-plumber'),
+    stylelint     = require('gulp-stylelint');
 
 
 gulp.task('browserSync', function() {
@@ -20,6 +21,17 @@ gulp.task('browserSync', function() {
     reloadDelay: 1000,
     notify: false
   });
+});
+
+gulp.task('stylelint', function() {
+  return gulp.src(['./src/scss/**/*.scss'])
+    .pipe(stylelint({
+      configFile: './.stylelintrc',
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }))
 });
 
 gulp.task('styles', function() {
@@ -65,18 +77,9 @@ gulp.task('copy-util', ['clean-dist'], function() {
   .pipe(gulp.dest('./dist'));
 });
 
-// This is our master task when you run `gulp` in CLI / Terminal.
-// This is the main watcher to use when in active development, this will:
-//  - startup the web server.
-//  - start up browserSync.
-//  - compress all scripts and SCSS files.
-//  - watch files.
-//  - copy files to the dist folder.
 
 gulp.task('default', ['styles', 'browserSync', 'copy-util'], function() {
-  gulp.watch(['src/scripts/src/vendor/**', 'src/scripts/**/*.coffee'], ['scripts']);
-  gulp.watch('src/scss/**', ['styles', 'copy-util']);
-  gulp.watch('src/images/**', ['images']);
+  gulp.watch('src/scss/**', ['stylelint', 'styles', 'copy-util']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });
