@@ -31,7 +31,10 @@ $columns: 12 !default;
   box-sizing: border-box;
 
   &[class*='right'] { float: right; }
-  &[class*='center'] { margin-left: auto; margin-right: auto; }
+  &[class*='center'] {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @for $i from 1 through $columns {

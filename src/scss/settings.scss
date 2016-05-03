@@ -15,10 +15,10 @@ $breakpoint-lg: '(min-width: 1280px)'; // 1280
 $breakpoint-xl: '(min-width: 1440px)'; // 1440
 
 // Colors.
-$color-primary: #00bbff;
-$color-secondary: #ff8740;
+$color-primary: #0bf;
+$color-secondary: #f00;
 $color-success: #60aa53;
-$color-error: #ff0000;
+$color-error: #f00;
 $color-warning: #e89414;
 
 // Greyscale.
@@ -27,7 +27,7 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5;
 $white: #fefefe;
 
 // Debug Settings.
-$debug-color-primary: rgba(255,9,206,0.5);
+$debug-color-primary: rgba(255, 9, 206, 0.5);
 
 // Font weights.
 $fw-book: 300;

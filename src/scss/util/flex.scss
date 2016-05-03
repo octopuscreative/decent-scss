@@ -3,7 +3,7 @@ $breakpoint-md: '(min-width: 52em)' !default;
 $breakpoint-lg: '(min-width: 64em)' !default;
 
 // Container settings
-.flex { display: flex }
+.flex { display: flex; }
 .flex-column { flex-direction: column; }
 .flex-wrap { flex-wrap: wrap; }
 
@@ -53,18 +53,18 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .flex-item-right { margin-left: auto; }
 
 @media #{$breakpoint-sm} {
-  .flex-sm { display: flex }
+  .flex-sm { display: flex; }
 }
 
 @media #{$breakpoint-md} {
-  .flex-md { display: flex }
+  .flex-md { display: flex; }
 }
 
 @media #{$breakpoint-lg} {
-  .flex-lg { display: flex }
+  .flex-lg { display: flex; }
 }
 
 @media #{$breakpoint-xl} {
-  .flex-lg { display: flex }
+  .flex-lg { display: flex; }
 }
 
