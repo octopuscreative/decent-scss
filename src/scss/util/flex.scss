@@ -20,6 +20,7 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .items-stretch { align-items: stretch; }
 .items-start { align-items: flex-start; }
 .items-end { align-items: flex-end; }
+.items-justify-center { justify-content: center; }
 
 // Self Alignment
 .self-center { align-self: center; }
