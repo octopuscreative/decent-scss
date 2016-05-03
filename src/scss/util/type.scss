@@ -15,11 +15,10 @@ html {
   font-family: $default-type-family;
 }
 
-
 @for $i from -3 to 14 {
   $value: $ratio;
 
-  @if $i == 0 { 
+  @if $i == 0 {
     .t-#{$i} { font-size: 1rem; }
   }
 
@@ -28,41 +27,42 @@ html {
       $value: $value/$ratio;
     }
 
-    $rem-value: $value + 0rem;
+    $rem-value: $value + 'rem';
 
     .tn-#{$i*-1} { font-size: $rem-value; }
-    .tn-sm-#{$i*-1} { 
-        @media #{$breakpoint-sm} { font-size: $rem-value; } 
+    .tn-sm-#{$i*-1} {
+      @media #{$breakpoint-sm} { font-size: $rem-value; }
     }
-    .tn-md-#{$i*-1} { 
-        @media #{$breakpoint-md} { font-size: $rem-value; } 
+    .tn-md-#{$i*-1} {
+      @media #{$breakpoint-md} { font-size: $rem-value; }
     }
-    .tn-lg-#{$i*-1} { 
-        @media #{$breakpoint-lg} { font-size: $rem-value; } 
+    .tn-lg-#{$i*-1} {
+      @media #{$breakpoint-lg} { font-size: $rem-value; }
     }
-    .tn-xl-#{$i*-1} { 
-        @media #{$breakpoint-xl} { font-size: $rem-value; } 
+    .tn-xl-#{$i*-1} {
+      @media #{$breakpoint-xl} { font-size: $rem-value; }
     }
   }
+
   @if $i > 0 {
     @for $n from 1 to $i {
       $value: $value * $ratio;
     }
 
-    $rem-value: $value + 0rem;
+    $rem-value: $value + 'rem';
 
     .t-#{$i} { font-size: $rem-value; }
-    .t-sm-#{$i} { 
-        @media #{$breakpoint-sm} { font-size: $rem-value; } 
+    .t-sm-#{$i} {
+      @media #{$breakpoint-sm} { font-size: $rem-value; }
     }
-    .t-md-#{$i} { 
-        @media #{$breakpoint-md} { font-size: $rem-value; } 
+    .t-md-#{$i} {
+      @media #{$breakpoint-md} { font-size: $rem-value; }
     }
-    .t-lg-#{$i} { 
-        @media #{$breakpoint-lg} { font-size: $rem-value; } 
+    .t-lg-#{$i} {
+      @media #{$breakpoint-lg} { font-size: $rem-value; }
     }
-    .t-xl-#{$i} { 
-        @media #{$breakpoint-xl} { font-size: $rem-value; } 
+    .t-xl-#{$i} {
+      @media #{$breakpoint-xl} { font-size: $rem-value; }
     }
   }
 }
@@ -81,7 +81,7 @@ html {
 .ta-left { text-align: left; }
 .ta-right { text-align: center; }
 
-.display { 
+.display {
   font-family: $display-type-family;
   font-weight: $fw-bold;
 }
@@ -90,22 +90,33 @@ html {
   font-family: $body-type-family;
 }
 
-.caps { 
+.caps {
   text-transform: uppercase;
   letter-spacing: $caps-type-tracking;
 }
 
-h1, h2, h3, h4 { display: block; line-height: 1.25; }
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  line-height: 1.25;
+}
+
 span { display: inline-block; }
 
-ol, li, blockquote { line-height: $default-line-height; }
+ol,
+li,
+blockquote { line-height: $default-line-height; }
 ol { list-style-type: decimal; }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
-pre, code {
+
+pre,
+code {
   @extend .tn-1;
 
   display: inline-block;

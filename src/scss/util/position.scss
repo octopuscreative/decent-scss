@@ -13,10 +13,27 @@
   &[class*='bottom'] { bottom: 0; }
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
-  &[class*='center'] { left: 50%; transform: translateX(-50%); }
-  &[class*='left-middle'] { left: 0; top: 50%; transform: translateY(-50%); }
-  &[class*='right-middle'] { right: 0; top: 50%; transform: translateY(-50%); }
-  &[class*='center-middle'] { top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); }
+
+  &[class*='center'] {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &[class*='left-middle'] {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[class*='right-middle'] {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[class*='center-middle'] {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
 }
 
 // Fixed positioning.
@@ -29,9 +46,24 @@
   &[class*='bottom'] { bottom: 0; }
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
-  &[class*='left-middle'] { left: 0; top: 50%; transform: translateY(-50%); }
-  &[class*='right-middle'] { right: 0; top: 50%; transform: translateY(-50%); }
-  &[class*='center-middle'] { top: 50%; left: 50%; transform: translate3d(-50%,-50%,0); }
+
+  &[class*='left-middle'] {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[class*='right-middle'] {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[class*='center-middle'] {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
 }
 
 // Width and height adjustments.
@@ -56,6 +88,7 @@
     .xn-sm-#{$i*10} { transform: translateX(-$i*10%); }
   }
 }
+
 @media #{$breakpoint-md} {
   .w-md-auto { width: auto; }
   .h-md-auto { height: auto; }
@@ -67,6 +100,7 @@
     .xn-md-#{$i*10} { transform: translateX(-$i*10%); }
   }
 }
+
 @media #{$breakpoint-lg} {
   .w-lg-auto { width: auto; }
   .h-lg-auto { height: auto; }
@@ -78,6 +112,7 @@
     .xn-lg-#{$i*10} { transform: translateX(-$i*10%); }
   }
 }
+
 @media #{$breakpoint-xl} {
   .w-xl-auto { width: auto; }
   .h-xl-auto { height: auto; }

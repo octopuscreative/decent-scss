@@ -10,7 +10,7 @@ $overlay-opacity: 0.7 !default;
   overflow: auto;
 
   @for $i from 1 through 9 {
-  	&[class*='#{$i*10}'] { background: rgba($overlay-color, $i/10); }
+    &[class*='#{$i*10}'] { background: rgba($overlay-color, $i/10); }
   }
-  
+
 }

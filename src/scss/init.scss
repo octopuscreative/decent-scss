@@ -1,5 +1,8 @@
-
+// Import settings.
 @import 'settings';
 
+// Import all utility classes.
 @import 'util/**/*.scss';
-@import 'global';
+
+// Import globals.
+@import 'global/**/*.scss';
