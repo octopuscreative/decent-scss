@@ -1,20 +1,68 @@
 [class^='hover-'],
 [class*=' hover-'] {
 
-	&[class*='opacity'] {
-  	overflow: hidden;
+  // Lighten the target.
+  &[class*='lighten'] {
+    overflow: hidden;
 
     &[class*='target'],
-    [class*='opacity-target'] {
-      transition: opacity 0.18s ease-in;
+    [class*='lighten-target'] {
+      transition: all 0.18s ease-in;
     }
 
     &[class*='target']:hover, 
-    &:hover [class*='opacity-target'] {
-      opacity: 0.5;
+    &:hover [class*='lighten-target'] {
+      opacity: 0.4;
     }
   }
 
+  // Darken the target.
+  &[class*='darken'] {
+
+    &[class*='target'],
+    [class*='darken-target'] {
+      opacity: 0.4;
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover, 
+    &:hover [class*='darken-target'] {
+      opacity: 1;
+    }
+  }
+
+  // Flip.
+  &[class*='flip'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='flip-target'] {
+      transform: translate3d(0,0,0);
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='flip-target'] {
+      animation: flip 0.27s ease-in;
+    }
+  }
+
+  &[class*='scale'] {
+
+    &[class*='target'],
+    [class*='scale-target'] {
+      transform: scale(1) translade3d(0,0,0);
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='scale-target'] {
+      transform: scale(0.9);
+    }
+  }
+
+
+  // Complete transitions.
+  // Fade the target in.
   &[class*='fadeIn'] {
     overflow: hidden;
 
@@ -22,7 +70,7 @@
     [class*='fadeIn-target'] {
       opacity: 0;
 
-      transition: opacity 0.18s ease-in;
+      transition: all 0.18s ease-in;
     }
 
     &[class*='target']:hover, 
@@ -31,6 +79,7 @@
     }
   }
 
+  // Fade the target in and up.
   &[class*='fadeInUp'] {
   	overflow: hidden;
 
@@ -50,6 +99,7 @@
     }
   }
 
+  // Fade the target in and down.
   &[class*='fadeInDown'] {
     overflow: hidden;
 
@@ -58,8 +108,7 @@
       opacity: 0;
       transform: translate3d(0,-10px,0);
 
-      transition: opacity 0.18s ease-in,
-        transform 0.18s ease-in;
+      transition: all 0.18s ease-in;
     }
 
     &[class*='target']:hover, 
@@ -69,13 +118,14 @@
     }
   }
 
+  // Slide the target down from the top
   &[class*='slideInDown'] {
     overflow: hidden;
 
     &[class*='target'],
     [class*='slideInDown-target'] {
       transform: translate3d(0,-100%,0);
-      transition: transform 0.18s ease-in;
+      transition: all 0.18s ease-in;
     }
 
     &[class*='target']:hover, 
@@ -84,47 +134,19 @@
     }
   }
 
+  // Slide the target up from the bottom.
   &[class*='slideInUp'] {
     overflow: hidden;
 
     &[class*='target'],
     [class*='slideInUp-target'] {
       transform: translate3d(0,100%,0);
-      transition: transform 0.18s ease-in;
+      transition: all 0.18s ease-in;
     }
 
     &[class*='target']:hover, 
     &:hover [class*='slideInUp-target'] {
       transform: translate3d(0,0,0);
-    }
-  }
-
-
-  &[class*='flip'] {
-  	overflow: hidden;
-
-    &[class*='target'],
-    [class*='flip-target'] {
-      transform: translate3d(0,0,0);
-    }
-
-    &[class*='target']:hover,
-		&:hover [class*='flip-target'] {
-		  animation: flip 0.27s ease-in;
-		}
-  }
-
-  &[class*='scale'] {
-
-    &[class*='target'],
-    [class*='scale-target'] {
-      transform: scale(1) translade3d(0,0,0);
-      transition: transform 0.18s ease-in;
-    }
-
-    &[class*='target']:hover,
-    &:hover [class*='scale-target'] {
-      transform: scale(0.9);
     }
   }
 

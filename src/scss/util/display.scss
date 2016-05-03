@@ -1,12 +1,6 @@
-$length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+$default-brand-height: 2rem !default;
 
-// Display properties.
-.d-inline-block { 
-	display: inline-block; 
-	vertical-align: middle;
-}
-.d-block { display: block; }
-.d-none { display: none; }
+$length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 
 // Keep elements in DOM for accessibility but hidden from view.
 .hidden { 
@@ -16,22 +10,64 @@ $length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 	left: -300%;
 }
 
+// Almost all websites have a brand or logo in the header
+// and/or footer. Used this on an element with an image
+// to properly size the brand.
+.brand {
+	img {
+		height: $default-brand-height*0.75;
+
+		@media #{$breakpoint-md} {
+			height: $default-brand-height;
+		}
+	}
+}
+
+
+// Display properties.
+.d-inline-block { 
+	display: inline-block; 
+	vertical-align: middle;
+}
+.d-block { display: block; }
+.d-none { display: none; }
+
 @media #{$breakpoint-sm} {
+	.d-sm-inline-block { 
+		display: inline-block; 
+		vertical-align: middle;
+	}
 	.d-sm-block { display: block; }
 	.d-sm-none { display: none; }
 }
 @media #{$breakpoint-md} {
+	.d-md-inline-block { 
+		display: inline-block; 
+		vertical-align: middle;
+	}
 	.d-md-block { display: block; }
 	.d-md-none { display: none; }
 } 
 @media #{$breakpoint-lg} {
+	.d-lg-inline-block { 
+		display: inline-block; 
+		vertical-align: middle;
+	}
 	.d-lg-block { display: block; }
 	.d-lg-none { display: none; }
 } 
 @media #{$breakpoint-xl} {
+	.d-xl-inline-block { 
+		display: inline-block; 
+		vertical-align: middle;
+	}
 	.d-xl-block { display: block; }
 	.d-xl-none { display: none; }
 }
+
+// Vertical align.
+.va-middle { vertical-align: middle; }
+.va-text-bottom { vertical-align: text-bottom; }
 
 
 // Percentage lengths.
@@ -86,6 +122,7 @@ $length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 		left: 0;
 	}
 
+	// Standard ratios.
 	&[class*='1_1']:before { padding-top: 100%; }
 	&[class*='1_2']:before { padding-top: 200%; }
 	&[class*='4_3']:before { padding-top: 75%; }
@@ -95,6 +132,7 @@ $length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 	&[class*='28_9']:before { padding-top: 32.14%; }
 	&[class*='36_9']:before { padding-top: 25%; }
 
+	&[class*='iphone6']:before { padding-top: 178%; }
 	// Thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
 }
 
@@ -106,9 +144,8 @@ $length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 
 	img { width: 100%; }
 
-	&[class*='fit'] img { 
+	&[class*='object-fit'] img {
 		min-height: 100%;
-		min-width: 100%;
 		object-fit: cover;
 	}
 
