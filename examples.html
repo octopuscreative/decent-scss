@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Octopus CSS Utilities</title>
+
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <main class="px-2">
+    <section class="pt-8"></section>
+
+    <header class="cbgg-white fixed-top-left w-100 p-2 z-10 shadow">
+      <h1 class="t-1"><a href="https://github.com/octopuscreative/scss-util">Octopus CSS Utilities</a></h1>
+    </header>
+
+    <!-- Example section
+    <section class="mb-8">
+      <div class="container">
+        <div class="row p-1">
+          <h2 class="tn-1 cg-4 caps">Positioning</h2>
+        </div>
+
+        <div class="flex"></div>
+      </div>
+    </section>
+    -->
+
+    <section class="mb-8">
+      <div class="container mb-1">
+        <div class="row">
+          <h2 class="tn-1 cg-4 py-1 caps">Grid</h2>
+          <small class="tn-1 d-block mb-1">Note that you can use <code>mxn-{# of columns}</code> to compensate for padding on columns</small>
+        </div>
+
+        <div class="row cbgg-7 mb-1 mxn-1 ta-center">
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
+        </div>
+
+        <div class="row cbgg-7 mxn-1 mb-1">
+          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
+          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
+        </div>
+
+        <div class="row cbgg-7 mxn-1 mb-1">
+          <div class="col-4 p-1 push-2">
+            <div class="container debug-bg px1">
+              <div class="col-4 p-1">
+                <div class="debug-bg pt-6"></div>
+              </div>
+              <div class="col-4 p-1">
+                <div class="debug-bg pt-6"></div>
+              </div>
+              <div class="col-4 p-1">
+                <div class="debug-bg pt-6"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 p-1">
+            <div class="container debug-bg px1">
+              <div class="col-6 p-1">
+                <div class="debug-bg pt-6"></div>
+              </div>
+              <div class="col-6 p-1">
+                <div class="debug-bg pt-6"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Positioning</h2>
+          </div>
+          <div class="col-6 col-sm-3 p-1">
+            <div class="ratio-1_1 cbgg-7 relative">
+              <div class="cbgg-5 w-50 h-50 absolute-top-left"></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 p-1">
+            <div class="ratio-1_1 cbgg-7 relative">
+              <div class="cbgg-5 w-50 h-50 absolute-top-right"></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 p-1">
+            <div class="ratio-1_1 cbgg-7 relative">
+              <div class="cbgg-5 w-50 h-50 absolute-bottom-left"></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-3 p-1">
+            <div class="ratio-1_1 cbgg-7 relative">
+              <div class="cbgg-5 w-50 h-50 absolute-bottom-right"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Whitespace</h2>
+          </div>
+
+          <span class="ml-1 p-1 pl-14 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-13 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-12 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-11 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-10 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-9 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-8 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-7 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-6 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-5 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-4 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-3 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-2 cbgg-7 w-auto"></span><br>
+          <span class="ml-1 p-1 pl-1 cbgg-7 w-auto"></span>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Type Scale</h2>
+          </div>
+
+          <p class="t-7 pl-1 mb-1">Proxima</p>
+          <p class="t-6 pl-1 mb-1">Proxima</p>
+          <p class="t-5 pl-1 mb-1">Proxima</p>
+          <p class="t-4 pl-1 mb-1">Proxima</p>
+          <p class="t-3 pl-1 mb-1">Proxima</p>
+          <p class="t-2 pl-1 mb-1">Proxima</p>
+          <p class="t-1 pl-1 mb-1">Proxima</p>
+          <p class="t-0 pl-1 mb-1">Proxima</p>
+          <p class="tn-1 pl-1 mb-1">Proxima</p>
+          <p class="tn-2 pl-1 mb-1">Proxima</p>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Responsive Ratios and Image Cropping</h2>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="col-1 p-1">
+            <div class="ratio-1_1 cbgg-5"></div>
+          </div>
+          <div class="col-1 p-1">
+            <div class="ratio-1_2 cbgg-5"></div>
+          </div>
+          <div class="col-1 p-1">
+            <div class="ratio-4_3 cbgg-5"></div>
+          </div>
+          <div class="col-1 p-1">
+            <div class="ratio-16_9 cbgg-5"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="col-3 p-1">
+            <div class="crop-object-fit ratio-1_1 cbgg-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
+            </div>
+          </div>
+          <div class="col-3 p-1">
+            <div class="crop-object-fit ratio-1_2 cbgg-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
+            </div>
+          </div>
+          <div class="crop-object-fit col-3 p-1">
+            <div class="ratio-4_3 cbgg-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
+            </div>
+          </div>
+          <div class="crop-object-fit col-3 p-1">
+            <div class="ratio-16_9 cbgg-5">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1 mb-1">
+            <h2 class="tn-1 cg-4 caps">Interactions</h2>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-1">
+              <div class="p-1">
+                <div class="ratio-1_1 cbgg-7 hover-lighten-target">
+                  <div class="w-100 h-100 p2 cbgg-2"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="p-1">
+                <div class="ratio-1_1 cbgg-7 hover-darken-target">
+                  <div class="w-100 h-100 p2 cbgg-2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-fadeIn">
+                <div class="w-100 h-100 p2 cbgg-2 fadeIn-target"></div>
+              </div>
+            </div>
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-fadeInUp">
+                <div class="w-100 h-100 p2 cbgg-2 fadeInUp-target"></div>
+              </div>
+            </div>
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-fadeInDown">
+                <div class="w-100 h-100 p2 cbgg-2 fadeInDown-target"></div>
+              </div>
+            </div>
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-slideInDown">
+                <div class="w-100 h-100 p2 cbgg-2 slideInDown-target"></div>
+              </div>
+            </div>
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-slideInUp">
+                <div class="w-100 h-100 p2 cbgg-2 slideInUp-target"></div>
+              </div>
+            </div>
+            <div class="col-1 p-1">
+              <div class="ratio-1_1 cbgg-7 hover-flip">
+                <div class="w-100 h-100 p2 cbgg-2 flip-target"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Debug</h2>
+          </div>
+
+          <div class="flex"></div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Display</h2>
+          </div>
+
+          <div class="flex"></div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Flex</h2>
+          </div>
+
+          <div class="flex"></div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">Table</h2>
+          </div>
+
+          <div class="flex"></div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="container">
+          <div class="row p-1">
+            <h2 class="tn-1 cg-4 caps">color</h2>
+          </div>
+
+          <div class="flex"></div>
+        </div>
+      </section>
+  </main>
+</body>
+</html>

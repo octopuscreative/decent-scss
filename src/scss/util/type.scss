@@ -13,6 +13,8 @@ body,
 html {
   font-size: $rem-base;
   font-family: $default-type-family;
+  color: $default-type-color;
+  font-weight: $body-type-weight;
 }
 
 @for $i from -3 to 14 {
@@ -71,6 +73,7 @@ html {
 .tw-semibold { font-weight: $fw-semibold; }
 .tw-medium { font-weight: $fw-medium; }
 .tw-book { font-weight: $fw-book; }
+.tw-light { font-weight: $fw-light; }
 
 .strikethrough { text-decoration: line-through; }
 .underline { text-decoration: underline; }
@@ -109,6 +112,11 @@ ol,
 li,
 blockquote { line-height: $default-line-height; }
 ol { list-style-type: decimal; }
+
+p {
+  line-height: $default-line-height;
+  font-weight: $body-type-weight;
+}
 
 a {
   display: inline-block;

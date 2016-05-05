@@ -1,8 +1,8 @@
 // Rem base.
-$rem-base: 16px;
+$rem-base: 14px;
 
 // Modular scale ration.
-$ratio: 1.333;
+$ratio: 1.3;
 
 // Grid settings.
 $container-width: 90rem;
@@ -15,7 +15,7 @@ $breakpoint-lg: '(min-width: 1280px)'; // 1280
 $breakpoint-xl: '(min-width: 1440px)'; // 1440
 
 // Colors.
-$color-primary: #0bf;
+$color-primary: #fffa50;
 $color-secondary: #f00;
 $color-success: #60aa53;
 $color-error: #f00;
@@ -30,6 +30,7 @@ $white: #fefefe;
 $debug-color-primary: rgba(255, 9, 206, 0.5);
 
 // Font weights.
+$fw-light: 200;
 $fw-book: 300;
 $fw-medium: 400;
 $fw-semibold: 500;
@@ -37,10 +38,14 @@ $fw-bold: 600;
 
 // Defaults.
 
+$default-brand-height: 1.5rem;
+
 // Tyopgraphy.
 $default-type-family: 'Proxima Nova', 'Helvetica', sans-serif;
-$default-type-color: #313233;
+$default-type-color: #646566;
 $default-line-height: 1.5;
+$body-type-weight: $fw-book;
+$caps-type-tracking: 0.2em !default;
 
 // Borders.
 $default-border-radius: 2px;

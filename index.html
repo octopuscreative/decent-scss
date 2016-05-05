@@ -5,311 +5,92 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Octopus CSS Utilities</title>
+  <title>Building at Octopus</title>
 
   <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
-  <main class="px-2">
-    <section class="pt-8"></section>
 
-    <header class="cbgg-white fixed-top-left w-100 p-2 z-10 shadow">
-      <h1 class="t-1"><a href="https://github.com/octopuscreative/scss-util">Octopus CSS Utilities</a></h1>
-    </header>
-
-    <!-- Example section
-    <section class="mb-8">
-      <div class="container">
-        <div class="row p-1">
-          <h2 class="tn-1 cg-4 caps">Positioning</h2>
+    <aside class="fixed-top-left h-100 br-7">
+      <div class="pl-4 pr-7 py-5">
+        <div class="brand mb-1">
+          <img src="/src/img/octopus-logo.svg" />
         </div>
-
-        <div class="flex"></div>
+        <p class="caps tn-2 cg-3">Development</p>
       </div>
-    </section>
-    -->
+      <nav class="py-5">
+        <a href="#" class="d-block t-1 cg-black pl-4 pr-7 py-1">Coding Style</a>
+        <ul class="px-4 py-2">
+          <li class="tw-light pl-1 mb-1">Linting</li>
+          <li class="tw-light pl-1 mb-1">CI</li>
+        </ul>
+        <a href="#" class="d-block t-1 cg-black pl-4 pr-7 py-1">Resources</a>
+        <ul class="px-4 py-2">
+          <li class="tw-light pl-1 mb-1">SmoothState.js</li>
+          <li class="tw-light pl-1 mb-1">Vue.js</li>
+        </ul>
+        <a href="#" class="d-block t-1 cg-black pl-4 pr-7 py-1 br-black">CSS Framework</a>
+        <ul class="px-4 py-2">
+          <li class="tw-light pl-1 mb-1">Typography</li>
+          <li class="tw-light pl-1 mb-1">Color</li>
+          <li class="tw-light pl-1 mb-1">Grid</li>
+          <li class="tw-light pl-1 mb-1">Position</li>
+        </ul>
 
-    <section class="mb-8">
-      <div class="container mb-1">
-        <div class="row">
-          <h2 class="tn-1 cg-4 py-1 caps">Grid</h2>
-          <small class="tn-1 d-block mb-1">Note that you can use <code>mxn-{# of columns}</code> to compensate for padding on columns</small>
+      </nav>
+      <nav class="absolute-bottom w-100 px-4 py-5">
+        <a href="http://github.com/octopuscreative/" class="d-block caps tn-1 cg-black mb-2">Github</a>
+        <a href="http://twitter.com/octopuscre8ive/" class="d-block caps tn-1 cg-black mb-2">Twitter</a>
+        <a href="http://facebook.com/octopuscreative/" class="d-block caps tn-1 cg-black mb-2">Facebook</a>
+      </nav>
+    </aside>
+
+    <main class="pl-10">
+      <header class="container px-8 pt-10 pb-8">
+        <div class="col-10 push-1">
+          <h1 class="d-inline-block t-2 cg-black cbg-primary pl-2 pr-7 py-1 mln-2 mb-5">What are utility classes?</h1>
+          <p class="t-1">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
         </div>
+      </header>
 
-        <div class="row cbgg-7 mb-1 mxn-1 ta-center">
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-sm-1 p-1"><div class="debug-bg pt-6"></div></div>
-        </div>
-
-        <div class="row cbgg-7 mxn-1 mb-1">
-          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
-          <div class="col-6 col-md-3 p-1"><div class="debug-bg pt-6"></div></div>
-        </div>
-
-        <div class="row cbgg-7 mxn-1 mb-1">
-          <div class="col-4 p-1 push-2">
-            <div class="container debug-bg px1">
-              <div class="col-4 p-1">
-                <div class="debug-bg pt-6"></div>
-              </div>
-              <div class="col-4 p-1">
-                <div class="debug-bg pt-6"></div>
-              </div>
-              <div class="col-4 p-1">
-                <div class="debug-bg pt-6"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-4 p-1">
-            <div class="container debug-bg px1">
-              <div class="col-6 p-1">
-                <div class="debug-bg pt-6"></div>
-              </div>
-              <div class="col-6 p-1">
-                <div class="debug-bg pt-6"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Positioning</h2>
-          </div>
-          <div class="col-6 col-sm-3 p-1">
-            <div class="ratio-1_1 cbgg-7 relative">
-              <div class="cbgg-5 w-50 h-50 absolute-top-left"></div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-3 p-1">
-            <div class="ratio-1_1 cbgg-7 relative">
-              <div class="cbgg-5 w-50 h-50 absolute-top-right"></div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-3 p-1">
-            <div class="ratio-1_1 cbgg-7 relative">
-              <div class="cbgg-5 w-50 h-50 absolute-bottom-left"></div>
-            </div>
-          </div>
-          <div class="col-6 col-sm-3 p-1">
-            <div class="ratio-1_1 cbgg-7 relative">
-              <div class="cbgg-5 w-50 h-50 absolute-bottom-right"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Whitespace</h2>
-          </div>
-
-          <span class="ml-1 p-1 pl-14 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-13 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-12 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-11 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-10 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-9 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-8 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-7 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-6 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-5 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-4 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-3 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-2 cbgg-7 w-auto"></span><br>
-          <span class="ml-1 p-1 pl-1 cbgg-7 w-auto"></span>
-        </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Type Scale</h2>
-          </div>
-
-          <p class="t-7 pl-1 mb-1">Proxima</p>
-          <p class="t-6 pl-1 mb-1">Proxima</p>
-          <p class="t-5 pl-1 mb-1">Proxima</p>
-          <p class="t-4 pl-1 mb-1">Proxima</p>
-          <p class="t-3 pl-1 mb-1">Proxima</p>
-          <p class="t-2 pl-1 mb-1">Proxima</p>
-          <p class="t-1 pl-1 mb-1">Proxima</p>
-          <p class="t-0 pl-1 mb-1">Proxima</p>
-          <p class="tn-1 pl-1 mb-1">Proxima</p>
-          <p class="tn-2 pl-1 mb-1">Proxima</p>
-        </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Responsive Ratios and Image Cropping</h2>
+      <article class="container px-8">
+        <div class="row mb-6">
+          <div class="col-10 push-1">
+            <h1 class="d-inline-block t-2 cg-black cbg-primary pl-2 pr-7 py-1 mln-2">Why utility classes?</h1>
           </div>
         </div>
 
-        <div class="container">
-          <div class="col-1 p-1">
-            <div class="ratio-1_1 cbgg-5"></div>
+        <div class="row mln-4">
+          <div class="flex mb-1">
+            <div class="flex col-3 pl-4 push-1">
+            <h2 class="t-1 cg-black mb-1 pr-4">Forget that inheritance bugs were ever a thing.</h2>
           </div>
-          <div class="col-1 p-1">
-            <div class="ratio-1_2 cbgg-5"></div>
+          <div class="flex col-3 pl-4">
+            <h2 class="t-1 cg-black mb-1 pr-4">Standardization between projects.</h2>
           </div>
-          <div class="col-1 p-1">
-            <div class="ratio-4_3 cbgg-5"></div>
-          </div>
-          <div class="col-1 p-1">
-            <div class="ratio-16_9 cbgg-5"></div>
+          <div class="flex col-3 pl-4">
+            <h2 class="t-1 cg-black mb-1 pr-4">Make responsive development a part of your workflow.</h2>
           </div>
         </div>
-
-        <div class="container">
-          <div class="col-3 p-1">
-            <div class="crop-object-fit ratio-1_1 cbgg-5">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
-            </div>
-          </div>
-          <div class="col-3 p-1">
-            <div class="crop-object-fit ratio-1_2 cbgg-5">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
-            </div>
-          </div>
-          <div class="crop-object-fit col-3 p-1">
-            <div class="ratio-4_3 cbgg-5">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
-            </div>
-          </div>
-          <div class="crop-object-fit col-3 p-1">
-            <div class="ratio-16_9 cbgg-5">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Natural_bridges_state_beach_Santa_Cruz_California.jpg/2880px-Natural_bridges_state_beach_Santa_Cruz_California.jpg" />
-            </div>
-          </div>
+        <div class="col-3 pl-4 push-1">
+          <p class="">Know exactly what styles are being applied just by scanning your markup. That means no more searching through inspector and nested SASS files to find where styles are being applied and overwritten.</p>
         </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1 mb-1">
-            <h2 class="tn-1 cg-4 caps">Interactions</h2>
-          </div>
-
-          <div class="row mb-2">
-            <div class="col-1">
-              <div class="p-1">
-                <div class="ratio-1_1 cbgg-7 hover-lighten-target">
-                  <div class="w-100 h-100 p2 cbgg-2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="p-1">
-                <div class="ratio-1_1 cbgg-7 hover-darken-target">
-                  <div class="w-100 h-100 p2 cbgg-2"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-fadeIn">
-                <div class="w-100 h-100 p2 cbgg-2 fadeIn-target"></div>
-              </div>
-            </div>
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-fadeInUp">
-                <div class="w-100 h-100 p2 cbgg-2 fadeInUp-target"></div>
-              </div>
-            </div>
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-fadeInDown">
-                <div class="w-100 h-100 p2 cbgg-2 fadeInDown-target"></div>
-              </div>
-            </div>
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-slideInDown">
-                <div class="w-100 h-100 p2 cbgg-2 slideInDown-target"></div>
-              </div>
-            </div>
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-slideInUp">
-                <div class="w-100 h-100 p2 cbgg-2 slideInUp-target"></div>
-              </div>
-            </div>
-            <div class="col-1 p-1">
-              <div class="ratio-1_1 cbgg-7 hover-flip">
-                <div class="w-100 h-100 p2 cbgg-2 flip-target"></div>
-              </div>
-            </div>
-          </div>
+        <div class="col-3 pl-4">
+          <p class="">In 20 years of combined professional experience, we've never been able to <em>actually</em> reuse CSS between projects.</p>
         </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Debug</h2>
-          </div>
-
-          <div class="flex"></div>
+        <div class="col-3 pl-4">
+          <p class="tn-1">Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
         </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Display</h2>
-          </div>
-
-          <div class="flex"></div>
         </div>
-      </section>
+      </article>
 
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Flex</h2>
-          </div>
-
-          <div class="flex"></div>
+      <footer class="container px-8 pt-10 pb-4">
+          <div class="col-10 push-1">
+          <p class="tn-1 cg-4">Egestas Mollis Ullamcorper Euismod Pharetra</p>
         </div>
-      </section>
+      </footer>
+    </main>
 
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">Table</h2>
-          </div>
 
-          <div class="flex"></div>
-        </div>
-      </section>
-
-      <section class="mb-8">
-        <div class="container">
-          <div class="row p-1">
-            <h2 class="tn-1 cg-4 caps">color</h2>
-          </div>
-
-          <div class="flex"></div>
-        </div>
-      </section>
-  </main>
 </body>
 </html>
