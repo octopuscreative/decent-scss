@@ -2796,10 +2796,7 @@ code {
 
 .display {
   font-family: "soleil", "Helvetica", sans-serif;
-  font-weight: 600; }
-
-.body {
-  font-family: "Proxima Nova", serif; }
+  line-height: 1.2; }
 
 .caps {
   text-transform: uppercase;

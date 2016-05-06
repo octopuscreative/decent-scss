@@ -1,11 +1,12 @@
 $rem-base: 16px !default;
 $ratio: 1.5 !default;
 
-$body-type-family: 'Proxima Nova', serif !default;
-$body-type-weight: 400 !default;
-$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$default-type-family: 'Proxima Nova', serif !default;
+$default-type-weight: 400 !default;
 $default-type-color: #010101 !default;
 $default-line-height: 1.5 !default;
+$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$display-line-height: 1.2 !default;
 
 $caps-type-tracking: 0.1em !default;
 
@@ -83,11 +84,7 @@ html {
 
 .display {
   font-family: $display-type-family;
-  font-weight: $fw-bold;
-}
-
-.body {
-  font-family: $body-type-family;
+  line-height: $display-line-height;
 }
 
 .caps {
