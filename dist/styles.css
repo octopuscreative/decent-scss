@@ -2794,6 +2794,9 @@ code {
 .tw-book {
   font-weight: 300; }
 
+.tw-light {
+  font-weight: 200; }
+
 .strikethrough {
   text-decoration: line-through; }
 
