@@ -2813,14 +2813,11 @@ code {
   text-align: left; }
 
 .ta-right {
-  text-align: center; }
+  text-align: right; }
 
 .display {
   font-family: "soleil", "Helvetica", sans-serif;
-  font-weight: 600; }
-
-.body {
-  font-family: "Proxima Nova", serif; }
+  line-height: 1.2; }
 
 .caps {
   text-transform: uppercase;
@@ -2832,9 +2829,6 @@ h3,
 h4 {
   display: block;
   line-height: 1.25; }
-
-span {
-  display: inline-block; }
 
 ol,
 li,

@@ -1,11 +1,12 @@
 $rem-base: 16px !default;
 $ratio: 1.5 !default;
 
-$body-type-family: 'Proxima Nova', serif !default;
-$body-type-weight: 400 !default;
-$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$default-type-family: 'Proxima Nova', serif !default;
+$default-type-weight: 400 !default;
 $default-type-color: #010101 !default;
 $default-line-height: 1.5 !default;
+$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$display-line-height: 1.2 !default;
 
 $caps-type-tracking: 0.1em !default;
 
@@ -82,15 +83,11 @@ html {
 
 .ta-center { text-align: center; }
 .ta-left { text-align: left; }
-.ta-right { text-align: center; }
+.ta-right { text-align: right; }
 
 .display {
   font-family: $display-type-family;
-  font-weight: $fw-bold;
-}
-
-.body {
-  font-family: $body-type-family;
+  line-height: $display-line-height;
 }
 
 .caps {
@@ -105,8 +102,6 @@ h4 {
   display: block;
   line-height: 1.25;
 }
-
-span { display: inline-block; }
 
 ol,
 li,
