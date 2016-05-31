@@ -63,11 +63,6 @@ code {
 .tw-medium { font-weight: $fw-medium; }
 .tw-book { font-weight: $fw-book; }
 
-// Alignment modifiers.
-.ta-center { text-align: center; }
-.ta-left { text-align: left; }
-.ta-right { text-align: right; }
-
 // Style modifiers.
 // We omit the prefix `t` here because these adjectives can
 // only apply to type.
@@ -81,7 +76,7 @@ code {
   line-height: $display-line-height;
 }
 
-// Because all caps is awesomem.
+// Because all caps is awesome.
 .caps {
   text-transform: uppercase;
   letter-spacing: $caps-type-tracking;
@@ -90,6 +85,35 @@ code {
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// Alignment modifiers.
+.ta-center { text-align: center; }
+.ta-left { text-align: left; }
+.ta-right { text-align: right; }
+
+@media #{$breakpoint-sm} {
+  .ta-sm-center { text-align: center; }
+  .ta-sm-left { text-align: left; }
+  .ta-sm-right { text-align: right; }
+}
+
+@media #{$breakpoint-md} {
+  .ta-md-center { text-align: center; }
+  .ta-md-left { text-align: left; }
+  .ta-md-right { text-align: right; }
+}
+
+@media #{$breakpoint-lg} {
+  .ta-lg-center { text-align: center; }
+  .ta-lg-left { text-align: left; }
+  .ta-lg-right { text-align: right; }
+}
+
+@media #{$breakpoint-xl} {
+  .ta-xl-center { text-align: center; }
+  .ta-xl-left { text-align: left; }
+  .ta-xl-right { text-align: right; }
 }
 
 // Calculate the font sizes by scale.
