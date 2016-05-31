@@ -74,12 +74,6 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
 // Shadows.
 .shadow { box-shadow: $default-box-shadow; }
 
-// [class^='shadow-'],
-// [class*=' shadow-'] {
-// 	[class*='sharp'] {}
-// 	[class*='diffused'] {}
-// }
-
 // Rounding.
 .rounded { border-radius: $default-border-radius; }
 [class^='rounded-'],
