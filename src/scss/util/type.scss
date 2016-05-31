@@ -1,3 +1,4 @@
+// Defaults.
 $rem-base: 16px !default;
 $ratio: 1.5 !default;
 
@@ -7,15 +8,91 @@ $default-type-color: #010101 !default;
 $default-line-height: 1.5 !default;
 $display-type-family: 'soleil', 'Helvetica', sans-serif !default;
 $display-line-height: 1.2 !default;
-
 $caps-type-tracking: 0.1em !default;
 
+
+// Because browsers do their own thing with fonts, let's
+// be more explicit in setting the defaults.
 body,
 html {
   font-size: $rem-base;
   font-family: $default-type-family;
+  line-height: $default-line-height;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  display: block;
+  line-height: $display-line-height;
+  font-weight: $default-type-weight;
+}
+
+ol,
+li,
+blockquote { line-height: $default-line-height; }
+ol { list-style-type: decimal; }
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  font-family: $display-type-family;
+  line-height: $default-line-height;
+  font-weight: $default-type-weight;
+}
+
+pre,
+code {
+  @extend .tn-1;
+
+  display: inline-block;
+  font-family: 'Courier New', monospace;
+  line-height: $default-line-height;
+}
+
+// Modifiers.
+// Type weight modifiers.
+.tw-bold { font-weight: $fw-bold; }
+.tw-semibold { font-weight: $fw-semibold; }
+.tw-medium { font-weight: $fw-medium; }
+.tw-book { font-weight: $fw-book; }
+
+// Alignment modifiers.
+.ta-center { text-align: center; }
+.ta-left { text-align: left; }
+.ta-right { text-align: right; }
+
+// Style modifiers.
+// We omit the prefix `t` here because these adjectives can
+// only apply to type.
+.strikethrough { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+.italic { font-style: italic; }
+
+// Use the display font.
+.display {
+  font-family: $display-type-family;
+  line-height: $display-line-height;
+}
+
+// Because all caps is awesomem.
+.caps {
+  text-transform: uppercase;
+  letter-spacing: $caps-type-tracking;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Calculate the font sizes by scale.
 @for $i from -3 to 14 {
   $value: $ratio;
 
@@ -68,53 +145,3 @@ html {
   }
 }
 
-.tw-bold { font-weight: $fw-bold; }
-.tw-semibold { font-weight: $fw-semibold; }
-.tw-medium { font-weight: $fw-medium; }
-.tw-book { font-weight: $fw-book; }
-
-.strikethrough { text-decoration: line-through; }
-.underline { text-decoration: underline; }
-
-.italic { font-style: italic; }
-
-.ta-center { text-align: center; }
-.ta-left { text-align: left; }
-.ta-right { text-align: right; }
-
-.display {
-  font-family: $display-type-family;
-  line-height: $display-line-height;
-}
-
-.caps {
-  text-transform: uppercase;
-  letter-spacing: $caps-type-tracking;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  display: block;
-  line-height: 1.25;
-}
-
-ol,
-li,
-blockquote { line-height: $default-line-height; }
-ol { list-style-type: decimal; }
-
-a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-pre,
-code {
-  @extend .tn-1;
-
-  display: inline-block;
-  font-family: 'Courier New', monospace;
-  line-height: $default-line-height;
-}
