@@ -1,0 +1,18 @@
+// Globals are perfect for things that are reused a lot
+// throughout your design – like buttons and custom
+// elements – and would make more sense to have just a
+// single class.
+
+// We can still utilize the utility classes here for
+// convenience and consistency.
+
+// .btn,
+// [class^='btn-'],
+// [class*=' btn-'] {
+
+//   &[class*='solid'] {
+//     @extend .antialiased;
+//     @extend .cbgg-black;
+//     @extend .cg-white;
+//   }
+// }
