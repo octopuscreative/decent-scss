@@ -1,6 +1,11 @@
 $container-width: 90rem !default;
 $columns: 12 !default;
 
+$breakpoint-sm: '(min-width: 600px)' !default;
+$breakpoint-md: '(min-width: 768px)' !default;
+$breakpoint-lg: '(min-width: 1280px)' !default;
+$breakpoint-xl: '(min-width: 1440px)' !default;
+
 .clearfix {
   &::after {
     content: "";
