@@ -1,8 +1,7 @@
 {
-  "name": "scss-util",
+  "name": "swell-css",
   "version": "0.0.1",
   "description": "Set of utility classes – not just for prototyping!",
-  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "gulp": "^3.9.0",
@@ -18,5 +17,29 @@
     "gulp-util": "^3.0.6",
     "stylelint-config-standard": "^6.0.0",
     "gulp-stylelint": "^2.0.2"
+  },
+  "contributors": [
+    { "name" : "Chris Griffith" , "email" : "chris@chrisgriffith.co", "url" : "http://chrisgriffith.co" },
+    { "name" : "Sean Washington" , "email" : "hello@seanwash.com", "url" : "http://seanwash.com" }
+  ],
+  "keywords": [
+    "css",
+    "scss",
+    "functional",
+    "utility",
+    "oocss",
+    "framework",
+    "atomic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octopuscreative/scss-util"
+  },
+  "bugs": {
+    "url" : "https://github.com/octopuscreative/scss-util/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://opensource.org/licenses/MIT"
   }
 }

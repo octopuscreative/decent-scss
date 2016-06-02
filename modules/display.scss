@@ -2,6 +2,11 @@ $default-brand-height: 2rem !default;
 
 $length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 
+$breakpoint-sm: '(min-width: 600px)' !default;
+$breakpoint-md: '(min-width: 768px)' !default;
+$breakpoint-lg: '(min-width: 1280px)' !default;
+$breakpoint-xl: '(min-width: 1440px)' !default;
+
 // Keep elements in DOM for accessibility but hidden from view.
 .hidden {
   visibility: hidden;
