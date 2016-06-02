@@ -12,7 +12,6 @@ $columns: 12 !default;
 .container {
   @extend .clearfix;
 
-  display: block;
   max-width: $container-width;
   margin-left: auto;
   margin-right: auto;
