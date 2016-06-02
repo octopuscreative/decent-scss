@@ -3,6 +3,9 @@ $default-border-radius: 2px !default;
 $default-border-weight: 1px !default;
 $thick-border-weight: $default-border-weight*2 !default;
 
+$default-border-color: #e8e9eb;
+$default-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+
 $color-primary: #0bf !default;
 $color-secondary: #ff8740 !default;
 $color-success: #60aa53 !default;
@@ -43,17 +46,17 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
 .bb-error { border-bottom: $default-border-weight solid $color-error; }
 .bl-error { border-left: $default-border-weight solid $color-error; }
 
-.b-black { border: $default-border-weight solid $black; }
-.bt-black { border-top: $default-border-weight solid $black; }
-.br-black { border-right: $default-border-weight solid $black; }
-.bb-black { border-bottom: $default-border-weight solid $black; }
-.bl-black { border-left: $default-border-weight solid $black; }
+.b-black { border: $default-border-weight solid black; }
+.bt-black { border-top: $default-border-weight solid black; }
+.br-black { border-right: $default-border-weight solid black; }
+.bb-black { border-bottom: $default-border-weight solid black; }
+.bl-black { border-left: $default-border-weight solid black; }
 
-.b-white { border: $default-border-weight solid $white; }
-.bt-white { border-top: $default-border-weight solid $white; }
-.br-white { border-right: $default-border-weight solid $white; }
-.bb-white { border-bottom: $default-border-weight solid $white; }
-.bl-white { border-left: $default-border-weight solid $white; }
+.b-white { border: $default-border-weight solid white; }
+.bt-white { border-top: $default-border-weight solid white; }
+.br-white { border-right: $default-border-weight solid white; }
+.bb-white { border-bottom: $default-border-weight solid white; }
+.bl-white { border-left: $default-border-weight solid white; }
 
 @each $grey in $greys {
   $i: index($greys, $grey);
