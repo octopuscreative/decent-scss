@@ -1,5 +1,5 @@
 {
-  "name": "swell-css",
+  "name": "decent-scss",
   "version": "0.0.1",
   "description": "Set of utility classes – not just for prototyping!",
   "devDependencies": {
@@ -33,10 +33,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/octopuscreative/scss-util"
+    "url": "https://github.com/octopuscreative/decent-scss"
   },
   "bugs": {
-    "url" : "https://github.com/octopuscreative/scss-util/issues"
+    "url" : "https://github.com/octopuscreative/decent-scss/issues"
   },
   "license": {
     "type": "MIT",
