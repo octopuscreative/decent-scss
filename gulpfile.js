@@ -17,14 +17,14 @@ var gulp          = require('gulp'),
 
 gulp.task('browserSync', function() {
   browserSync({
-    server: { baseDir: "./" },
+    server: { baseDir: './' },
     reloadDelay: 1000,
     notify: false
   });
 });
 
 gulp.task('stylelint', function() {
-  return gulp.src(['./src/scss/**/*.scss'])
+  return gulp.src(['./modules/**/*.scss'])
     .pipe(stylelint({
       configFile: './.stylelintrc',
       syntax: 'scss',
@@ -35,7 +35,7 @@ gulp.task('stylelint', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('src/scss/init.scss')
+  return gulp.src('./modules/all.scss')
     .pipe(plumber({
       errorHandler: function (err) {
         console.log(err);
@@ -45,15 +45,15 @@ gulp.task('styles', function() {
     .pipe(sassGlob())
     .pipe(sass({
       errLogToConsole: true,
-      includePaths: [ 'src/scss/' ]
+      includePaths: [ './modules/' ]
     }))
     .pipe(autoprefixer({
       browsers: autoPrefixBrowserList,
       cascade:  true
     }))
     .on('error', gutil.log)
-    .pipe(concat('styles.css'))
-    .pipe(gulp.dest('src'))
+    .pipe(concat('decent.css'))
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -65,21 +65,8 @@ gulp.task('html', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('clean-dist', shell.task([
-  'rm -rf ./dist'
-]));
-
-// Copy the util stylesheets to a distribution folder.
-gulp.task('copy-util', ['clean-dist'], function() {
-  gulp.src([
-    './src/*.css'
-  ])
-  .pipe(gulp.dest('./dist'));
-});
-
-
-gulp.task('default', ['styles', 'browserSync', 'copy-util'], function() {
-  gulp.watch('src/scss/**', ['stylelint', 'styles', 'copy-util']);
+gulp.task('default', ['styles', 'browserSync'], function() {
+  gulp.watch('src/scss/**', ['stylelint', 'styles']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });
