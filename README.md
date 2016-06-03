@@ -2,9 +2,29 @@
 
 A collection of functional CSS utilities as created by the folks at [Octop.us](http://octop.us).
 
+## Rationale
+
+You might see this and think to yourself, why would anyone want to write CSS this way? So did we. But after some research and using [Basscss](http://www.basscss.com/) for a bit we were hooked.
+
+Here's what convinced us:
+
+* **No side effects** - Although the cascade can be a useful thing, more often than not it becomes a hinderance in long term projects or with projects that have multiple developers working in the code base.
+* **Composable** -  Think composition over inheritance. With Decent.scss you compose your ui out of already existing blocks (think legos) of css.
+* **Consistency** - Functional CSS helps to facility consistency in your end products. With Decent.scss, all of the values for whitespace, font sizes, etc are all calculated from the same settings. This means that there are no more magic numbers hiding out in your stylesheets and that consistency is as easy as using the generated classes.
+* **Clear & Easy to follow** - There's a lot of contention around this point, but we maintain that it's easier to reason about complexity in your markup as opposed to CSS. With CSS you have to worry about inheritance as well as the cascade, two things that can work against as soon as your website or app starts to grow. By taking a few minutes to familiarize yourself with the [Class Reference](https://github.com/octopuscreative/decent-scss/wiki) for Decent.scss, you'll be able to look at any markup and have a good idea of how it looks and functions.
+
+#### Useful reads
+
+* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
+* [How not to scale css](https://gist.github.com/mrmrs/5d6c3bf60a9ff410fcec)
+* [Expressive CSS](http://johnpolacek.github.io/expressive-css/)
+* [CSS Purge](http://csspurge.com/)
+* [Semantic CSS](http://snook.ca/archives/html_and_css/semantic-css)
+* [Functional Programming, CSS, and your sanity](http://www.jon.gold/2015/07/functional-css/)
+
 ## Setup
 
-To install, run `npm i --save decent-scss`, then `@import` the desired modules. We've left this part open ended on purpose for flexibilitie's sake. The simplest way would be something like `@import '../node_modules/decent-scss/modules/all.scss';` to get all of the modules, making sure to adjust that import to point to the proper directory.
+To install, run `npm i --save decent-scss`, then `@import` the desired modules. We've left this part open ended on purpose for flexibility's sake. The simplest way would be something like `@import '../node_modules/decent-scss/modules/all.scss';` to get all of the modules, making sure to adjust that import to point to the proper directory.
 
 If you're looking for a more elegant solution to including CSS from `node_modules`, you'll find a multitude of resources [here](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=import+scss+from+node_modules).
 
@@ -20,13 +40,6 @@ We've included any configuration variables at the top of each module file so tha
 ## CSS
 
 If that CSS that you're after and you don't care about changing any of the settings, then you can use the files located at `css/decent.css`.
-
-## Rationale
-
-* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)
-* [How not to scale css](https://gist.github.com/mrmrs/5d6c3bf60a9ff410fcec)
-* [Expressive CSS](http://johnpolacek.github.io/expressive-css/)
-* [CSS Purge](http://csspurge.com/)
 
 ## Work in Progress
 
