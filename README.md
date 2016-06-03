@@ -28,9 +28,11 @@ If that CSS that you're after and you don't care about changing any of the setti
 * [Expressive CSS](http://johnpolacek.github.io/expressive-css/)
 * [CSS Purge](http://csspurge.com/)
 
-## Moderation
+## Work in Progress
 
-Don't forget to exercise moderation when building up your repertoire of utility classes. We recommend using tools like [CSS Stats](http://cssstats.com) to make sure that you're not including a multitude of CSS that doesn't actually get used. As of right now the kitchen sink weighs in just over 100kb - and we're actively working on slimming it down!
+Please note that this is still a work in progress! [We're keeping tabs on the state of our CSS here](http://cssstats.com/stats?url=http%3A%2F%2Foctopuscreative.github.io%2Fdecent-scss%2Findex.html&ua=Browser%20Default) and actively working on improving both the quality and size of the code. Pull requests are welcome!
+
+Don't forget to exercise moderation when building up your repertoire of utility classes. We recommend using tools like [CSS Stats](http://cssstats.com) to make sure that you're not including a multitude of CSS that doesn't actually get used.
 
 ## Development Notes
 
