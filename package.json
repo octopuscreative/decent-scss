@@ -1,6 +1,6 @@
 {
   "name": "decent-scss",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Set of utility classes – not just for prototyping!",
   "scripts": {
     "prepublish": "gulp styles"
@@ -22,8 +22,16 @@
     "gulp-stylelint": "^2.0.2"
   },
   "contributors": [
-    { "name" : "Chris Griffith" , "email" : "chris@chrisgriffith.co", "url" : "http://chrisgriffith.co" },
-    { "name" : "Sean Washington" , "email" : "hello@seanwash.com", "url" : "http://seanwash.com" }
+    {
+      "name": "Chris Griffith",
+      "email": "chris@chrisgriffith.co",
+      "url": "http://chrisgriffith.co"
+    },
+    {
+      "name": "Sean Washington",
+      "email": "hello@seanwash.com",
+      "url": "http://seanwash.com"
+    }
   ],
   "keywords": [
     "css",
@@ -39,7 +47,7 @@
     "url": "https://github.com/octopuscreative/decent-scss"
   },
   "bugs": {
-    "url" : "https://github.com/octopuscreative/decent-scss/issues"
+    "url": "https://github.com/octopuscreative/decent-scss/issues"
   },
   "license": {
     "type": "MIT",
