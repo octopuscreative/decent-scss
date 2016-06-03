@@ -2,6 +2,9 @@
   "name": "decent-scss",
   "version": "0.0.1",
   "description": "Set of utility classes – not just for prototyping!",
+  "scripts": {
+    "prepublish": "gulp styles"
+  },
   "devDependencies": {
     "browser-sync": "^2.9.10",
     "gulp": "^3.9.0",
