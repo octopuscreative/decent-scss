@@ -53,6 +53,7 @@ gulp.task('styles', function() {
     }))
     .on('error', gutil.log)
     .pipe(concat('decent.css'))
+    .pipe(minifyCSS())
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({stream: true}));
 });
