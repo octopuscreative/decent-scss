@@ -1,6 +1,6 @@
-# Octopus CSS Utilities
+# Decent.scss
 
-A collection of functional CSS utilities.
+A collection of functional CSS utilities as created by the folks at [Octop.us](http://octop.us).
 
 ## Setup
 
