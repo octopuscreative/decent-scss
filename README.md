@@ -10,8 +10,8 @@ If you're looking for a more elegant solution to including CSS from `node_module
 
 ## Usage
 
-[Class Reference](https://github.com/octopuscreative/scss-util/wiki)  
-[Example Usage](http://octopuscreative.github.io/scss-util/index.html)
+[Class Reference](https://github.com/octopuscreative/decent-scss/wiki)  
+[Example Usage](http://octopuscreative.github.io/decent-scss/index.html)
 
 ## Customizing
 
