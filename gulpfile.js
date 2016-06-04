@@ -11,19 +11,32 @@ var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer'),
     gulpSequence  = require('gulp-sequence').use(gulp),
     shell         = require('gulp-shell'),
-    plumber       = require('gulp-plumber');
+    plumber       = require('gulp-plumber'),
+    stylelint     = require('gulp-stylelint'),
+    cssstats      = require('gulp-cssstats');
 
 
 gulp.task('browserSync', function() {
   browserSync({
-    server: { baseDir: "./" },
+    server: { baseDir: './' },
     reloadDelay: 1000,
     notify: false
   });
 });
 
+gulp.task('stylelint', function() {
+  return gulp.src(['./modules/**/*.scss'])
+    .pipe(stylelint({
+      configFile: './.stylelintrc',
+      syntax: 'scss',
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }))
+});
+
 gulp.task('styles', function() {
-  return gulp.src('src/scss/init.scss')
+  return gulp.src('./modules/all.scss')
     .pipe(plumber({
       errorHandler: function (err) {
         console.log(err);
@@ -33,15 +46,17 @@ gulp.task('styles', function() {
     .pipe(sassGlob())
     .pipe(sass({
       errLogToConsole: true,
-      includePaths: [ 'src/scss/' ]
+      includePaths: [ './modules/' ]
     }))
     .pipe(autoprefixer({
       browsers: autoPrefixBrowserList,
       cascade:  true
     }))
     .on('error', gutil.log)
-    .pipe(concat('styles.css'))
-    .pipe(gulp.dest('src'))
+    .pipe(concat('decent.css'))
+    .pipe(minifyCSS())
+    .pipe(cssstats())
+    .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -53,30 +68,8 @@ gulp.task('html', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('clean-dist', shell.task([
-  'rm -rf ./dist'
-]));
-
-// Copy the util stylesheets to a distribution folder.
-gulp.task('copy-util', ['clean-dist'], function() {
-  gulp.src([
-    './src/*.css'
-  ])
-  .pipe(gulp.dest('./dist'));
-});
-
-// This is our master task when you run `gulp` in CLI / Terminal.
-// This is the main watcher to use when in active development, this will:
-//  - startup the web server.
-//  - start up browserSync.
-//  - compress all scripts and SCSS files.
-//  - watch files.
-//  - copy files to the dist folder.
-
-gulp.task('default', ['styles', 'browserSync', 'copy-util'], function() {
-  gulp.watch(['src/scripts/src/vendor/**', 'src/scripts/**/*.coffee'], ['scripts']);
-  gulp.watch('src/scss/**', ['styles', 'copy-util']);
-  gulp.watch('src/images/**', ['images']);
+gulp.task('default', ['styles', 'browserSync'], function() {
+  gulp.watch('src/scss/**', ['stylelint', 'styles']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });

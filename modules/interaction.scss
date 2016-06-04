@@ -1,0 +1,158 @@
+[class^='hover-'],
+[class*=' hover-'] {
+
+  // Lighten the target.
+  &[class*='lighten'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='lighten-target'] {
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='lighten-target'] {
+      opacity: 0.4;
+    }
+  }
+
+  // Darken the target.
+  &[class*='darken'] {
+
+    &[class*='target'],
+    [class*='darken-target'] {
+      opacity: 0.4;
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='darken-target'] {
+      opacity: 1;
+    }
+  }
+
+  // Flip.
+  &[class*='flip'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='flip-target'] {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='flip-target'] {
+      animation: flip 0.27s ease-in;
+    }
+  }
+
+  &[class*='scale'] {
+
+    &[class*='target'],
+    [class*='scale-target'] {
+      transform: scale(1) translade3d(0, 0, 0);
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='scale-target'] {
+      transform: scale(0.9);
+    }
+  }
+
+  // Complete transitions.
+  // Fade the target in.
+  &[class*='fadeIn'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeIn-target'] {
+      opacity: 0;
+
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='fadeIn-target'] {
+      opacity: 1;
+    }
+  }
+
+  // Fade the target in and up.
+  &[class*='fadeInUp'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeInUp-target'] {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+
+      transition: opacity 0.18s ease-in, transform 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='fadeInUp-target'] {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Fade the target in and down.
+  &[class*='fadeInDown'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='fadeInDown-target'] {
+      opacity: 0;
+      transform: translate3d(0, -10px, 0);
+
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='fadeInDown-target'] {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Slide the target down from the top
+  &[class*='slideInDown'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='slideInDown-target'] {
+      transform: translate3d(0, -100%, 0);
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='slideInDown-target'] {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Slide the target up from the bottom.
+  &[class*='slideInUp'] {
+    overflow: hidden;
+
+    &[class*='target'],
+    [class*='slideInUp-target'] {
+      transform: translate3d(0, 100%, 0);
+      transition: all 0.18s ease-in;
+    }
+
+    &[class*='target']:hover,
+    &:hover [class*='slideInUp-target'] {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+}
+
+@keyframes flip {
+  0% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -100%, 0); }
+  51% { transform: translate3d(0, 100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}

@@ -1,6 +1,11 @@
 $container-width: 90rem !default;
 $columns: 12 !default;
 
+$breakpoint-sm: '(min-width: 600px)' !default;
+$breakpoint-md: '(min-width: 768px)' !default;
+$breakpoint-lg: '(min-width: 1280px)' !default;
+$breakpoint-xl: '(min-width: 1440px)' !default;
+
 .clearfix {
   &::after {
     content: "";
@@ -12,7 +17,6 @@ $columns: 12 !default;
 .container {
   @extend .clearfix;
 
-  display: block;
   max-width: $container-width;
   margin-left: auto;
   margin-right: auto;
@@ -31,7 +35,10 @@ $columns: 12 !default;
   box-sizing: border-box;
 
   &[class*='right'] { float: right; }
-  &[class*='center'] { margin-left: auto; margin-right: auto; }
+  &[class*='center'] {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @for $i from 1 through $columns {

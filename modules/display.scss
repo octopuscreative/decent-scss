@@ -1,0 +1,142 @@
+$default-brand-height: 2rem !default;
+
+$length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+
+$breakpoint-sm: '(min-width: 600px)' !default;
+$breakpoint-md: '(min-width: 768px)' !default;
+$breakpoint-lg: '(min-width: 1280px)' !default;
+$breakpoint-xl: '(min-width: 1440px)' !default;
+
+// Keep elements in DOM for accessibility but hidden from view.
+.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  left: -300%;
+}
+
+// Almost all websites have a brand or logo in the header
+// and/or footer. Used this on an element with an image
+// to properly size the brand.
+.brand {
+  img {
+    height: $default-brand-height*0.75;
+
+    @media #{$breakpoint-md} {
+      height: $default-brand-height;
+    }
+  }
+}
+
+// Display properties.
+.d-inline-block { display: inline-block; }
+.d-block { display: block; }
+.d-none { display: none; }
+
+@media #{$breakpoint-sm} {
+  .d-sm-inline-block { display: inline-block; }
+  .d-sm-block { display: block; }
+  .d-sm-none { display: none; }
+}
+
+@media #{$breakpoint-md} {
+  .d-md-inline-block { display: inline-block; }
+  .d-md-block { display: block; }
+  .d-md-none { display: none; }
+}
+
+@media #{$breakpoint-lg} {
+  .d-lg-inline-block { display: inline-block; }
+  .d-lg-block { display: block; }
+  .d-lg-none { display: none; }
+}
+
+@media #{$breakpoint-xl} {
+  .d-xl-inline-block { display: inline-block; }
+  .d-xl-block { display: block; }
+  .d-xl-none { display: none; }
+}
+
+// Vertical align.
+.va-middle { vertical-align: middle; }
+.va-text-bottom { vertical-align: text-bottom; }
+
+// Percentage lengths.
+@each $increment in $length-increments {
+  .h-#{$increment} { height: $increment + 0%; }
+  .w-#{$increment} { width: $increment + 0%; }
+}
+
+@media #{$breakpoint-sm} {
+  @each $increment in $length-increments {
+    .h-sm-#{$increment} { height: $increment + 0%; }
+    .w-sm-#{$increment} { width: $increment + 0%; }
+  }
+}
+
+@media #{$breakpoint-md} {
+  @each $increment in $length-increments {
+    .h-md-#{$increment} { height: $increment + 0%; }
+    .w-md-#{$increment} { width: $increment + 0%; }
+  }
+}
+
+@media #{$breakpoint-lg} {
+  @each $increment in $length-increments {
+    .h-lg-#{$increment} { height: $increment + 0%; }
+    .w-lg-#{$increment} { width: $increment + 0%; }
+  }
+}
+
+@media #{$breakpoint-xl} {
+  @each $increment in $length-increments {
+    .h-xl-#{$increment} { height: $increment + 0%; }
+    .w-xl-#{$increment} { width: $increment + 0%; }
+  }
+}
+
+// Aspect ratios.
+[class^='ratio-'],
+[class*=' ratio-'] {
+  width: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+  }
+
+  & > *:not([class*='absolute']) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // Standard ratios.
+  &[class*='1_1']::before { padding-top: 100%; }
+  &[class*='1_2']::before { padding-top: 200%; }
+  &[class*='4_3']::before { padding-top: 75%; }
+  &[class*='5_3']::before { padding-top: 60%; }
+  &[class*='16_9']::before { padding-top: 56.25%; }
+  &[class*='21_9']::before { padding-top: 42.86%; }
+  &[class*='28_9']::before { padding-top: 32.14%; }
+  &[class*='36_9']::before { padding-top: 25%; }
+
+  &[class*='iphone6']::before { padding-top: 178%; }
+  // Thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
+}
+
+// Use an element to crop an image.
+.crop,
+[class^='crop-'],
+[class*=' crop-'] {
+  overflow: hidden;
+
+  img { width: 100%; }
+
+  &[class*='object-fit'] img {
+    min-height: 100%;
+    // https://css-tricks.com/almanac/properties/o/object-fit/
+    object-fit: cover;
+  }
+}

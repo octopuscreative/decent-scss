@@ -1,0 +1,140 @@
+// Apply relative positioning to an element.
+// Specifically a parent with absolutely positioned
+// children.
+.relative { position: relative; }
+
+// Absolute positioning.
+.absolute,
+[class^='absolute-'],
+[class*=' absolute-'] {
+  position: absolute;
+
+  &[class*='top'] { top: 0; }
+  &[class*='bottom'] { bottom: 0; }
+  &[class*='left'] { left: 0; }
+  &[class*='right'] { right: 0; }
+
+  &[class*='center'] {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &[class*='left-middle'] {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[class*='right-middle'] {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &[class*='center-middle'] {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+// Fixed positioning.
+.fixed,
+[class^='fixed-'],
+[class*=' fixed-'] {
+  position: fixed;
+
+  &[class*='top'] { top: 0; }
+  &[class*='bottom'] { bottom: 0; }
+  &[class*='left'] { left: 0; }
+  &[class*='right'] { right: 0; }
+
+  &[class*='left-middle'] {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[class*='right-middle'] {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &[class*='center-middle'] {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+// Width and height adjustments.
+.w-auto { width: auto; }
+.h-auto { height: auto; }
+
+@for $i from 1 through 10 {
+  .y-#{$i*10} { transform: translateY($i*10%); }
+  .yn-#{$i*10} { transform: translateY(-$i*10%); }
+  .x-#{$i*10} { transform: translateX($i*10%); }
+  .xn-#{$i*10} { transform: translateX(-$i*10%); }
+}
+
+@media #{$breakpoint-sm} {
+  .w-sm-auto { width: auto; }
+  .h-sm-auto { height: auto; }
+
+  @for $i from 1 through 10 {
+    .y-sm-#{$i*10} { transform: translateY($i*10%); }
+    .yn-sm-#{$i*10} { transform: translateY(-$i*10%); }
+    .x-sm-#{$i*10} { transform: translateX($i*10%); }
+    .xn-sm-#{$i*10} { transform: translateX(-$i*10%); }
+  }
+}
+
+@media #{$breakpoint-md} {
+  .w-md-auto { width: auto; }
+  .h-md-auto { height: auto; }
+
+  @for $i from 1 through 10 {
+    .y-md-#{$i*10} { transform: translateY($i*10%); }
+    .yn-md-#{$i*10} { transform: translateY(-$i*10%); }
+    .x-md-#{$i*10} { transform: translateX($i*10%); }
+    .xn-md-#{$i*10} { transform: translateX(-$i*10%); }
+  }
+}
+
+@media #{$breakpoint-lg} {
+  .w-lg-auto { width: auto; }
+  .h-lg-auto { height: auto; }
+
+  @for $i from 1 through 10 {
+    .y-lg-#{$i*10} { transform: translateY($i*10%); }
+    .yn-lg-#{$i*10} { transform: translateY(-$i*10%); }
+    .x-lg-#{$i*10} { transform: translateX($i*10%); }
+    .xn-lg-#{$i*10} { transform: translateX(-$i*10%); }
+  }
+}
+
+@media #{$breakpoint-xl} {
+  .w-xl-auto { width: auto; }
+  .h-xl-auto { height: auto; }
+
+  @for $i from 1 through 10 {
+    .y-xl-#{$i*10} { transform: translateY($i*10%); }
+    .yn-xl-#{$i*10} { transform: translateY(-$i*10%); }
+    .x-xl-#{$i*10} { transform: translateX($i*10%); }
+    .xn-xl-#{$i*10} { transform: translateX(-$i*10%); }
+  }
+}
+
+// Z-index.
+.z-10 { z-index: 1001; }
+.z-9 { z-index: 1000; }
+.z-8 { z-index: 999; }
+.z-7 { z-index: 998; }
+.z-6 { z-index: 101; }
+.z-5 { z-index: 100; }
+.z-4 { z-index: 999; }
+.z-3 { z-index: 998; }
+.z-2 { z-index: 100; }
+.z-1 { z-index: 99; }
+.z-0 { z-index: 0; }
+.zn-1 { z-index: -1; }

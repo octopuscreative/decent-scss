@@ -1,0 +1,34 @@
+$color-primary: #0bf !default;
+$color-secondary: #ff8740 !default;
+$color-success: #60aa53 !default;
+$color-error: #f00 !default;
+$color-warning: #e89414 !default;
+
+$greys: lighten(#000, 10%) lighten(#000, 24%) lighten(#000, 38%) lighten(#000, 52%) lighten(#000, 64%) lighten(#000, 78%) lighten(#000, 92%) lighten(#000, 98%) !default;
+
+.c-primary { color: $color-primary; }
+.c-secondary { color: $color-secondary; }
+.c-success { color: $color-success; }
+.c-warning { color: $color-warning; }
+.c-error { color: $color-error; }
+
+.cbg-primary { background-color: $color-primary; }
+.cbg-secondary { background-color: $color-secondary; }
+.cbg-success { background-color: $color-success; }
+.cbg-warning { background-color: $color-warning; }
+.cbg-error { background-color: $color-error; }
+
+.c-black { color: black; }
+.c-white { color: white; }
+
+.cbg-black { background-color: black; }
+.cbg-white { background-color: white; }
+
+@each $grey in $greys {
+  $i: index($greys, $grey);
+
+  // The use of g here notes that these colors are a part of
+  // the grays that are generated
+  .cg-#{$i} { color: $grey; }
+  .cbgg-#{$i} { background-color: $grey; }
+}
