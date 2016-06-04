@@ -12,7 +12,8 @@ var gulp          = require('gulp'),
     gulpSequence  = require('gulp-sequence').use(gulp),
     shell         = require('gulp-shell'),
     plumber       = require('gulp-plumber'),
-    stylelint     = require('gulp-stylelint');
+    stylelint     = require('gulp-stylelint'),
+    cssstats      = require('gulp-cssstats');
 
 
 gulp.task('browserSync', function() {
@@ -54,6 +55,7 @@ gulp.task('styles', function() {
     .on('error', gutil.log)
     .pipe(concat('decent.css'))
     .pipe(minifyCSS())
+    .pipe(cssstats())
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({stream: true}));
 });
