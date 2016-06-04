@@ -29,45 +29,30 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 }
 
 // Display properties.
-.d-inline-block {
-  display: inline-block;
-  vertical-align: middle;
-}
+.d-inline-block { display: inline-block; }
 .d-block { display: block; }
 .d-none { display: none; }
 
 @media #{$breakpoint-sm} {
-  .d-sm-inline-block {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  .d-sm-inline-block { display: inline-block; }
   .d-sm-block { display: block; }
   .d-sm-none { display: none; }
 }
 
 @media #{$breakpoint-md} {
-  .d-md-inline-block {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  .d-md-inline-block { display: inline-block; }
   .d-md-block { display: block; }
   .d-md-none { display: none; }
 }
 
 @media #{$breakpoint-lg} {
-  .d-lg-inline-block {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  .d-lg-inline-block { display: inline-block; }
   .d-lg-block { display: block; }
   .d-lg-none { display: none; }
 }
 
 @media #{$breakpoint-xl} {
-  .d-xl-inline-block {
-    display: inline-block;
-    vertical-align: middle;
-  }
+  .d-xl-inline-block { display: inline-block; }
   .d-xl-block { display: block; }
   .d-xl-none { display: none; }
 }
@@ -151,8 +136,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 
   &[class*='object-fit'] img {
     min-height: 100%;
+    // https://css-tricks.com/almanac/properties/o/object-fit/
     object-fit: cover;
   }
-
-  // https://css-tricks.com/almanac/properties/o/object-fit/
 }
