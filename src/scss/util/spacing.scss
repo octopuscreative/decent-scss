@@ -1,41 +1,42 @@
-$modifier: 0.75;
+$spacing-limit: 12 !default;
+$spacing-base: 0.5rem !default;
+$spacing-ratio: 1.5 !default;
 
-$rem_base: 16px !default;
-$ratio: 1.5 !default;
+$spacing-limit: $spacing-limit+1;
 
-@function whitespace_calculator($ratio, $i) {
+@function spacing_calculator($spacing-ratio, $i) {
 
-  $value: $ratio;
+  $value: $spacing-ratio;
 
   @if $i == 0 {
     $value: 0;
   }
 
   @if $i == -1 {
-    $value: -1/$ratio;
+    $value: -1/$spacing-ratio;
   }
 
   @if $i == 1 {
-    $value: 1/$ratio;
+    $value: 1/$spacing-ratio;
   }
 
   @if $i < -1 {
     @for $n from -2 to -1*($i) {
-      $value: -($value/$ratio);
+      $value: -($value/$spacing-ratio);
     }
   }
 
   @if $i > 1 {
     @for $n from 2 to $i {
-      $value: $value * $ratio;
+      $value: $value * $spacing-ratio;
     }
   }
 
   @return $value + rem;
 }
 
-@for $i from 0 to 19 {
-  $rem-value: whitespace_calculator($ratio, $i);
+@for $i from -$spacing-limit to $spacing-limit {
+  $rem-value: spacing_calculator($spacing-ratio, $i);
   .pm { padding: 0; }
   .p-#{$i} { padding: #{$rem-value}; }
   .pt-#{$i} { padding-top: #{$rem-value}; }
@@ -80,8 +81,8 @@ $ratio: 1.5 !default;
 }
 
 @media #{$breakpoint-sm} {
-  @for $i from 0 to 19 {
-    $rem-value: whitespace_calculator($ratio, $i);
+  @for $i from -$spacing-limit to $spacing-limit {
+    $rem-value: spacing_calculator($spacing-ratio, $i);
 
     @if $i >= 0 {
       .p-sm-#{$i} { padding: #{$rem-value}; }
@@ -129,8 +130,8 @@ $ratio: 1.5 !default;
 }
 
 @media #{$breakpoint-md} {
-  @for $i from 0 to 19 {
-    $rem-value: whitespace_calculator($ratio, $i);
+  @for $i from -$spacing-limit to $spacing-limit {
+    $rem-value: spacing_calculator($spacing-ratio, $i);
 
     @if $i >= 0 {
       .p-md-#{$i} { padding: #{$rem-value}; }
@@ -178,8 +179,8 @@ $ratio: 1.5 !default;
 }
 
 @media #{$breakpoint-lg} {
-  @for $i from 0 to 19 {
-    $rem-value: whitespace_calculator($ratio, $i);
+  @for $i from -$spacing-limit to $spacing-limit {
+    $rem-value: spacing_calculator($spacing-ratio, $i);
 
     @if $i >= 0 {
       .p-lg-#{$i} { padding: #{$rem-value}; }
@@ -227,8 +228,8 @@ $ratio: 1.5 !default;
 }
 
 @media #{$breakpoint-xl} {
-  @for $i from 0 to 19 {
-    $rem-value: whitespace_calculator($ratio, $i);
+  @for $i from -$spacing-limit to $spacing-limit {
+    $rem-value: spacing_calculator($spacing-ratio, $i);
 
     @if $i >= 0 {
       .p-xl-#{$i} { padding: #{$rem-value}; }
