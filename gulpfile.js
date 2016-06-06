@@ -55,9 +55,14 @@ gulp.task('styles', function() {
     .on('error', gutil.log)
     .pipe(concat('decent.css'))
     .pipe(minifyCSS())
-    .pipe(cssstats())
     .pipe(gulp.dest('css'))
     .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('stats', function() {
+  return gulp.src('./css/decent.css')
+  .pipe(cssstats())
+  .pipe(gulp.dest('css'))
 });
 
 // Refresh browser on html changes.
@@ -68,8 +73,8 @@ gulp.task('html', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('default', ['styles', 'browserSync'], function() {
-  gulp.watch('src/scss/**', ['stylelint', 'styles']);
+gulp.task('default', ['styles', 'stats', 'browserSync'], function() {
+  gulp.watch('src/scss/**', ['stylelint', 'styles', 'stats']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });

@@ -1,0 +1,30 @@
+@function whitespace_calculator($ratio, $i) {
+
+  $value: $ratio;
+
+  @if $i == 0 {
+    $value: 0;
+  }
+
+  @if $i == -1 {
+    $value: -1/$ratio;
+  }
+
+  @if $i == 1 {
+    $value: 1/$ratio;
+  }
+
+  @if $i < -1 {
+    @for $n from -2 to -1*($i) {
+      $value: -($value/$ratio);
+    }
+  }
+
+  @if $i > 1 {
+    @for $n from 2 to $i {
+      $value: $value * $ratio;
+    }
+  }
+
+  @return $value + rem;
+}

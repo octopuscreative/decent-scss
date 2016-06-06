@@ -1,3 +1,9 @@
+$breakpoint-sm: '(min-width: 600px)' !default;
+$breakpoint-md: '(min-width: 768px)' !default;
+$breakpoint-lg: '(min-width: 1280px)' !default;
+$breakpoint-xl: '(min-width: 1440px)' !default;
+
+
 // Apply relative positioning to an element.
 // Specifically a parent with absolutely positioned
 // children.
