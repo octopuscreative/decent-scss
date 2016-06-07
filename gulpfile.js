@@ -74,7 +74,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('default', ['styles', 'stats', 'browserSync'], function() {
-  gulp.watch('src/scss/**', ['stylelint', 'styles', 'stats']);
+  gulp.watch(['modules/**/*', 'fucntions/**/*'], ['stylelint', 'styles', 'stats']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });
