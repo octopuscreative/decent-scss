@@ -123,7 +123,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   &[class*='36_9']::before { padding-top: 25%; }
 
   &[class*='iphone6']::before { padding-top: 178%; }
-  // Thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
+  // Cool little trick thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
 }
 
 // Use an element to crop an image.
@@ -132,9 +132,9 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 [class*=' crop-'] {
   overflow: hidden;
 
-  img { width: 100%; }
+  &[class*='fit'] { width: 100%; }
 
-  &[class*='object-fit'] img {
+  &[class*='cover'] img {
     min-height: 100%;
     // https://css-tricks.com/almanac/properties/o/object-fit/
     object-fit: cover;
