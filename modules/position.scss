@@ -86,7 +86,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 [class*=' fixed-'] {
   position: fixed;
 
-    &[class*='top'] { top: 0; }
+  &[class*='top'] { top: 0; }
   &[class*='bottom'] { bottom: 0; }
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
@@ -115,7 +115,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     position: relative;
     
     @media #{$breakpoint-md} {
-      position: absolute;
+      position: fixed;
     }
   }
 
@@ -123,7 +123,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     position: relative;
     
     @media #{$breakpoint-sm} {
-      position: absolute;
+      position: fixed;
     }
   }
 
@@ -131,7 +131,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     position: relative;
     
     @media #{$breakpoint-md} {
-      position: absolute;
+      position: fixed;
     }
   }
 
@@ -139,7 +139,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     position: relative;
     
     @media #{$breakpoint-lg} {
-      position: absolute;
+      position: fixed;
     }
   }
 
@@ -147,7 +147,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     position: relative;
     
     @media #{$breakpoint-xl} {
-      position: absolute;
+      position: fixed;
     }
   }
 }
