@@ -1,7 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/
- * v2.0 | 20110126
- * License: none (public domain)
- */
+$reset-inputs: true !default;
 
 html,
 body,
@@ -88,6 +85,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-weight: normal;
   font-family: inherit;
   vertical-align: baseline;
 }
@@ -134,19 +132,18 @@ table {
   border-spacing: 0;
 }
 
-// Form Resets.
-input {
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  background: none;
-  box-shadow: none;
-}
-
-button {
-  appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  background: none;
-  box-shadow: none;
+@if $reset-inputs {
+  // Form Resets.
+  // This allows us to define the styles ourselves – except
+  // for radios and checkboxes where it may be useful to have 
+  // the native elements.
+  textarea,
+  input:not([type='radio']):not([type='checkbox']),
+  button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+    box-shadow: none;
+  }
 }
