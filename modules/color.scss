@@ -24,11 +24,17 @@ $greys: lighten(#000, 10%) lighten(#000, 24%) lighten(#000, 38%) lighten(#000, 5
 .cbg-black { background-color: black; }
 .cbg-white { background-color: white; }
 
+// Greys.
 @each $grey in $greys {
   $i: index($greys, $grey);
 
   // The use of g here notes that these colors are a part of
-  // the grays that are generated
+  // the greys that are generated
   .cg-#{$i} { color: $grey; }
   .cbgg-#{$i} { background-color: $grey; }
+}
+
+// Opacity.
+@for $i from 0 through 10 {
+  .a-#{$i} { opacity: $i/10; }
 }
