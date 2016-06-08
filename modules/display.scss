@@ -126,6 +126,12 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   // Cool little trick thanks to http://www.mademyday.de/css-height-equals-width-with-pure-css.html.
 }
 
+// Take control of your background images.
+[class^='bg-'],
+[class*=' bg-'] {
+  &[class*='cover'] { background-size: cover; }
+}
+
 // Use an element to crop an image.
 .crop,
 [class^='crop-'],
