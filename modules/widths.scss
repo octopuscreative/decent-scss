@@ -1,99 +1,63 @@
-$modifier: 0.75;
-$rem_base: 16px !default;
-$ratio: 1.5 !default;
-$step_begin: 10;
-$step_end: 20;
+$percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 
-@function whitespace-calculator($ratio, $i){
+// Based on the Golden Ratio – because it _feels_ good.
+$length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
 
-  $value: $ratio;
+@for $i from 1 through length($spacing-increments) {
+  $rem-value: nth($spacing-increments, $i) + rem;
 
-  @if $i == 0 {
-    $value: 0;
+  .w-#{$i} { width: #{$rem-value}; }
+  .minw-#{$i} { min-width: #{$rem-value}; }
+  .maxw-#{$i} { max-width: #{$rem-value}; }
+
+  @media #{$breakpoint-sm} {
+    .w-sm-#{$i} { width: #{$rem-value}; }
+    .minw-sm-#{$i} { min-width: #{$rem-value}; }
+    .maxw-sm-#{$i} { max-width: #{$rem-value}; }
   }
 
-  @if $i == -1 {
-    $value: -1/$ratio;
+  @media #{$breakpoint-md} {
+    .w-md-#{$i} { width: #{$rem-value}; }
+    .minw-md-#{$i} { min-width: #{$rem-value}; }
+    .maxw-md-#{$i} { max-width: #{$rem-value}; }
   }
 
-  @if $i == 1 {
-    $value: 1/$ratio;
+  @media #{$breakpoint-lg} {
+    .w-lg-#{$i} { width: #{$rem-value}; }
+    .minw-lg-#{$i} { min-width: #{$rem-value}; }
+    .maxw-lg-#{$i} { max-width: #{$rem-value}; }
   }
 
-  @if $i < -1 {
-    @for $n from -2 to -1*($i) {
-      $value: -($value/$ratio);
-    }
-  }
-
-  @if $i > 1 {
-    @for $n from 2 to $i {
-      $value: $value * $ratio;
-    }
-  }
-
-  @return $value + 0rem;
-}
-
-@for $i from $step_begin to $step_end {
-  $rem-value: whitespace-calculator($ratio, $i);
-
-  @if $i < 0 {}
-  @if $i >= 0 {
-    .w-#{$i} { width: #{$rem-value}; }
-    .minw-#{$i} { min-width: #{$rem-value}; }
-    .maxw-#{$i} { max-width: #{$rem-value}; }
+  @media #{$breakpoint-xl} {
+    .w-xl-#{$i} { width: #{$rem-value}; }
+    .minw-xl-#{$i} { min-width: #{$rem-value}; }
+    .maxw-xl-#{$i} { max-width: #{$rem-value}; }
   }
 }
 
-@media #{$breakpoint-sm} {
-  @for $i from $step_begin to $step_end {
-    $rem-value: whitespace-calculator($ratio, $i);
+// Percentage lengths.
+// `p` denotes percent.
+@each $increment in $percentage-length-increments {
+  .hp-#{$increment} { height: $increment + 0%; }
+  .wp-#{$increment} { width: $increment + 0%; }
 
-    @if $i < 0 {}
-    @if $i >= 0 {
-      .w-sm-#{$i} { width: #{$rem-value}; }
-      .minw-sm-#{$i} { min-width: #{$rem-value}; }
-      .maxw-sm-#{$i} { max-width: #{$rem-value}; }
-    }
+  @media #{$breakpoint-sm} {
+    .hp-sm-#{$increment} { height: $increment + 0%; }
+    .wp-sm-#{$increment} { width: $increment + 0%; }
   }
-}
 
-@media #{$breakpoint-md} {
-  @for $i from $step_begin to $step_end {
-    $rem-value: whitespace-calculator($ratio, $i);
-
-    @if $i < 0 {}
-    @if $i >= 0 {
-      .w-md-#{$i} { width: #{$rem-value}; }
-      .minw-md-#{$i} { min-width: #{$rem-value}; }
-      .maxw-md-#{$i} { max-width: #{$rem-value}; }
-    }
+  @media #{$breakpoint-md} {
+    .hp-md-#{$increment} { height: $increment + 0%; }
+    .wp-md-#{$increment} { width: $increment + 0%; }
   }
-}
 
-@media #{$breakpoint-lg} {
-  @for $i from $step_begin to $step_end {
-    $rem-value: whitespace-calculator($ratio, $i);
-
-    @if $i < 0 {}
-    @if $i >= 0 {
-      .w-lg-#{$i} { width: #{$rem-value}; }
-      .minw-lg-#{$i} { min-width: #{$rem-value}; }
-      .maxw-lg-#{$i} { max-width: #{$rem-value}; }
-    }
+  @media #{$breakpoint-lg} {
+    .hp-lg-#{$increment} { height: $increment + 0%; }
+    .wp-lg-#{$increment} { width: $increment + 0%; }
   }
-}
 
-@media #{$breakpoint-xl} {
-  @for $i from $step_begin to $step_end {
-    $rem-value: whitespace-calculator($ratio, $i);
-
-    @if $i < 0 {}
-    @if $i >= 0 {
-      .w-xl-#{$i} { width: #{$rem-value}; }
-      .minw-xl-#{$i} { min-width: #{$rem-value}; }
-      .maxw-xl-#{$i} { max-width: #{$rem-value}; }
-    }
+  @media #{$breakpoint-xl} {
+    .hp-xl-#{$increment} { height: $increment + 0%; }
+    .wp-xl-#{$increment} { width: $increment + 0%; }
   }
 }

@@ -1,7 +1,5 @@
 $default-brand-height: 2rem !default;
 
-$length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
-
 $breakpoint-sm: '(min-width: 600px)' !default;
 $breakpoint-md: '(min-width: 768px)' !default;
 $breakpoint-lg: '(min-width: 1280px)' !default;
@@ -60,40 +58,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 // Vertical align.
 .va-middle { vertical-align: middle; }
 .va-text-bottom { vertical-align: text-bottom; }
-
-// Percentage lengths.
-@each $increment in $length-increments {
-  .h-#{$increment} { height: $increment + 0%; }
-  .w-#{$increment} { width: $increment + 0%; }
-}
-
-@media #{$breakpoint-sm} {
-  @each $increment in $length-increments {
-    .h-sm-#{$increment} { height: $increment + 0%; }
-    .w-sm-#{$increment} { width: $increment + 0%; }
-  }
-}
-
-@media #{$breakpoint-md} {
-  @each $increment in $length-increments {
-    .h-md-#{$increment} { height: $increment + 0%; }
-    .w-md-#{$increment} { width: $increment + 0%; }
-  }
-}
-
-@media #{$breakpoint-lg} {
-  @each $increment in $length-increments {
-    .h-lg-#{$increment} { height: $increment + 0%; }
-    .w-lg-#{$increment} { width: $increment + 0%; }
-  }
-}
-
-@media #{$breakpoint-xl} {
-  @each $increment in $length-increments {
-    .h-xl-#{$increment} { height: $increment + 0%; }
-    .w-xl-#{$increment} { width: $increment + 0%; }
-  }
-}
 
 // Aspect ratios.
 [class^='ratio-'],
