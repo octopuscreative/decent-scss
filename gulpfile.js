@@ -36,7 +36,7 @@ gulp.task('stylelint', function() {
 });
 
 gulp.task('styles', function() {
-  return gulp.src('./modules/all.scss')
+  return gulp.src('modules/all.scss')
     .pipe(plumber({
       errorHandler: function (err) {
         console.log(err);
@@ -55,7 +55,7 @@ gulp.task('styles', function() {
     .on('error', gutil.log)
     .pipe(concat('decent.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('./css'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -74,7 +74,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('default', ['styles', 'stats', 'browserSync'], function() {
-  gulp.watch(['modules/**/*', 'fucntions/**/*'], ['stylelint', 'styles', 'stats']);
+  gulp.watch(['./modules/**/*', './functions/**/*'], ['stylelint', 'styles', 'stats']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();
 });

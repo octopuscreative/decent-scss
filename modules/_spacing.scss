@@ -20,201 +20,201 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
   }
 
   .m-#{$i} { margin: $rem-value; }
-  .mn-#{$i} { margin: -$rem-value; }
+  .mn-#{$i} { margin: -1*$rem-value; }
   .mt-#{$i} { margin-top: $rem-value; }
-  .mtn-#{$i} { margin-top: -$rem-value; }
+  .mtn-#{$i} { margin-top: -1*$rem-value; }
   .mr-#{$i} { margin-right: $rem-value; }
-  .mrn-#{$i} { margin-right: -$rem-value; }
+  .mrn-#{$i} { margin-right: -1*$rem-value; }
   .mb-#{$i} { margin-bottom: $rem-value; }
-  .mbn-#{$i} { margin-bottom: -$rem-value; }
+  .mbn-#{$i} { margin-bottom: -1*$rem-value; }
   .ml-#{$i} { margin-left: $rem-value; }
-  .mln-#{$i} { margin-left: -$rem-value; }
+  .mln-#{$i} { margin-left: -1*$rem-value; }
   .mx-#{$i} {
     margin-left: $rem-value;
     margin-right: $rem-value;
   }
   .mxn-#{$i} {
-    margin-left: -$rem-value;
-    margin-right: -$rem-value;
+    margin-left: -1*$rem-value;
+    margin-right: -1*$rem-value;
   }
   .my-#{$i} {
     margin-top: $rem-value;
     margin-bottom: $rem-value;
   }
   .myn-#{$i} {
-    margin-top: -$rem-value;
-    margin-bottom: -$rem-value;
+    margin-top: -1*$rem-value;
+    margin-bottom: -1*$rem-value;
   }
 
   @media #{$breakpoint-sm} {
-    .p-sm-#{$i} { padding: #{$rem-value}; }
-    .pt-sm-#{$i} { padding-top: #{$rem-value}; }
-    .pr-sm-#{$i} { padding-right: #{$rem-value}; }
-    .pb-sm-#{$i} { padding-bottom: #{$rem-value}; }
-    .pl-sm-#{$i} { padding-left: #{$rem-value}; }
+    .p-sm-#{$i} { padding: $rem-value; }
+    .pt-sm-#{$i} { padding-top: $rem-value; }
+    .pr-sm-#{$i} { padding-right: $rem-value; }
+    .pb-sm-#{$i} { padding-bottom: $rem-value; }
+    .pl-sm-#{$i} { padding-left: $rem-value; }
     .px-sm-#{$i} {
-      padding-left: #{$rem-value};
-      padding-right: #{$rem-value};
+      padding-left: $rem-value;
+      padding-right: $rem-value;
     }
     .py-sm-#{$i} {
-      padding-top: #{$rem-value};
-      padding-bottom: #{$rem-value};
+      padding-top: $rem-value;
+      padding-bottom: $rem-value;
     }
 
-    .m-sm-#{$i} { margin: #{$rem-value}; }
-    .mn-sm-#{$i} { margin: -#{$rem-value}; }
-    .mt-sm-#{$i} { margin-top: #{$rem-value}; }
-    .mtn-sm-#{$i} { margin-top: -#{$rem-value}; }
-    .mr-sm-#{$i} { margin-right: #{$rem-value}; }
-    .mrn-sm-#{$i} { margin-right: -#{$rem-value}; }
-    .mb-sm-#{$i} { margin-bottom: #{$rem-value}; }
-    .mbn-sm-#{$i} { margin-bottom: -#{$rem-value}; }
-    .ml-sm-#{$i} { margin-left: #{$rem-value}; }
-    .mln-sm-#{$i} { margin-left: -#{$rem-value}; }
+    .m-sm-#{$i} { margin: $rem-value; }
+    .mn-sm-#{$i} { margin: -1*$rem-value; }
+    .mt-sm-#{$i} { margin-top: $rem-value; }
+    .mtn-sm-#{$i} { margin-top: -1*$rem-value; }
+    .mr-sm-#{$i} { margin-right: $rem-value; }
+    .mrn-sm-#{$i} { margin-right: -1*$rem-value; }
+    .mb-sm-#{$i} { margin-bottom: $rem-value; }
+    .mbn-sm-#{$i} { margin-bottom: -1*$rem-value; }
+    .ml-sm-#{$i} { margin-left: $rem-value; }
+    .mln-sm-#{$i} { margin-left: -1*$rem-value; }
     .mx-sm-#{$i} {
-      margin-left: #{$rem-value};
-      margin-right: #{$rem-value};
+      margin-left: $rem-value;
+      margin-right: $rem-value;
     }
     .mxn-sm-#{$i} {
-      margin-left: -#{$rem-value};
-      margin-right: -#{$rem-value};
+      margin-left: -1*$rem-value;
+      margin-right: -1*$rem-value;
     }
     .my-sm-#{$i} {
-      margin-top: #{$rem-value};
-      margin-bottom: #{$rem-value};
+      margin-top: $rem-value;
+      margin-bottom: $rem-value;
     }
     .myn-sm-#{$i} {
-      margin-top: -#{$rem-value};
-      margin-bottom: -#{$rem-value};
+      margin-top: -1*$rem-value;
+      margin-bottom: -1*$rem-value;
     }
   }
 
   @media #{$breakpoint-md} {
-    .p-md-#{$i} { padding: #{$rem-value}; }
-    .pt-md-#{$i} { padding-top: #{$rem-value}; }
-    .pr-md-#{$i} { padding-right: #{$rem-value}; }
-    .pb-md-#{$i} { padding-bottom: #{$rem-value}; }
-    .pl-md-#{$i} { padding-left: #{$rem-value}; }
+    .p-md-#{$i} { padding: $rem-value; }
+    .pt-md-#{$i} { padding-top: $rem-value; }
+    .pr-md-#{$i} { padding-right: $rem-value; }
+    .pb-md-#{$i} { padding-bottom: $rem-value; }
+    .pl-md-#{$i} { padding-left: $rem-value; }
     .px-md-#{$i} {
-      padding-left: #{$rem-value};
-      padding-right: #{$rem-value};
+      padding-left: $rem-value;
+      padding-right: $rem-value;
     }
     .py-md-#{$i} {
-      padding-top: #{$rem-value};
-      padding-bottom: #{$rem-value};
+      padding-top: $rem-value;
+      padding-bottom: $rem-value;
     }
 
-    .m-md-#{$i} { margin: #{$rem-value}; }
-    .mn-md-#{$i} { margin: -#{$rem-value}; }
-    .mt-md-#{$i} { margin-top: #{$rem-value}; }
-    .mtn-md-#{$i} { margin-top: -#{$rem-value}; }
-    .mr-md-#{$i} { margin-right: #{$rem-value}; }
-    .mrn-md-#{$i} { margin-right: -#{$rem-value}; }
-    .mb-md-#{$i} { margin-bottom: #{$rem-value}; }
-    .mbn-md-#{$i} { margin-bottom: -#{$rem-value}; }
-    .ml-md-#{$i} { margin-left: #{$rem-value}; }
-    .mln-md-#{$i} { margin-left: -#{$rem-value}; }
+    .m-md-#{$i} { margin: $rem-value; }
+    .mn-md-#{$i} { margin: -1*$rem-value; }
+    .mt-md-#{$i} { margin-top: $rem-value; }
+    .mtn-md-#{$i} { margin-top: -1*$rem-value; }
+    .mr-md-#{$i} { margin-right: $rem-value; }
+    .mrn-md-#{$i} { margin-right: -1*$rem-value; }
+    .mb-md-#{$i} { margin-bottom: $rem-value; }
+    .mbn-md-#{$i} { margin-bottom: -1*$rem-value; }
+    .ml-md-#{$i} { margin-left: $rem-value; }
+    .mln-md-#{$i} { margin-left: -1*$rem-value; }
     .mx-md-#{$i} {
-      margin-left: #{$rem-value};
-      margin-right: #{$rem-value};
+      margin-left: $rem-value;
+      margin-right: $rem-value;
     }
     .mxn-md-#{$i} {
-      margin-left: -#{$rem-value};
-      margin-right: -#{$rem-value};
+      margin-left: -1*$rem-value;
+      margin-right: -1*$rem-value;
     }
     .my-md-#{$i} {
-      margin-top: #{$rem-value};
-      margin-bottom: #{$rem-value};
+      margin-top: $rem-value;
+      margin-bottom: $rem-value;
     }
     .myn-md-#{$i} {
-      margin-top: -#{$rem-value};
-      margin-bottom: -#{$rem-value};
+      margin-top: -1*$rem-value;
+      margin-bottom: -1*$rem-value;
     }
   }
 
   @media #{$breakpoint-lg} {
-    .p-lg-#{$i} { padding: #{$rem-value}; }
-    .pt-lg-#{$i} { padding-top: #{$rem-value}; }
-    .pr-lg-#{$i} { padding-right: #{$rem-value}; }
-    .pb-lg-#{$i} { padding-bottom: #{$rem-value}; }
-    .pl-lg-#{$i} { padding-left: #{$rem-value}; }
+    .p-lg-#{$i} { padding: $rem-value; }
+    .pt-lg-#{$i} { padding-top: $rem-value; }
+    .pr-lg-#{$i} { padding-right: $rem-value; }
+    .pb-lg-#{$i} { padding-bottom: $rem-value; }
+    .pl-lg-#{$i} { padding-left: $rem-value; }
     .px-lg-#{$i} {
-      padding-left: #{$rem-value};
-      padding-right: #{$rem-value};
+      padding-left: $rem-value;
+      padding-right: $rem-value;
     }
     .py-lg-#{$i} {
-      padding-top: #{$rem-value};
-      padding-bottom: #{$rem-value};
+      padding-top: $rem-value;
+      padding-bottom: $rem-value;
     }
 
-    .m-lg-#{$i} { margin: #{$rem-value}; }
-    .mn-lg-#{$i} { margin: -#{$rem-value}; }
-    .mt-lg-#{$i} { margin-top: #{$rem-value}; }
-    .mtn-lg-#{$i} { margin-top: -#{$rem-value}; }
-    .mr-lg-#{$i} { margin-right: #{$rem-value}; }
-    .mrn-lg-#{$i} { margin-right: -#{$rem-value}; }
-    .mb-lg-#{$i} { margin-bottom: #{$rem-value}; }
-    .mbn-lg-#{$i} { margin-bottom: -#{$rem-value}; }
-    .ml-lg-#{$i} { margin-left: #{$rem-value}; }
-    .mln-lg-#{$i} { margin-left: -#{$rem-value}; }
+    .m-lg-#{$i} { margin: $rem-value; }
+    .mn-lg-#{$i} { margin: -1*$rem-value; }
+    .mt-lg-#{$i} { margin-top: $rem-value; }
+    .mtn-lg-#{$i} { margin-top: -1*$rem-value; }
+    .mr-lg-#{$i} { margin-right: $rem-value; }
+    .mrn-lg-#{$i} { margin-right: -1*$rem-value; }
+    .mb-lg-#{$i} { margin-bottom: $rem-value; }
+    .mbn-lg-#{$i} { margin-bottom: -1*$rem-value; }
+    .ml-lg-#{$i} { margin-left: $rem-value; }
+    .mln-lg-#{$i} { margin-left: -1*$rem-value; }
     .mx-lg-#{$i} {
-      margin-left: #{$rem-value};
-      margin-right: #{$rem-value};
+      margin-left: $rem-value;
+      margin-right: $rem-value;
     }
     .mxn-lg-#{$i} {
-      margin-left: -#{$rem-value};
-      margin-right: -#{$rem-value};
+      margin-left: -1*$rem-value;
+      margin-right: -1*$rem-value;
     }
     .my-lg-#{$i} {
-      margin-top: #{$rem-value};
-      margin-bottom: #{$rem-value};
+      margin-top: $rem-value;
+      margin-bottom: $rem-value;
     }
     .myn-lg-#{$i} {
-      margin-top: -#{$rem-value};
-      margin-bottom: -#{$rem-value};
+      margin-top: -1*$rem-value;
+      margin-bottom: -1*$rem-value;
     }
   }
 
   @media #{$breakpoint-xl} {
-    .p-xl-#{$i} { padding: #{$rem-value}; }
-    .pt-xl-#{$i} { padding-top: #{$rem-value}; }
-    .pr-xl-#{$i} { padding-right: #{$rem-value}; }
-    .pb-xl-#{$i} { padding-bottom: #{$rem-value}; }
-    .pl-xl-#{$i} { padding-left: #{$rem-value}; }
+    .p-xl-#{$i} { padding: $rem-value; }
+    .pt-xl-#{$i} { padding-top: $rem-value; }
+    .pr-xl-#{$i} { padding-right: $rem-value; }
+    .pb-xl-#{$i} { padding-bottom: $rem-value; }
+    .pl-xl-#{$i} { padding-left: $rem-value; }
     .px-xl-#{$i} {
-      padding-left: #{$rem-value};
-      padding-right: #{$rem-value};
+      padding-left: $rem-value;
+      padding-right: $rem-value;
     }
     .py-xl-#{$i} {
-      padding-top: #{$rem-value};
-      padding-bottom: #{$rem-value};
+      padding-top: $rem-value;
+      padding-bottom: $rem-value;
     }
 
-    .m-xl-#{$i} { margin: #{$rem-value}; }
-    .mn-xl-#{$i} { margin: -#{$rem-value}; }
-    .mt-xl-#{$i} { margin-top: #{$rem-value}; }
-    .mtn-xl-#{$i} { margin-top: -#{$rem-value}; }
-    .mr-xl-#{$i} { margin-right: #{$rem-value}; }
-    .mrn-xl-#{$i} { margin-right: -#{$rem-value}; }
-    .mb-xl-#{$i} { margin-bottom: #{$rem-value}; }
-    .mbn-xl-#{$i} { margin-bottom: -#{$rem-value}; }
-    .ml-xl-#{$i} { margin-left: #{$rem-value}; }
-    .mln-xl-#{$i} { margin-left: -#{$rem-value}; }
+    .m-xl-#{$i} { margin: $rem-value; }
+    .mn-xl-#{$i} { margin: -1*$rem-value; }
+    .mt-xl-#{$i} { margin-top: $rem-value; }
+    .mtn-xl-#{$i} { margin-top: -1*$rem-value; }
+    .mr-xl-#{$i} { margin-right: $rem-value; }
+    .mrn-xl-#{$i} { margin-right: -1*$rem-value; }
+    .mb-xl-#{$i} { margin-bottom: $rem-value; }
+    .mbn-xl-#{$i} { margin-bottom: -1*$rem-value; }
+    .ml-xl-#{$i} { margin-left: $rem-value; }
+    .mln-xl-#{$i} { margin-left: -1*$rem-value; }
     .mx-xl-#{$i} {
-      margin-left: #{$rem-value};
-      margin-right: #{$rem-value};
+      margin-left: $rem-value;
+      margin-right: $rem-value;
     }
     .mxn-xl-#{$i} {
-      margin-left: -#{$rem-value};
-      margin-right: -#{$rem-value};
+      margin-left: -1*$rem-value;
+      margin-right: -1*$rem-value;
     }
     .my-xl-#{$i} {
-      margin-top: #{$rem-value};
-      margin-bottom: #{$rem-value};
+      margin-top: $rem-value;
+      margin-bottom: $rem-value;
     }
     .myn-xl-#{$i} {
-      margin-top: -#{$rem-value};
-      margin-bottom: -#{$rem-value};
+      margin-top: -1*$rem-value;
+      margin-bottom: -1*$rem-value;
     }
   }
 }
