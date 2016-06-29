@@ -3,8 +3,8 @@ $default-border-radius: 2px !default;
 $default-border-weight: 1px !default;
 $thick-border-weight: $default-border-weight*2 !default;
 
-$default-border-color: #e8e9eb;
-$default-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+$default-border-color: #e8e9eb !default;
+$default-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1) !default;
 
 $color-primary: #0bf !default;
 $color-secondary: #ff8740 !default;
