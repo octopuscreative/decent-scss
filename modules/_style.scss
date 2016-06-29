@@ -82,10 +82,7 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
 
 [class^='rounded-'],
 [class*=' rounded-'] {
-  &[class*='top-left'] { border-top-left-radius: $default-border-radius; }
-  &[class*='top-right'] { border-top-right-radius: $default-border-radius; }
-  &[class*='bottom-right'] { border-bottom-right-radius: $default-border-radius; }
-  &[class*='bottom-left'] { border-bottom-left-radius: $default-border-radius; }
+  border-radius: 0;
 
   &[class*='left'] {
     border-top-left-radius: $default-border-radius;
@@ -96,4 +93,25 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
     border-top-right-radius: $default-border-radius;
     border-bottom-right-radius: $default-border-radius;
   }
+
+  &[class*='top-left'] {
+    border-top-left-radius: $default-border-radius;
+    border-bottom-left-radius: 0;
+  }
+
+  &[class*='top-right'] {
+    border-top-right-radius: $default-border-radius;
+    border-bottom-right-radius: 0;
+  }
+
+  &[class*='bottom-right'] {
+    border-bottom-right-radius: $default-border-radius;
+    border-top-left-radius: 0;
+  }
+
+  &[class*='bottom-left'] {
+    border-bottom-left-radius: $default-border-radius;
+    border-top-right-radius: 0;
+  }
+
 }
