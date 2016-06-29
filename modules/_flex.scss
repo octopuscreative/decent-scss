@@ -15,12 +15,15 @@ $breakpoint-lg: '(min-width: 64em)' !default;
 .flex-start { align-items: flex-start; }
 .flex-end { align-items: flex-end; }
 
-// Item alignment
+// Items alignment
 .items-center { align-items: center; }
 .items-baseline { align-items: baseline; }
 .items-stretch { align-items: stretch; }
 .items-start { align-items: flex-start; }
 .items-end { align-items: flex-end; }
+
+// Item Alignment
+.item-right { margin-left: auto; }
 
 // Self Alignment
 .self-center { align-self: center; }
