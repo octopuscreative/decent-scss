@@ -1,9 +1,37 @@
 // Based on the Golden Ratio – because it _feels_ good.
 $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
 
-// Overrides.
-.p-0 { padding: 0 !important; }
-.m-0 { margin: 0 !important; }
+.p-0 { padding: 0; }
+.pt-0 { padding-top: 0; }
+.pr-0 { padding-right: 0; }
+.pb-0 { padding-bottom: 0; }
+.pl-0 { padding-left: 0; }
+
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mr-0 { margin-right: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 @for $i from 1 through length($spacing-increments) {
   $rem-value: nth($spacing-increments, $i) + rem;
@@ -23,33 +51,67 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
   }
 
   .m-#{$i} { margin: $rem-value; }
-  .mn-#{$i} { margin: -1*$rem-value; }
+  .mn-#{$i} { margin: -1*($rem-value); }
   .mt-#{$i} { margin-top: $rem-value; }
-  .mtn-#{$i} { margin-top: -1*$rem-value; }
+  .mtn-#{$i} { margin-top: -1*($rem-value); }
   .mr-#{$i} { margin-right: $rem-value; }
-  .mrn-#{$i} { margin-right: -1*$rem-value; }
+  .mrn-#{$i} { margin-right: -1*($rem-value); }
   .mb-#{$i} { margin-bottom: $rem-value; }
-  .mbn-#{$i} { margin-bottom: -1*$rem-value; }
+  .mbn-#{$i} { margin-bottom: -1*($rem-value); }
   .ml-#{$i} { margin-left: $rem-value; }
-  .mln-#{$i} { margin-left: -1*$rem-value; }
+  .mln-#{$i} { margin-left: -1*($rem-value); }
   .mx-#{$i} {
     margin-left: $rem-value;
     margin-right: $rem-value;
   }
   .mxn-#{$i} {
-    margin-left: -1*$rem-value;
-    margin-right: -1*$rem-value;
+    margin-left: -1*($rem-value);
+    margin-right: -1*($rem-value);
   }
   .my-#{$i} {
     margin-top: $rem-value;
     margin-bottom: $rem-value;
   }
   .myn-#{$i} {
-    margin-top: -1*$rem-value;
-    margin-bottom: -1*$rem-value;
+    margin-top: -1*($rem-value);
+    margin-bottom: -1*($rem-value);
+  }
+}
+
+@media #{$breakpoint-sm} {
+
+  .p-sm-0 { padding: 0; }
+  .pt-sm-0 { padding-top: 0; }
+  .pr-sm-0 { padding-right: 0; }
+  .pb-sm-0 { padding-bottom: 0; }
+  .pl-sm-0 { padding-left: 0; }
+  .px-sm-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .py-sm-0 {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  @media #{$breakpoint-sm} {
+  .m-sm-0 { margin: 0; }
+  .mt-sm-0 { margin-top: 0; }
+  .mr-sm-0 { margin-right: 0; }
+  .mb-sm-0 { margin-bottom: 0; }
+  .ml-sm-0 { margin-left: 0; }
+  .mx-sm-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .my-sm-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through length($spacing-increments) {
+
+    $rem-value: nth($spacing-increments, $i) + rem;
+
     .p-sm-#{$i} { padding: $rem-value; }
     .pt-sm-#{$i} { padding-top: $rem-value; }
     .pr-sm-#{$i} { padding-right: $rem-value; }
@@ -65,34 +127,67 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
     }
 
     .m-sm-#{$i} { margin: $rem-value; }
-    .mn-sm-#{$i} { margin: -1*$rem-value; }
+    .mn-sm-#{$i} { margin: -1*($rem-value); }
     .mt-sm-#{$i} { margin-top: $rem-value; }
-    .mtn-sm-#{$i} { margin-top: -1*$rem-value; }
+    .mtn-sm-#{$i} { margin-top: -1*($rem-value); }
     .mr-sm-#{$i} { margin-right: $rem-value; }
-    .mrn-sm-#{$i} { margin-right: -1*$rem-value; }
+    .mrn-sm-#{$i} { margin-right: -1*($rem-value); }
     .mb-sm-#{$i} { margin-bottom: $rem-value; }
-    .mbn-sm-#{$i} { margin-bottom: -1*$rem-value; }
+    .mbn-sm-#{$i} { margin-bottom: -1*($rem-value); }
     .ml-sm-#{$i} { margin-left: $rem-value; }
-    .mln-sm-#{$i} { margin-left: -1*$rem-value; }
+    .mln-sm-#{$i} { margin-left: -1*($rem-value); }
     .mx-sm-#{$i} {
       margin-left: $rem-value;
       margin-right: $rem-value;
     }
     .mxn-sm-#{$i} {
-      margin-left: -1*$rem-value;
-      margin-right: -1*$rem-value;
+      margin-left: -1*($rem-value);
+      margin-right: -1*($rem-value);
     }
     .my-sm-#{$i} {
       margin-top: $rem-value;
       margin-bottom: $rem-value;
     }
     .myn-sm-#{$i} {
-      margin-top: -1*$rem-value;
-      margin-bottom: -1*$rem-value;
+      margin-top: -1*($rem-value);
+      margin-bottom: -1*($rem-value);
     }
   }
+}
 
-  @media #{$breakpoint-md} {
+@media #{$breakpoint-md} {
+
+  .p-md-0 { padding: 0; }
+  .pt-md-0 { padding-top: 0; }
+  .pr-md-0 { padding-right: 0; }
+  .pb-md-0 { padding-bottom: 0; }
+  .pl-md-0 { padding-left: 0; }
+  .px-md-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .py-md-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .m-md-0 { margin: 0; }
+  .mt-md-0 { margin-top: 0; }
+  .mr-md-0 { margin-right: 0; }
+  .mb-md-0 { margin-bottom: 0; }
+  .ml-md-0 { margin-left: 0; }
+  .mx-md-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .my-md-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through length($spacing-increments) {
+    $rem-value: nth($spacing-increments, $i) + rem;
+
     .p-md-#{$i} { padding: $rem-value; }
     .pt-md-#{$i} { padding-top: $rem-value; }
     .pr-md-#{$i} { padding-right: $rem-value; }
@@ -108,34 +203,66 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
     }
 
     .m-md-#{$i} { margin: $rem-value; }
-    .mn-md-#{$i} { margin: -1*$rem-value; }
+    .mn-md-#{$i} { margin: -1*($rem-value); }
     .mt-md-#{$i} { margin-top: $rem-value; }
-    .mtn-md-#{$i} { margin-top: -1*$rem-value; }
+    .mtn-md-#{$i} { margin-top: -1*($rem-value); }
     .mr-md-#{$i} { margin-right: $rem-value; }
-    .mrn-md-#{$i} { margin-right: -1*$rem-value; }
+    .mrn-md-#{$i} { margin-right: -1*($rem-value); }
     .mb-md-#{$i} { margin-bottom: $rem-value; }
-    .mbn-md-#{$i} { margin-bottom: -1*$rem-value; }
+    .mbn-md-#{$i} { margin-bottom: -1*($rem-value); }
     .ml-md-#{$i} { margin-left: $rem-value; }
-    .mln-md-#{$i} { margin-left: -1*$rem-value; }
+    .mln-md-#{$i} { margin-left: -1*($rem-value); }
     .mx-md-#{$i} {
       margin-left: $rem-value;
       margin-right: $rem-value;
     }
     .mxn-md-#{$i} {
-      margin-left: -1*$rem-value;
-      margin-right: -1*$rem-value;
+      margin-left: -1*($rem-value);
+      margin-right: -1*($rem-value);
     }
     .my-md-#{$i} {
       margin-top: $rem-value;
       margin-bottom: $rem-value;
     }
     .myn-md-#{$i} {
-      margin-top: -1*$rem-value;
-      margin-bottom: -1*$rem-value;
+      margin-top: -1*($rem-value);
+      margin-bottom: -1*($rem-value);
     }
   }
+}
 
-  @media #{$breakpoint-lg} {
+@media #{$breakpoint-lg} {
+  .p-lg-0 { padding: 0; }
+  .pt-lg-0 { padding-top: 0; }
+  .pr-lg-0 { padding-right: 0; }
+  .pb-lg-0 { padding-bottom: 0; }
+  .pl-lg-0 { padding-left: 0; }
+  .px-lg-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .py-lg-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .m-lg-0 { margin: 0; }
+  .mt-lg-0 { margin-top: 0; }
+  .mr-lg-0 { margin-right: 0; }
+  .mb-lg-0 { margin-bottom: 0; }
+  .ml-lg-0 { margin-left: 0; }
+  .mx-lg-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .my-lg-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through length($spacing-increments) {
+    $rem-value: nth($spacing-increments, $i) + rem;
+
     .p-lg-#{$i} { padding: $rem-value; }
     .pt-lg-#{$i} { padding-top: $rem-value; }
     .pr-lg-#{$i} { padding-right: $rem-value; }
@@ -151,34 +278,66 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
     }
 
     .m-lg-#{$i} { margin: $rem-value; }
-    .mn-lg-#{$i} { margin: -1*$rem-value; }
+    .mn-lg-#{$i} { margin: -1*($rem-value); }
     .mt-lg-#{$i} { margin-top: $rem-value; }
-    .mtn-lg-#{$i} { margin-top: -1*$rem-value; }
+    .mtn-lg-#{$i} { margin-top: -1*($rem-value); }
     .mr-lg-#{$i} { margin-right: $rem-value; }
-    .mrn-lg-#{$i} { margin-right: -1*$rem-value; }
+    .mrn-lg-#{$i} { margin-right: -1*($rem-value); }
     .mb-lg-#{$i} { margin-bottom: $rem-value; }
-    .mbn-lg-#{$i} { margin-bottom: -1*$rem-value; }
+    .mbn-lg-#{$i} { margin-bottom: -1*($rem-value); }
     .ml-lg-#{$i} { margin-left: $rem-value; }
-    .mln-lg-#{$i} { margin-left: -1*$rem-value; }
+    .mln-lg-#{$i} { margin-left: -1*($rem-value); }
     .mx-lg-#{$i} {
       margin-left: $rem-value;
       margin-right: $rem-value;
     }
     .mxn-lg-#{$i} {
-      margin-left: -1*$rem-value;
-      margin-right: -1*$rem-value;
+      margin-left: -1*($rem-value);
+      margin-right: -1*($rem-value);
     }
     .my-lg-#{$i} {
       margin-top: $rem-value;
       margin-bottom: $rem-value;
     }
     .myn-lg-#{$i} {
-      margin-top: -1*$rem-value;
-      margin-bottom: -1*$rem-value;
+      margin-top: -1*($rem-value);
+      margin-bottom: -1*($rem-value);
     }
   }
+}
 
-  @media #{$breakpoint-xl} {
+@media #{$breakpoint-xl} {
+  .p-xl-0 { padding: 0; }
+  .pt-xl-0 { padding-top: 0; }
+  .pr-xl-0 { padding-right: 0; }
+  .pb-xl-0 { padding-bottom: 0; }
+  .pl-xl-0 { padding-left: 0; }
+  .px-xl-0 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .py-xl-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .m-xl-0 { margin: 0; }
+  .mt-xl-0 { margin-top: 0; }
+  .mr-xl-0 { margin-right: 0; }
+  .mb-xl-0 { margin-bottom: 0; }
+  .ml-xl-0 { margin-left: 0; }
+  .mx-xl-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .my-xl-0 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @for $i from 1 through length($spacing-increments) {
+    $rem-value: nth($spacing-increments, $i) + rem;
+
     .p-xl-#{$i} { padding: $rem-value; }
     .pt-xl-#{$i} { padding-top: $rem-value; }
     .pr-xl-#{$i} { padding-right: $rem-value; }
@@ -194,30 +353,31 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
     }
 
     .m-xl-#{$i} { margin: $rem-value; }
-    .mn-xl-#{$i} { margin: -1*$rem-value; }
+    .mn-xl-#{$i} { margin: -1*($rem-value); }
     .mt-xl-#{$i} { margin-top: $rem-value; }
-    .mtn-xl-#{$i} { margin-top: -1*$rem-value; }
+    .mtn-xl-#{$i} { margin-top: -1*($rem-value); }
     .mr-xl-#{$i} { margin-right: $rem-value; }
-    .mrn-xl-#{$i} { margin-right: -1*$rem-value; }
+    .mrn-xl-#{$i} { margin-right: -1*($rem-value); }
     .mb-xl-#{$i} { margin-bottom: $rem-value; }
-    .mbn-xl-#{$i} { margin-bottom: -1*$rem-value; }
+    .mbn-xl-#{$i} { margin-bottom: -1*($rem-value); }
     .ml-xl-#{$i} { margin-left: $rem-value; }
-    .mln-xl-#{$i} { margin-left: -1*$rem-value; }
+    .mln-xl-#{$i} { margin-left: -1*($rem-value); }
     .mx-xl-#{$i} {
       margin-left: $rem-value;
       margin-right: $rem-value;
     }
     .mxn-xl-#{$i} {
-      margin-left: -1*$rem-value;
-      margin-right: -1*$rem-value;
+      margin-left: -1*($rem-value);
+      margin-right: -1*($rem-value);
     }
     .my-xl-#{$i} {
       margin-top: $rem-value;
       margin-bottom: $rem-value;
     }
     .myn-xl-#{$i} {
-      margin-top: -1*$rem-value;
-      margin-bottom: -1*$rem-value;
+      margin-top: -1*($rem-value);
+      margin-bottom: -1*($rem-value);
     }
   }
 }
+
