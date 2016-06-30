@@ -12,41 +12,88 @@
 7 silly cache add   rawSpec: '.',
 7 silly cache add   spec: '/Users/chrisg/projects/decent',
 7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz not in flight; packing
-9 verbose tar pack [ '/Users/chrisg/.npm/decent-scss/0.11.0/package.tgz',
+8 verbose addLocalDirectory /Users/chrisg/.npm/decent-scss/0.12.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/chrisg/.npm/decent-scss/0.12.0/package.tgz',
 9 verbose tar pack   '/Users/chrisg/projects/decent' ]
-10 verbose tarball /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz
+10 verbose tarball /Users/chrisg/.npm/decent-scss/0.12.0/package.tgz
 11 verbose folder /Users/chrisg/projects/decent
-12 info prepublish decent-scss@0.11.0
+12 info prepublish decent-scss@0.12.0
 13 verbose unsafe-perm in lifecycle true
-14 info decent-scss@0.11.0 Failed to exec prepublish script
-15 error addLocalDirectory Could not pack /Users/chrisg/projects/decent to /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz
-16 error addLocal Could not install /Users/chrisg/projects/decent
-17 verbose stack Error: decent-scss@0.11.0 prepublish: `gulp styles`
-17 verbose stack Exit status 1
-17 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
-17 verbose stack     at emitTwo (events.js:87:13)
-17 verbose stack     at EventEmitter.emit (events.js:172:7)
-17 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-17 verbose stack     at emitTwo (events.js:87:13)
-17 verbose stack     at ChildProcess.emit (events.js:172:7)
-17 verbose stack     at maybeClose (internal/child_process.js:821:16)
-17 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
-18 verbose pkgid decent-scss@0.11.0
-19 verbose cwd /Users/chrisg/projects/decent
-20 error Darwin 15.5.0
-21 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-22 error node v4.3.0
-23 error npm  v2.14.12
-24 error code ELIFECYCLE
-25 error decent-scss@0.11.0 prepublish: `gulp styles`
-25 error Exit status 1
-26 error Failed at the decent-scss@0.11.0 prepublish script 'gulp styles'.
-26 error This is most likely a problem with the decent-scss package,
-26 error not with npm itself.
-26 error Tell the author that this fails on your system:
-26 error     gulp styles
-26 error You can get their info via:
-26 error     npm owner ls decent-scss
-26 error There is likely additional logging output above.
-27 verbose exit [ 1, true ]
+14 verbose addLocalTarball adding from inside cache /Users/chrisg/.npm/decent-scss/0.12.0/package.tgz
+15 silly cache afterAdd decent-scss@0.12.0
+16 verbose afterAdd /Users/chrisg/.npm/decent-scss/0.12.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/chrisg/.npm/decent-scss/0.12.0/package/package.json written
+18 silly publish { name: 'decent-scss',
+18 silly publish   version: '0.12.0',
+18 silly publish   description: 'Set of utility classes – not just for prototyping!',
+18 silly publish   scripts: { prepublish: 'gulp styles' },
+18 silly publish   devDependencies:
+18 silly publish    { 'browser-sync': '^2.9.10',
+18 silly publish      gulp: '^3.9.0',
+18 silly publish      'gulp-autoprefixer': '^3.0.2',
+18 silly publish      'gulp-concat': '^2.6.0',
+18 silly publish      'gulp-cssstats': '^1.0.1',
+18 silly publish      'gulp-minify-css': '^1.2.1',
+18 silly publish      'gulp-plumber': '^1.0.1',
+18 silly publish      'gulp-sass': '^2.0.4',
+18 silly publish      'gulp-sass-glob': '0.0.8',
+18 silly publish      'gulp-sequence': '^0.4.1',
+18 silly publish      'gulp-shell': '^0.5.0',
+18 silly publish      'gulp-stylelint': '^2.0.2',
+18 silly publish      'gulp-uglify': '^1.4.1',
+18 silly publish      'gulp-util': '^3.0.6',
+18 silly publish      'stylelint-config-standard': '^6.0.0' },
+18 silly publish   contributors:
+18 silly publish    [ { name: 'Chris Griffith',
+18 silly publish        email: 'chris@chrisgriffith.co',
+18 silly publish        url: 'http://chrisgriffith.co' },
+18 silly publish      { name: 'Sean Washington',
+18 silly publish        email: 'hello@seanwash.com',
+18 silly publish        url: 'http://seanwash.com' } ],
+18 silly publish   keywords:
+18 silly publish    [ 'css',
+18 silly publish      'scss',
+18 silly publish      'functional',
+18 silly publish      'utility',
+18 silly publish      'oocss',
+18 silly publish      'framework',
+18 silly publish      'atomic' ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/octopuscreative/decent-scss.git' },
+18 silly publish   bugs: { url: 'https://github.com/octopuscreative/decent-scss/issues' },
+18 silly publish   license: { type: 'MIT', url: 'https://opensource.org/licenses/MIT' },
+18 silly publish   readme: '# Decent.scss\n\nA collection of functional CSS utilities as created by the folks at [Octop.us](http://octop.us).\n\n## Rationale\n\nYou might see this and think to yourself, why would anyone want to write CSS this way? So did we. But after some research and using [Basscss](http://www.basscss.com/) for a bit we were hooked.\n\nHere\'s what convinced us:\n\n* **No side effects** - Although the cascade can be a useful thing, more often than not it becomes a hinderance in long term projects or with projects that have multiple developers working in the code base.\n* **Composable** -  Think composition over inheritance. With Decent.scss you compose your ui out of already existing blocks (think legos) of css.\n* **Consistency** - Functional CSS helps to facility consistency in your end products. With Decent.scss, all of the values for whitespace, font sizes, etc are all calculated from the same settings. This means that there are no more magic numbers hiding out in your stylesheets and that consistency is as easy as using the generated classes.\n* **Clear & Easy to follow** - There\'s a lot of contention around this point, but we maintain that it\'s easier to reason about complexity in your markup as opposed to CSS. With CSS you have to worry about inheritance as well as the cascade, two things that can work against as soon as your website or app starts to grow. By taking a few minutes to familiarize yourself with the [Class Reference](https://github.com/octopuscreative/decent-scss/wiki) for Decent.scss, you\'ll be able to look at any markup and have a good idea of how it looks and functions.\n\n#### Useful reads\n\n* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)\n* [How not to scale css](https://gist.github.com/mrmrs/5d6c3bf60a9ff410fcec)\n* [Expressive CSS](http://johnpolacek.github.io/expressive-css/)\n* [CSS Purge](http://csspurge.com/)\n* [Semantic CSS](http://snook.ca/archives/html_and_css/semantic-css)\n* [Functional Programming, CSS, and your sanity](http://www.jon.gold/2015/07/functional-css/)\n\n## Setup\n\nTo install, run `npm i --save decent-scss`, then `@import` the desired modules. We\'ve left this part open ended on purpose for flexibility\'s sake. The simplest way would be something like `@import \'../node_modules/decent-scss/modules/all.scss\';` to get all of the modules, making sure to adjust that import to point to the proper directory.\n\nIf you\'re looking for a more elegant solution to including CSS from `node_modules`, you\'ll find a multitude of resources [here](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=import+scss+from+node_modules).\n\n## Usage\n\n[Class Reference](https://github.com/octopuscreative/decent-scss/wiki)  \n[Example Usage](http://octopuscreative.github.io/decent-scss/index.html)\n\n## Customizing\n\nWe\'ve included any configuration variables at the top of each module file so that you\'re able to tailor fit decent.scss to your project. Simply create a settings file and include or set them inline before you import any of the modules.\n\n## CSS\n\nIf that CSS that you\'re after and you don\'t care about changing any of the settings, then you can use the files located at `css/decent.css`.\n\n## Work in Progress\n\nPlease note that this is still a work in progress! [We\'re keeping tabs on the state of our CSS here](http://cssstats.com/stats?url=http%3A%2F%2Foctopuscreative.github.io%2Fdecent-scss%2Findex.html&ua=Browser%20Default) and actively working on improving both the quality and size of the code. Pull requests are welcome!\n\nDon\'t forget to exercise moderation when building up your repertoire of utility classes. We recommend using tools like [CSS Stats](http://cssstats.com) to make sure that you\'re not including a multitude of CSS that doesn\'t actually get used.\n\n## Development Notes\n\n* Before publishing, make sure to run `npm run prepublish` as you need to make sure you have a compiled css file available.\n* Adhere to Stylelint\'s warnings! We do it and so should you.\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'cd2c05eca90020028c0365e1416f5a38aa9d7f56',
+18 silly publish   homepage: 'https://github.com/octopuscreative/decent-scss#readme',
+18 silly publish   _id: 'decent-scss@0.12.0',
+18 silly publish   _shasum: '89a30e79ac18d8909eada0329198d0fbde373f92',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name decent-scss
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/decent-scss
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/chrisg/.npm/decent-scss/0.12.0/package.tgz
+26 verbose stack Error: auth required for publishing
+26 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
+26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:134:14
+26 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
+26 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:104:3)
+26 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
+26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
+26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
+26 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
+26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:73:5
+26 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
+27 verbose cwd /Users/chrisg/projects/decent
+28 error Darwin 15.5.0
+29 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+30 error node v4.3.0
+31 error npm  v2.14.12
+32 error code ENEEDAUTH
+33 error need auth auth required for publishing
+33 error need auth You need to authorize this machine using `npm adduser`
+34 verbose exit [ 1, true ]
