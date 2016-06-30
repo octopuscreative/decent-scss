@@ -10,10 +10,11 @@ $display-type-family: 'soleil', 'Helvetica', sans-serif !default;
 $display-line-height: 1.2 !default;
 $caps-type-tracking: 0.1em !default;
 
-$fw-book: 300;
-$fw-medium: 400;
-$fw-semibold: 500;
-$fw-bold: 600;
+$fw-light: 200 !default;
+$fw-book: 300 !default;
+$fw-medium: 400 !default;
+$fw-semibold: 500 !default;
+$fw-bold: 600 !default;
 
 // Because browsers do their own thing with fonts, let's
 // be more explicit in setting the defaults.
