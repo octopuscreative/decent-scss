@@ -127,6 +127,18 @@ code {
 
   @if $i == 0 {
     .t-#{$i} { font-size: 1rem; }
+    .t-sm-#{$i} {
+      @media #{$breakpoint-sm} { font-size: 1rem; }
+    }
+    .t-md-#{$i} {
+      @media #{$breakpoint-md} { font-size: 1rem; }
+    }
+    .t-lg-#{$i} {
+      @media #{$breakpoint-lg} { font-size: 1rem; }
+    }
+    .t-xl-#{$i} {
+      @media #{$breakpoint-xl} { font-size: 1rem; }
+    }
   }
 
   @if $i < 0 {

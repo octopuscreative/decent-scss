@@ -1,0 +1,52 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/chrisg/projects/decent',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/chrisg/.npm/decent-scss/0.11.0/package.tgz',
+9 verbose tar pack   '/Users/chrisg/projects/decent' ]
+10 verbose tarball /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz
+11 verbose folder /Users/chrisg/projects/decent
+12 info prepublish decent-scss@0.11.0
+13 verbose unsafe-perm in lifecycle true
+14 info decent-scss@0.11.0 Failed to exec prepublish script
+15 error addLocalDirectory Could not pack /Users/chrisg/projects/decent to /Users/chrisg/.npm/decent-scss/0.11.0/package.tgz
+16 error addLocal Could not install /Users/chrisg/projects/decent
+17 verbose stack Error: decent-scss@0.11.0 prepublish: `gulp styles`
+17 verbose stack Exit status 1
+17 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+17 verbose stack     at emitTwo (events.js:87:13)
+17 verbose stack     at EventEmitter.emit (events.js:172:7)
+17 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+17 verbose stack     at emitTwo (events.js:87:13)
+17 verbose stack     at ChildProcess.emit (events.js:172:7)
+17 verbose stack     at maybeClose (internal/child_process.js:821:16)
+17 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+18 verbose pkgid decent-scss@0.11.0
+19 verbose cwd /Users/chrisg/projects/decent
+20 error Darwin 15.5.0
+21 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+22 error node v4.3.0
+23 error npm  v2.14.12
+24 error code ELIFECYCLE
+25 error decent-scss@0.11.0 prepublish: `gulp styles`
+25 error Exit status 1
+26 error Failed at the decent-scss@0.11.0 prepublish script 'gulp styles'.
+26 error This is most likely a problem with the decent-scss package,
+26 error not with npm itself.
+26 error Tell the author that this fails on your system:
+26 error     gulp styles
+26 error You can get their info via:
+26 error     npm owner ls decent-scss
+26 error There is likely additional logging output above.
+27 verbose exit [ 1, true ]
