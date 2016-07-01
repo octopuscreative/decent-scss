@@ -65,10 +65,10 @@
 18 silly publish   license: { type: 'MIT', url: 'https://opensource.org/licenses/MIT' },
 18 silly publish   readme: '# Decent.scss\n\nA collection of functional CSS utilities as created by the folks at [Octop.us](http://octop.us).\n\n## Rationale\n\nYou might see this and think to yourself, why would anyone want to write CSS this way? So did we. But after some research and using [Basscss](http://www.basscss.com/) for a bit we were hooked.\n\nHere\'s what convinced us:\n\n* **No side effects** - Although the cascade can be a useful thing, more often than not it becomes a hinderance in long term projects or with projects that have multiple developers working in the code base.\n* **Composable** -  Think composition over inheritance. With Decent.scss you compose your ui out of already existing blocks (think legos) of css.\n* **Consistency** - Functional CSS helps to facility consistency in your end products. With Decent.scss, all of the values for whitespace, font sizes, etc are all calculated from the same settings. This means that there are no more magic numbers hiding out in your stylesheets and that consistency is as easy as using the generated classes.\n* **Clear & Easy to follow** - There\'s a lot of contention around this point, but we maintain that it\'s easier to reason about complexity in your markup as opposed to CSS. With CSS you have to worry about inheritance as well as the cascade, two things that can work against as soon as your website or app starts to grow. By taking a few minutes to familiarize yourself with the [Class Reference](https://github.com/octopuscreative/decent-scss/wiki) for Decent.scss, you\'ll be able to look at any markup and have a good idea of how it looks and functions.\n\n#### Useful reads\n\n* [About HTML semantics and front-end architecture](http://nicolasgallagher.com/about-html-semantics-front-end-architecture/)\n* [How not to scale css](https://gist.github.com/mrmrs/5d6c3bf60a9ff410fcec)\n* [Expressive CSS](http://johnpolacek.github.io/expressive-css/)\n* [CSS Purge](http://csspurge.com/)\n* [Semantic CSS](http://snook.ca/archives/html_and_css/semantic-css)\n* [Functional Programming, CSS, and your sanity](http://www.jon.gold/2015/07/functional-css/)\n\n## Setup\n\nTo install, run `npm i --save decent-scss`, then `@import` the desired modules. We\'ve left this part open ended on purpose for flexibility\'s sake. The simplest way would be something like `@import \'../node_modules/decent-scss/modules/all.scss\';` to get all of the modules, making sure to adjust that import to point to the proper directory.\n\nIf you\'re looking for a more elegant solution to including CSS from `node_modules`, you\'ll find a multitude of resources [here](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=import+scss+from+node_modules).\n\n## Usage\n\n[Class Reference](https://github.com/octopuscreative/decent-scss/wiki)  \n[Example Usage](http://octopuscreative.github.io/decent-scss/index.html)\n\n## Customizing\n\nWe\'ve included any configuration variables at the top of each module file so that you\'re able to tailor fit decent.scss to your project. Simply create a settings file and include or set them inline before you import any of the modules.\n\n## CSS\n\nIf that CSS that you\'re after and you don\'t care about changing any of the settings, then you can use the files located at `css/decent.css`.\n\n## Work in Progress\n\nPlease note that this is still a work in progress! [We\'re keeping tabs on the state of our CSS here](http://cssstats.com/stats?url=http%3A%2F%2Foctopuscreative.github.io%2Fdecent-scss%2Findex.html&ua=Browser%20Default) and actively working on improving both the quality and size of the code. Pull requests are welcome!\n\nDon\'t forget to exercise moderation when building up your repertoire of utility classes. We recommend using tools like [CSS Stats](http://cssstats.com) to make sure that you\'re not including a multitude of CSS that doesn\'t actually get used.\n\n## Development Notes\n\n* Before publishing, make sure to run `npm run prepublish` as you need to make sure you have a compiled css file available.\n* Adhere to Stylelint\'s warnings! We do it and so should you.\n',
 18 silly publish   readmeFilename: 'README.md',
-18 silly publish   gitHead: 'cd2c05eca90020028c0365e1416f5a38aa9d7f56',
+18 silly publish   gitHead: '567a50acb424fb0b7bdbf9c4443e8f1309cc1f79',
 18 silly publish   homepage: 'https://github.com/octopuscreative/decent-scss#readme',
 18 silly publish   _id: 'decent-scss@0.12.0',
-18 silly publish   _shasum: '89a30e79ac18d8909eada0329198d0fbde373f92',
+18 silly publish   _shasum: '08ff733910d988730ce66207c50feb4efee19adf',
 18 silly publish   _from: '.' }
 19 verbose getPublishConfig undefined
 20 silly mapToRegistry name decent-scss
@@ -77,23 +77,47 @@
 23 silly mapToRegistry uri https://registry.npmjs.org/decent-scss
 24 verbose publish registryBase https://registry.npmjs.org/
 25 silly publish uploading /Users/chrisg/.npm/decent-scss/0.12.0/package.tgz
-26 verbose stack Error: auth required for publishing
-26 verbose stack     at CachingRegistryClient.publish (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
-26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:134:14
-26 verbose stack     at mapToRegistry (/usr/local/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
-26 verbose stack     at publish_ (/usr/local/lib/node_modules/npm/lib/publish.js:104:3)
-26 verbose stack     at Array.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-26 verbose stack     at LOOP (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
-26 verbose stack     at chain (/usr/local/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
-26 verbose stack     at /usr/local/lib/node_modules/npm/lib/publish.js:73:5
-26 verbose stack     at RES (/usr/local/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
-27 verbose cwd /Users/chrisg/projects/decent
-28 error Darwin 15.5.0
-29 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
-30 error node v4.3.0
-31 error npm  v2.14.12
-32 error code ENEEDAUTH
-33 error need auth auth required for publishing
-33 error need auth You need to authorize this machine using `npm adduser`
-34 verbose exit [ 1, true ]
+26 verbose request uri https://registry.npmjs.org/decent-scss
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 4:15:47 PM
+29 verbose request using bearer token for auth
+30 verbose request id e52dc7a64397ba09
+31 http request PUT https://registry.npmjs.org/decent-scss
+32 http 403 https://registry.npmjs.org/decent-scss
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '96',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Thu, 30 Jun 2016 23:15:48 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-sjc3131-SJC',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1467328547.941557,VS0,VE158',
+33 verbose headers   vary: 'Accept-Encoding' }
+34 verbose request invalidating /Users/chrisg/.npm/registry.npmjs.org/decent-scss on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 0.12.0." : decent-scss
+36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid decent-scss
+39 verbose cwd /Users/chrisg/projects/decent
+40 error Darwin 15.5.0
+41 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+42 error node v4.3.0
+43 error npm  v2.14.12
+44 error code E403
+45 error "You cannot publish over the previously published version 0.12.0." : decent-scss
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
