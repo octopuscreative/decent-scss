@@ -40,6 +40,11 @@ li,
 blockquote { line-height: $default-line-height; }
 ol { list-style-type: decimal; }
 
+
+p {
+  font-weight: $default-type-weight;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
