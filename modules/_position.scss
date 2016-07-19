@@ -19,7 +19,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
 
-  &[class='center'] {
+  &[class*='center'] {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -91,7 +91,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
 
-  &[class='center'] {
+  &[class*='center'] {
     left: 50%;
     transform: translateX(-50%);
   }
