@@ -1,0 +1,27 @@
+.f-left { float: left; }
+.f-right { float: right; }
+.f-none { float: none; }
+
+@media #{$breakpoint-sm} {
+  .f-sm-left { float: left; }
+  .f-sm-right { float: right; }
+  .f-sm-none { float: none; }
+}
+
+@media #{$breakpoint-md} {
+  .f-md-left { float: left; }
+  .f-md-right { float: right; }
+  .f-md-none { float: none; }
+}
+
+@media #{$breakpoint-lg} {
+  .f-lg-left { float: left; }
+  .f-lg-right { float: right; }
+  .f-lg-none { float: none; }
+}
+
+@media #{$breakpoint-xl} {
+  .f-xl-left { float: left; }
+  .f-xl-right { float: right; }
+  .f-xl-none { float: none; }
+}
