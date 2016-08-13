@@ -7,14 +7,15 @@ $default-type-weight: 400 !default;
 $default-type-color: #010101 !default;
 $default-line-height: 1.5 !default;
 $display-type-family: 'soleil', 'Helvetica', sans-serif !default;
+$display-type-weight: 700 !default;
 $display-line-height: 1.2 !default;
 $caps-type-tracking: 0.1em !default;
 
-$fw-light: 200 !default;
-$fw-book: 300 !default;
-$fw-medium: 400 !default;
-$fw-semibold: 500 !default;
-$fw-bold: 600 !default;
+$tw-light: 200 !default;
+$tw-book: 300 !default;
+$tw-medium: 400 !default;
+$tw-semibold: 500 !default;
+$tw-bold: 600 !default;
 
 // Because browsers do their own thing with fonts, let's
 // be more explicit in setting the defaults.
@@ -23,6 +24,7 @@ html {
   font-size: $rem-base;
   font-family: $default-type-family;
   line-height: $default-line-height;
+  font-weight: $default-type-weight;
 }
 
 h1,
@@ -38,6 +40,11 @@ ol,
 li,
 blockquote { line-height: $default-line-height; }
 ol { list-style-type: decimal; }
+
+
+p {
+  font-weight: $default-type-weight;
+}
 
 a {
   display: inline-block;
@@ -63,10 +70,11 @@ code {
 
 // Modifiers.
 // Type weight modifiers.
-.tw-bold { font-weight: $fw-bold; }
-.tw-semibold { font-weight: $fw-semibold; }
-.tw-medium { font-weight: $fw-medium; }
-.tw-book { font-weight: $fw-book; }
+.tw-bold { font-weight: $tw-bold; }
+.tw-semibold { font-weight: $tw-semibold; }
+.tw-medium { font-weight: $tw-medium; }
+.tw-book { font-weight: $tw-book; }
+.tw-light { font-weight: $tw-light; }
 
 // Style modifiers.
 // We omit the prefix `t` here because these adjectives can
@@ -78,6 +86,7 @@ code {
 // Use the display font.
 .display {
   font-family: $display-type-family;
+  font-weight: $display-type-weight;
   line-height: $display-line-height;
 }
 
@@ -127,6 +136,18 @@ code {
 
   @if $i == 0 {
     .t-#{$i} { font-size: 1rem; }
+    .t-sm-#{$i} {
+      @media #{$breakpoint-sm} { font-size: 1rem; }
+    }
+    .t-md-#{$i} {
+      @media #{$breakpoint-md} { font-size: 1rem; }
+    }
+    .t-lg-#{$i} {
+      @media #{$breakpoint-lg} { font-size: 1rem; }
+    }
+    .t-xl-#{$i} {
+      @media #{$breakpoint-xl} { font-size: 1rem; }
+    }
   }
 
   @if $i < 0 {

@@ -12,6 +12,9 @@ $color-success: #60aa53 !default;
 $color-error: #f00 !default;
 $color-warning: #e89414 !default;
 
+$black: #010101 !default;
+$white: #fefefe !default;
+
 // Define the greyscale.
 $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default;
 
@@ -27,6 +30,18 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
 .br-thick { border-right: $thick-border-weight solid $default-border-color; }
 .bb-thick { border-bottom: $thick-border-weight solid $default-border-color; }
 .bl-thick { border-left: $thick-border-weight solid $default-border-color; }
+
+.b-primary { border: $default-border-weight solid $color-primary; }
+.bt-primary { border-top: $default-border-weight solid $color-primary; }
+.br-primary { border-right: $default-border-weight solid $color-primary; }
+.bb-primary { border-bottom: $default-border-weight solid $color-primary; }
+.bl-primary { border-left: $default-border-weight solid $color-primary; }
+
+.b-secondary { border: $default-border-weight solid $color-secondary; }
+.bt-secondary { border-top: $default-border-weight solid $color-secondary; }
+.br-secondary { border-right: $default-border-weight solid $color-secondary; }
+.bb-secondary { border-bottom: $default-border-weight solid $color-secondary; }
+.bl-secondary { border-left: $default-border-weight solid $color-secondary; }
 
 .b-success { border: $default-border-weight solid $color-success; }
 .bt-success { border-top: $default-border-weight solid $color-success; }
