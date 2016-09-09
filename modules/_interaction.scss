@@ -1,44 +1,41 @@
-$default-transition: all 0.17s ease-in;
+$default-transition: all 0.17s ease-in !default;
 
-$interactions: (
-
-  fadeUp: (
-    settings: (
-      overflow: hidden,
-      border: 1px solid pink
-    ),
-    start: (
-      opacity: 0.4
-    ),
-    end: (
-      opacity: 1
-    )
-  ),
-
-  fadeDown: (
-    settings: (
-      overflow: hidden,
-      border: 1px solid pink
-    ),
-    start: (
-      opacity: 1
-    ),
-    end: (
-      opacity: 0.4
-    )
-  ),
-
-  scaleUp: (
-    start: (
-      transform: scale(1) translate3d(0,0,0)
-    ),
-    end: (
-      transform: scale(1.05) translate3d(0,0,0)
-    )
-  )
-
-);
-
+// $interactions: (
+//   fadeUp: (
+//     settings: (
+//       overflow: hidden,
+//       border: 1px solid pink
+//     ),
+//     start: (
+//       opacity: 0.4
+//     ),
+//     end: (
+//       opacity: 1
+//     )
+//   ),
+//
+//   fadeDown: (
+//     settings: (
+//       overflow: hidden,
+//       border: 1px solid pink
+//     ),
+//     start: (
+//       opacity: 1
+//     ),
+//     end: (
+//       opacity: 0.4
+//     )
+//   ),
+//
+//   scaleUp: (
+//     start: (
+//       transform: scale(1) translate3d(0,0,0)
+//     ),
+//     end: (
+//       transform: scale(1.05) translate3d(0,0,0)
+//     )
+//   )
+// );
 
 @mixin print-styles($map) {
   @each $style, $value in $map {
@@ -46,13 +43,10 @@ $interactions: (
   }
 }
 
-@mixin interaction($interaction, $contexts) {
-
-  transition: $default-transition;
-
-    &[class*='#{$interaction}'] {
-    
-
+@mixin interaction($interaction, $contexts, $state) {
+  
+  &[class*='#{$interaction}'] {
+  
     @each $context, $styles in $contexts {
 
       @if $context == 'settings' {
@@ -63,12 +57,13 @@ $interactions: (
           
         &[class*='target'],
         [class*='#{$interaction}-target'] {
+          transition: $default-transition;
           @include print-styles($styles);
         }
       }
       
       @if $context == 'end' {
-        &[class*='target']:hover,
+        &[class*='target']:#{$state},
         &:hover [class*='#{$interaction}-target'] {
           @include print-styles($styles);
         }
@@ -81,12 +76,12 @@ $interactions: (
 @each $interaction, $contexts in $interactions {
 
   [class^='hover-'],
-  [class*=' hover-'] { @include interaction($interaction, $contexts); }
+  [class*=' hover-'] { @include interaction($interaction, $contexts, 'hover'); }
 
   [class^='active-'],
-  [class*=' active-'] { @include interaction($interaction, $contexts); }
+  [class*=' active-'] { @include interaction($interaction, $contexts, 'active'); }
 
   [class^='focus-'],
-  [class*=' focus-'] { @include interaction($interaction, $contexts); }
+  [class*=' focus-'] { @include interaction($interaction, $contexts, 'focus'); }
 
 }
