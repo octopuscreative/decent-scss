@@ -33,6 +33,11 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
   margin-bottom: 0;
 }
 
+.mx-auto { 
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @for $i from 1 through length($spacing-increments) {
   $rem-value: nth($spacing-increments, $i) + rem;
 
