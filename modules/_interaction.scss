@@ -1,41 +1,6 @@
 $default-transition: all 0.17s ease-in !default;
 
-// $interactions: (
-//   fadeUp: (
-//     settings: (
-//       overflow: hidden,
-//       border: 1px solid pink
-//     ),
-//     start: (
-//       opacity: 0.4
-//     ),
-//     end: (
-//       opacity: 1
-//     )
-//   ),
-//
-//   fadeDown: (
-//     settings: (
-//       overflow: hidden,
-//       border: 1px solid pink
-//     ),
-//     start: (
-//       opacity: 1
-//     ),
-//     end: (
-//       opacity: 0.4
-//     )
-//   ),
-//
-//   scaleUp: (
-//     start: (
-//       transform: scale(1) translate3d(0,0,0)
-//     ),
-//     end: (
-//       transform: scale(1.05) translate3d(0,0,0)
-//     )
-//   )
-// );
+$interactions: null !default;
 
 @mixin print-styles($map) {
   @each $style, $value in $map {
