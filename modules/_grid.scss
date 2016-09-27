@@ -44,6 +44,8 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 @for $i from 1 through $columns {
   .col-#{$i} { width: ($i/$columns * 100%); }
   .push-#{$i} { margin-left: ($i/$columns * 100%); }
+  .pull-#{$i} { margin-left: -($i/$columns * 100%); }
+  .pull-right-#{$i} { margin-right: -($i/$columns * 100%); }
 }
 
 @media #{$breakpoint-sm} {
