@@ -19,10 +19,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
 
-  &[class*='center'] {
-    left: 50%;
-    transform: translateX(-50%);
-  }
   &[class*='left-middle'] {
     left: 0;
     top: 50%;
@@ -38,45 +34,37 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
+}
 
-  &[class*='md-'] {
-    position: relative;
+.absolute-sm {
+  position: relative;
 
-    @media #{$breakpoint-md} {
-      position: absolute;
-    }
+  @media #{$breakpoint-sm} {
+    position: absolute;
   }
+}
 
-  &[class*='sm-'] {
-    position: relative;
+.absolute-md {
+  position: relative;
 
-    @media #{$breakpoint-sm} {
-      position: absolute;
-    }
+  @media #{$breakpoint-md} {
+    position: absolute;
   }
+}
 
-  &[class*='md-'] {
-    position: relative;
+.absolute-lg {
+  position: relative;
 
-    @media #{$breakpoint-md} {
-      position: absolute;
-    }
+  @media #{$breakpoint-lg} {
+    position: absolute;
   }
+}
 
-  &[class*='lg-'] {
-    position: relative;
+.absolute-xl {
+  position: relative;
 
-    @media #{$breakpoint-lg} {
-      position: absolute;
-    }
-  }
-
-  &[class*='xl-'] {
-    position: relative;
-
-    @media #{$breakpoint-xl} {
-      position: absolute;
-    }
+  @media #{$breakpoint-xl} {
+    position: absolute;
   }
 }
 
@@ -91,10 +79,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   &[class*='left'] { left: 0; }
   &[class*='right'] { right: 0; }
 
-  &[class*='center'] {
-    left: 50%;
-    transform: translateX(-50%);
-  }
   &[class*='left-middle'] {
     left: 0;
     top: 50%;
@@ -110,45 +94,37 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
+}
 
-  &[class*='md-'] {
-    position: relative;
+.fixed-sm {
+  position: relative;
 
-    @media #{$breakpoint-md} {
-      position: fixed;
-    }
+  @media #{$breakpoint-sm} {
+    position: fixed;
   }
+}
 
-  &[class*='sm-'] {
-    position: relative;
+.fixed-md {
+  position: relative;
 
-    @media #{$breakpoint-sm} {
-      position: fixed;
-    }
+  @media #{$breakpoint-md} {
+    position: fixed;
   }
+}
 
-  &[class*='md-'] {
-    position: relative;
+.fixed-lg {
+  position: relative;
 
-    @media #{$breakpoint-md} {
-      position: fixed;
-    }
+  @media #{$breakpoint-lg} {
+    position: fixed;
   }
+}
 
-  &[class*='lg-'] {
-    position: relative;
+.fixed-xl {
+  position: relative;
 
-    @media #{$breakpoint-lg} {
-      position: fixed;
-    }
-  }
-
-  &[class*='xl-'] {
-    position: relative;
-
-    @media #{$breakpoint-xl} {
-      position: fixed;
-    }
+  @media #{$breakpoint-xl} {
+    position: fixed;
   }
 }
 
