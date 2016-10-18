@@ -34,37 +34,45 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
-}
 
-.absolute-sm {
-  position: relative;
+  &[class*='md-'] {
+    position: relative;
 
-  @media #{$breakpoint-sm} {
-    position: absolute;
+    @media #{$breakpoint-md} {
+      position: absolute;
+    }
   }
-}
 
-.absolute-md {
-  position: relative;
+  &[class*='sm-'] {
+    position: relative;
 
-  @media #{$breakpoint-md} {
-    position: absolute;
+    @media #{$breakpoint-sm} {
+      position: absolute;
+    }
   }
-}
 
-.absolute-lg {
-  position: relative;
+  &[class*='md-'] {
+    position: relative;
 
-  @media #{$breakpoint-lg} {
-    position: absolute;
+    @media #{$breakpoint-md} {
+      position: absolute;
+    }
   }
-}
 
-.absolute-xl {
-  position: relative;
+  &[class*='lg-'] {
+    position: relative;
 
-  @media #{$breakpoint-xl} {
-    position: absolute;
+    @media #{$breakpoint-lg} {
+      position: absolute;
+    }
+  }
+
+  &[class*='xl-'] {
+    position: relative;
+
+    @media #{$breakpoint-xl} {
+      position: absolute;
+    }
   }
 }
 
@@ -94,37 +102,45 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
-}
 
-.fixed-sm {
-  position: relative;
+  &[class*='md-'] {
+    position: relative;
 
-  @media #{$breakpoint-sm} {
-    position: fixed;
+    @media #{$breakpoint-md} {
+      position: fixed;
+    }
   }
-}
 
-.fixed-md {
-  position: relative;
+  &[class*='sm-'] {
+    position: relative;
 
-  @media #{$breakpoint-md} {
-    position: fixed;
+    @media #{$breakpoint-sm} {
+      position: fixed;
+    }
   }
-}
 
-.fixed-lg {
-  position: relative;
+  &[class*='md-'] {
+    position: relative;
 
-  @media #{$breakpoint-lg} {
-    position: fixed;
+    @media #{$breakpoint-md} {
+      position: fixed;
+    }
   }
-}
 
-.fixed-xl {
-  position: relative;
+  &[class*='lg-'] {
+    position: relative;
 
-  @media #{$breakpoint-xl} {
-    position: fixed;
+    @media #{$breakpoint-lg} {
+      position: fixed;
+    }
+  }
+
+  &[class*='xl-'] {
+    position: relative;
+
+    @media #{$breakpoint-xl} {
+      position: fixed;
+    }
   }
 }
 
