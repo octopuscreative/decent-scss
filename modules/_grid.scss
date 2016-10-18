@@ -52,6 +52,8 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   @for $i from 1 through $columns {
     .col-sm-#{$i} { width: ($i/$columns * 100%); }
     .push-sm-#{$i} { margin-left: ($i/$columns * 100%); }
+    .pull-sm-#{$i} { margin-left: -($i/$columns * 100%); }
+    .pull-sm-right-#{$i} { margin-right: -($i/$columns * 100%); }
   }
 }
 
@@ -59,6 +61,8 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   @for $i from 1 through $columns {
     .col-md-#{$i} { width: ($i/$columns * 100%); }
     .push-md-#{$i} { margin-left: ($i/$columns * 100%); }
+    .pull-md-#{$i} { margin-left: -($i/$columns * 100%); }
+    .pull-md-right-#{$i} { margin-right: -($i/$columns * 100%); }
   }
 }
 
@@ -66,6 +70,8 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   @for $i from 1 through $columns {
     .col-lg-#{$i} { width: ($i/$columns * 100%); }
     .push-lg-#{$i} { margin-left: ($i/$columns * 100%); }
+    .pull-lg-#{$i} { margin-left: -($i/$columns * 100%); }
+    .pull-lg-right-#{$i} { margin-right: -($i/$columns * 100%); }
   }
 }
 
@@ -73,5 +79,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   @for $i from 1 through $columns {
     .col-xl-#{$i} { width: ($i/$columns * 100%); }
     .push-xl-#{$i} { margin-left: ($i/$columns * 100%); }
+    .pull-xl-#{$i} { margin-left: -($i/$columns * 100%); }
+    .pull-xl-right-#{$i} { margin-right: -($i/$columns * 100%); }
   }
 }
