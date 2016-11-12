@@ -1,9 +1,10 @@
-$default-brand-height: 2rem !default;
-
-$breakpoint-sm: '(min-width: 600px)' !default;
-$breakpoint-md: '(min-width: 768px)' !default;
-$breakpoint-lg: '(min-width: 1280px)' !default;
-$breakpoint-xl: '(min-width: 1440px)' !default;
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
 
 // Keep elements in DOM for accessibility but hidden from view.
 .hidden {
@@ -13,116 +14,54 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   left: -300%;
 }
 
-// Almost all websites have a brand or logo in the header
-// and/or footer. Used this on an element with an image
-// to properly size the brand.
-.brand {
-  img {
-    height: $default-brand-height*0.75;
-
-    @media #{$breakpoint-md} {
-      height: $default-brand-height;
-    }
-  }
-}
-
 // Display properties.
 .d-inline-block { display: inline-block; }
 .d-block { display: block; }
 .d-none { display: none; }
-.d-full { 
+
+.d-full {
   width: 100%;
   height: 100vh;
 }
 
-.o-auto { 
+.o-auto {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
+
 .o-visible { overflow: visible; }
 .o-hidden { overflow: hidden; }
 
 .no-wrap { white-space: nowrap; }
 
-@media #{$breakpoint-sm} {
-  .d-sm-inline-block { display: inline-block; }
-  .d-sm-block { display: block; }
-  .d-sm-none { display: none; }
-  .d-sm-full { 
-    width: 100%;
-    height: 100vh;
-  }
-
-  .o-sm-auto { 
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .o-sm-visible { overflow: visible; }
-  .o-sm-hidden { overflow: hidden; }
-
-  .sm-no-wrap { white-space: nowrap; }
-}
-
-@media #{$breakpoint-md} {
-  .d-md-inline-block { display: inline-block; }
-  .d-md-block { display: block; }
-  .d-md-none { display: none; }
-  .d-md-full { 
-    width: 100%;
-    height: 100vh;
-  }
-
-  .o-md-auto { 
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .o-md-visible { overflow: visible; }
-  .o-md-hidden { overflow: hidden; }
-
-  .md-no-wrap { white-space: nowrap; }
-}
-
-@media #{$breakpoint-lg} {
-  .d-lg-inline-block { display: inline-block; }
-  .d-lg-block { display: block; }
-  .d-lg-none { display: none; }
-  .d-lg-full { 
-    width: 100%;
-    height: 100vh;
-  }
-
-  .o-lg-auto { 
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .o-lg-visible { overflow: visible; }
-  .o-lg-hidden { overflow: hidden; }
-
-  .lg-no-wrap { white-space: nowrap; }
-}
-
-@media #{$breakpoint-xl} {
-  .d-xl-inline-block { display: inline-block; }
-  .d-xl-block { display: block; }
-  .d-xl-none { display: none; }
-  .d-xl-full { 
-    width: 100%;
-    height: 100vh;
-  }
-
-  .o-xl-auto { 
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .o-xl-visible { overflow: visible; }
-  .o-xl-hidden { overflow: hidden; }
-
-  .xl-no-wrap { white-space: nowrap; }
-}
-
 // Vertical align.
 .va-middle { vertical-align: middle; }
 .va-text-bottom { vertical-align: text-bottom; }
+
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    .d-#{$abbr}-inline-block { display: inline-block; }
+    .d-#{$abbr}-block { display: block; }
+    .d-#{$abbr}-none { display: none; }
+
+    .d-#{$abbr}-full {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .o-#{$abbr}-auto {
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .o-#{$abbr}-visible { overflow: visible; }
+    .o-#{$abbr}-hidden { overflow: hidden; }
+
+    .#{$abbr}-no-wrap { white-space: nowrap; }
+
+    .va-#{$abbr}-middle { vertical-align: middle; }
+    .va-#{$abbr}-text-bottom { vertical-align: text-bottom; }
+  }
+}
 
 // Aspect ratios.
 [class^='ratio-'],

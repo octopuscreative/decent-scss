@@ -1,3 +1,11 @@
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 $breakpoint-sm: '(min-width: 600px)' !default;
 $breakpoint-md: '(min-width: 768px)' !default;
 $breakpoint-lg: '(min-width: 1280px)' !default;
@@ -8,182 +16,36 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 // children.
 .relative { position: relative; }
 
-// Absolute positioning.
-.absolute,
-[class^='absolute-'],
-[class*=' absolute-'] {
-  position: absolute;
+// Absolute and fixed positioning.
+.absolute { position: absolute; }
+.fixed { position: fixed; }
 
-  &[class*='top'] { top: 0; }
-  &[class*='bottom'] { bottom: 0; }
-  &[class*='left'] { left: 0; }
-  &[class*='right'] { right: 0; }
-
-  &[class*='left-middle'] {
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &[class*='right-middle'] {
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &[class*='center-middle'] {
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  &[class*='md-'] {
-    position: relative;
-
-    @media #{$breakpoint-md} {
-      position: absolute;
-    }
-  }
-
-  &[class*='sm-'] {
-    position: relative;
-
-    @media #{$breakpoint-sm} {
-      position: absolute;
-    }
-  }
-
-  &[class*='md-'] {
-    position: relative;
-
-    @media #{$breakpoint-md} {
-      position: absolute;
-    }
-  }
-
-  &[class*='lg-'] {
-    position: relative;
-
-    @media #{$breakpoint-lg} {
-      position: absolute;
-    }
-  }
-
-  &[class*='xl-'] {
-    position: relative;
-
-    @media #{$breakpoint-xl} {
-      position: absolute;
-    }
-  }
-}
-
-// Fixed positioning.
-.fixed,
-[class^='fixed-'],
-[class*=' fixed-'] {
-  position: fixed;
-
-  &[class*='top'] { top: 0; }
-  &[class*='bottom'] { bottom: 0; }
-  &[class*='left'] { left: 0; }
-  &[class*='right'] { right: 0; }
-
-  &[class*='left-middle'] {
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &[class*='right-middle'] {
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &[class*='center-middle'] {
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  }
-
-  &[class*='md-'] {
-    position: relative;
-
-    @media #{$breakpoint-md} {
-      position: fixed;
-    }
-  }
-
-  &[class*='sm-'] {
-    position: relative;
-
-    @media #{$breakpoint-sm} {
-      position: fixed;
-    }
-  }
-
-  &[class*='md-'] {
-    position: relative;
-
-    @media #{$breakpoint-md} {
-      position: fixed;
-    }
-  }
-
-  &[class*='lg-'] {
-    position: relative;
-
-    @media #{$breakpoint-lg} {
-      position: fixed;
-    }
-  }
-
-  &[class*='xl-'] {
-    position: relative;
-
-    @media #{$breakpoint-xl} {
-      position: fixed;
-    }
-  }
-}
-
+// Coordinates.
 @for $i from 1 through 10 {
+  .top-#{$i*10} { top: $i*10%; }
+  .right-#{$i*10} { right: $i*10%; }
+  .bottom-#{$i*10} { bottom: $i*10%; }
+  .left-#{$i*10} { left: $i*10%; }
+
   .y-#{$i*10} { transform: translateY($i*10%); }
   .yn-#{$i*10} { transform: translateY(-$i*10%); }
   .x-#{$i*10} { transform: translateX($i*10%); }
   .xn-#{$i*10} { transform: translateX(-$i*10%); }
 }
 
-@media #{$breakpoint-sm} {
-  @for $i from 1 through 10 {
-    .y-sm-#{$i*10} { transform: translateY($i*10%); }
-    .yn-sm-#{$i*10} { transform: translateY(-$i*10%); }
-    .x-sm-#{$i*10} { transform: translateX($i*10%); }
-    .xn-sm-#{$i*10} { transform: translateX(-$i*10%); }
-  }
-}
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    @for $i from 1 through 10 {
+      .top-#{$abbr}-#{$i*10} { top: $i*10%; }
+      .right-#{$abbr}-#{$i*10} { right: $i*10%; }
+      .bottom-#{$abbr}-#{$i*10} { bottom: $i*10%; }
+      .left-#{$abbr}-#{$i*10} { left: $i*10%; }
 
-@media #{$breakpoint-md} {
-  @for $i from 1 through 10 {
-    .y-md-#{$i*10} { transform: translateY($i*10%); }
-    .yn-md-#{$i*10} { transform: translateY(-$i*10%); }
-    .x-md-#{$i*10} { transform: translateX($i*10%); }
-    .xn-md-#{$i*10} { transform: translateX(-$i*10%); }
-  }
-}
-
-@media #{$breakpoint-lg} {
-  @for $i from 1 through 10 {
-    .y-lg-#{$i*10} { transform: translateY($i*10%); }
-    .yn-lg-#{$i*10} { transform: translateY(-$i*10%); }
-    .x-lg-#{$i*10} { transform: translateX($i*10%); }
-    .xn-lg-#{$i*10} { transform: translateX(-$i*10%); }
-  }
-}
-
-@media #{$breakpoint-xl} {
-  @for $i from 1 through 10 {
-    .y-xl-#{$i*10} { transform: translateY($i*10%); }
-    .yn-xl-#{$i*10} { transform: translateY(-$i*10%); }
-    .x-xl-#{$i*10} { transform: translateX($i*10%); }
-    .xn-xl-#{$i*10} { transform: translateX(-$i*10%); }
+      .y-#{$abbr}-#{$i*10} { transform: translateY($i*10%); }
+      .yn-#{$abbr}-#{$i*10} { transform: translateY(-$i*10%); }
+      .x-#{$abbr}-#{$i*10} { transform: translateX($i*10%); }
+      .xn-#{$abbr}-#{$i*10} { transform: translateX(-$i*10%); }
+    }
   }
 }
 

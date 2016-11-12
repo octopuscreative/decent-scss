@@ -1,3 +1,11 @@
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 // Default border weight.
 $default-border-radius: 2px !default;
 $default-border-weight: 1px !default;
@@ -90,7 +98,6 @@ $greys: #313233 #595a5c #646566 #87888a #bec0c2 #d7d8da #e8e9eb #f2f4f5 !default
 .br-thick-white { border-right: $thick-border-weight solid $white; }
 .bb-thick-white { border-bottom: $thick-border-weight solid $white; }
 .bl-thick-white { border-left: $thick-border-weight solid $white; }
-
 
 @each $grey in $greys {
   $i: index($greys, $grey);

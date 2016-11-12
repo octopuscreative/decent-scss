@@ -1,7 +1,13 @@
-$percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
 
-// Based on the Golden Ratio – because it _feels_ good.
-$length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
+$percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+$length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the Golden Ratio – because it _feels_ good.
 
 @for $i from 1 through length($spacing-increments) {
   $rem-value: nth($spacing-increments, $i) + rem;
@@ -10,54 +16,22 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
   .w-auto { width: auto; }
   .minw-#{$i} { min-width: #{$rem-value}; }
   .maxw-#{$i} { max-width: #{$rem-value}; }
-  
   .h-#{$i} { height: #{$rem-value}; }
   .h-auto { height: auto; }
   .minh-#{$i} { min-height: #{$rem-value}; }
   .maxh-#{$i} { max-height: #{$rem-value}; }
 
-  @media #{$breakpoint-sm} {
-    .w-sm-#{$i} { width: #{$rem-value}; }
-    .w-sm-auto { width: auto; }
-    .minw-sm-#{$i} { min-width: #{$rem-value}; }
-    .maxw-sm-#{$i} { max-width: #{$rem-value}; }
-    .h-sm-#{$i} { height: #{$rem-value}; }
-    .h-sm-auto { height: auto; }
-    .minh-sm-#{$i} { min-height: #{$rem-value}; }
-    .maxh-sm-#{$i} { max-height: #{$rem-value}; }
-  }
-
-  @media #{$breakpoint-md} {
-    .w-md-#{$i} { width: #{$rem-value}; }
-    .w-md-auto { width: auto; }
-    .minw-md-#{$i} { min-width: #{$rem-value}; }
-    .maxw-md-#{$i} { max-width: #{$rem-value}; }
-    .h-md-#{$i} { height: #{$rem-value}; }
-    .h-md-auto { height: auto; }
-    .minh-md-#{$i} { min-height: #{$rem-value}; }
-    .maxh-md-#{$i} { max-height: #{$rem-value}; }
-  }
-
-  @media #{$breakpoint-lg} {
-    .w-lg-#{$i} { width: #{$rem-value}; }
-    .w-lg-auto { width: auto; }
-    .minw-lg-#{$i} { min-width: #{$rem-value}; }
-    .maxw-lg-#{$i} { max-width: #{$rem-value}; }
-    .h-lg-#{$i} { height: #{$rem-value}; }
-    .h-lg-auto { height: auto; }
-    .minh-lg-#{$i} { min-height: #{$rem-value}; }
-    .maxh-lg-#{$i} { max-height: #{$rem-value}; }
-  }
-
-  @media #{$breakpoint-xl} {
-    .w-xl-#{$i} { width: #{$rem-value}; }
-    .w-xl-auto { width: auto; }
-    .minw-xl-#{$i} { min-width: #{$rem-value}; }
-    .maxw-xl-#{$i} { max-width: #{$rem-value}; }
-    .h-xl-#{$i} { height: #{$rem-value}; }
-    .h-xl-auto { height: auto; }
-    .minh-xl-#{$i} { min-height: #{$rem-value}; }
-    .maxh-xl-#{$i} { max-height: #{$rem-value}; }
+  @each $abbr, $breakpoint in $breakpoints {
+    @media #{$breakpoint} {
+      .w-#{$abbr}-#{$i} { width: #{$rem-value}; }
+      .w-#{$abbr}-auto { width: auto; }
+      .minw-#{$abbr}-#{$i} { min-width: #{$rem-value}; }
+      .maxw-#{$abbr}-#{$i} { max-width: #{$rem-value}; }
+      .h-#{$abbr}-#{$i} { height: #{$rem-value}; }
+      .h-#{$abbr}-auto { height: auto; }
+      .minh-#{$abbr}-#{$i} { min-height: #{$rem-value}; }
+      .maxh-#{$abbr}-#{$i} { max-height: #{$rem-value}; }
+    }
   }
 }
 
@@ -67,23 +41,10 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
   .hp-#{$increment} { height: $increment + 0%; }
   .wp-#{$increment} { width: $increment + 0%; }
 
-  @media #{$breakpoint-sm} {
-    .hp-sm-#{$increment} { height: $increment + 0%; }
-    .wp-sm-#{$increment} { width: $increment + 0%; }
-  }
-
-  @media #{$breakpoint-md} {
-    .hp-md-#{$increment} { height: $increment + 0%; }
-    .wp-md-#{$increment} { width: $increment + 0%; }
-  }
-
-  @media #{$breakpoint-lg} {
-    .hp-lg-#{$increment} { height: $increment + 0%; }
-    .wp-lg-#{$increment} { width: $increment + 0%; }
-  }
-
-  @media #{$breakpoint-xl} {
-    .hp-xl-#{$increment} { height: $increment + 0%; }
-    .wp-xl-#{$increment} { width: $increment + 0%; }
+  @each $abbr, $breakpoint in $breakpoints {
+    @media #{$breakpoint} {
+      .hp-#{$abbr}-#{$increment} { height: $increment + 0%; }
+      .wp-#{$abbr}-#{$increment} { width: $increment + 0%; }
+    }
   }
 }

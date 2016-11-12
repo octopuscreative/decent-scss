@@ -1,10 +1,13 @@
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 $container-width: 90rem !default;
 $columns: 12 !default;
-
-$breakpoint-sm: '(min-width: 600px)' !default;
-$breakpoint-md: '(min-width: 768px)' !default;
-$breakpoint-lg: '(min-width: 1280px)' !default;
-$breakpoint-xl: '(min-width: 1440px)' !default;
 
 .clearfix {
   &::after {
@@ -16,7 +19,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 
 .container {
   @extend .clearfix;
-
   max-width: $container-width;
   margin-left: auto;
   margin-right: auto;
@@ -24,7 +26,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 
 .row {
   @extend .clearfix;
-
   display: block;
 }
 
@@ -33,12 +34,6 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   float: left;
   width: 100%;
   box-sizing: border-box;
-
-  &[class*='right'] { float: right; }
-  &[class*='center'] {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @for $i from 1 through $columns {
@@ -47,68 +42,25 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   .pull-#{$i} { margin-left: -($i/$columns * 100%); }
   .pull-right-#{$i} { margin-right: -($i/$columns * 100%); }
   .push-0,
-  .pull-0 { 
+  .pull-0 {
     margin-left: 0;
     margin-right: 0;
   }
 }
 
-@media #{$breakpoint-sm} {
-  @for $i from 1 through $columns {
-    .col-sm-#{$i} { width: ($i/$columns * 100%); }
-    .push-sm-#{$i} { margin-left: ($i/$columns * 100%); }
-    .pull-sm-#{$i} { margin-left: -($i/$columns * 100%); }
-    .pull-sm-right-#{$i} { margin-right: -($i/$columns * 100%); }
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    @for $i from 1 through $columns {
+      .col-#{$abbr}-#{$i} { width: ($i/$columns * 100%); }
+      .push-#{$abbr}-#{$i} { margin-left: ($i/$columns * 100%); }
+      .pull-#{$abbr}-#{$i} { margin-left: -($i/$columns * 100%); }
+      .pull-#{$abbr}-right-#{$i} { margin-right: -($i/$columns * 100%); }
 
-    .push-sm-0,
-    .pull-sm-0 { 
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-}
-
-@media #{$breakpoint-md} {
-  @for $i from 1 through $columns {
-    .col-md-#{$i} { width: ($i/$columns * 100%); }
-    .push-md-#{$i} { margin-left: ($i/$columns * 100%); }
-    .pull-md-#{$i} { margin-left: -($i/$columns * 100%); }
-    .pull-md-right-#{$i} { margin-right: -($i/$columns * 100%); }
-
-    .push-md-0,
-    .pull-md-0 { 
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-}
-
-@media #{$breakpoint-lg} {
-  @for $i from 1 through $columns {
-    .col-lg-#{$i} { width: ($i/$columns * 100%); }
-    .push-lg-#{$i} { margin-left: ($i/$columns * 100%); }
-    .pull-lg-#{$i} { margin-left: -($i/$columns * 100%); }
-    .pull-lg-right-#{$i} { margin-right: -($i/$columns * 100%); }
-
-    .push-lg-0,
-    .pull-lg-0 { 
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
-}
-
-@media #{$breakpoint-xl} {
-  @for $i from 1 through $columns {
-    .col-xl-#{$i} { width: ($i/$columns * 100%); }
-    .push-xl-#{$i} { margin-left: ($i/$columns * 100%); }
-    .pull-xl-#{$i} { margin-left: -($i/$columns * 100%); }
-    .pull-xl-right-#{$i} { margin-right: -($i/$columns * 100%); }
-
-    .push-xl-0,
-    .pull-xl-0 { 
-      margin-left: 0;
-      margin-right: 0;
+      .push-#{$abbr}-0,
+      .pull-#{$abbr}-0 {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
   }
 }

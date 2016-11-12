@@ -1,27 +1,19 @@
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 .f-left { float: left; }
 .f-right { float: right; }
 .f-none { float: none; }
 
-@media #{$breakpoint-sm} {
-  .f-sm-left { float: left; }
-  .f-sm-right { float: right; }
-  .f-sm-none { float: none; }
-}
-
-@media #{$breakpoint-md} {
-  .f-md-left { float: left; }
-  .f-md-right { float: right; }
-  .f-md-none { float: none; }
-}
-
-@media #{$breakpoint-lg} {
-  .f-lg-left { float: left; }
-  .f-lg-right { float: right; }
-  .f-lg-none { float: none; }
-}
-
-@media #{$breakpoint-xl} {
-  .f-xl-left { float: left; }
-  .f-xl-right { float: right; }
-  .f-xl-none { float: none; }
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    .f-#{$abbr}-left { float: left; }
+    .f-#{$abbr}-right { float: right; }
+    .f-#{$abbr}-none { float: none; }
+  }
 }

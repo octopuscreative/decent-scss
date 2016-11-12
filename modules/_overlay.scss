@@ -1,3 +1,11 @@
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 $overlay-color: #000 !default;
 $overlay-opacity: 0.7 !default;
 

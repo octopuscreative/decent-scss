@@ -1,4 +1,11 @@
 // Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
+
 $rem-base: 16px !default;
 $ratio: 1.5 !default;
 
@@ -9,10 +16,11 @@ $default-line-height: 1.5 !default;
 $display-type-family: 'soleil', 'Helvetica', sans-serif !default;
 $display-type-weight: 700 !default;
 $display-line-height: 1.2 !default;
-$caps-type-tracking: 0.1em !default;
+$default-type-tracking: 0.1em !default;
 
+$tw-extra-light: 100 !default;
 $tw-light: 200 !default;
-$tw-book: 300 !default;
+$tw-regular: 300 !default;
 $tw-medium: 400 !default;
 $tw-semibold: 500 !default;
 $tw-bold: 600 !default;
@@ -40,7 +48,6 @@ ol,
 li,
 blockquote { line-height: $default-line-height; }
 ol { list-style-type: decimal; }
-
 
 p {
   font-weight: $default-type-weight;
@@ -73,8 +80,9 @@ code {
 .tw-bold { font-weight: $tw-bold; }
 .tw-semibold { font-weight: $tw-semibold; }
 .tw-medium { font-weight: $tw-medium; }
-.tw-book { font-weight: $tw-book; }
+.tw-regular { font-weight: $tw-regular; }
 .tw-light { font-weight: $tw-light; }
+.tw-extra-light { font-weight: $tw-extra-light; }
 
 // Style modifiers.
 // We omit the prefix `t` here because these adjectives can
@@ -83,6 +91,14 @@ code {
 .underline { text-decoration: underline; }
 .italic { font-style: italic; }
 
+.uppercase { text-transform: uppercase; }
+.tracked { letter-spacing: $default-type-tracking; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 // Use the display font.
 .display {
   font-family: $display-type-family;
@@ -90,44 +106,17 @@ code {
   line-height: $display-line-height;
 }
 
-// Because all caps is awesome.
-.caps {
-  text-transform: uppercase;
-  letter-spacing: $caps-type-tracking;
-}
-
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 // Alignment modifiers.
 .ta-center { text-align: center; }
 .ta-left { text-align: left; }
 .ta-right { text-align: right; }
 
-@media #{$breakpoint-sm} {
-  .ta-sm-center { text-align: center; }
-  .ta-sm-left { text-align: left; }
-  .ta-sm-right { text-align: right; }
-}
-
-@media #{$breakpoint-md} {
-  .ta-md-center { text-align: center; }
-  .ta-md-left { text-align: left; }
-  .ta-md-right { text-align: right; }
-}
-
-@media #{$breakpoint-lg} {
-  .ta-lg-center { text-align: center; }
-  .ta-lg-left { text-align: left; }
-  .ta-lg-right { text-align: right; }
-}
-
-@media #{$breakpoint-xl} {
-  .ta-xl-center { text-align: center; }
-  .ta-xl-left { text-align: left; }
-  .ta-xl-right { text-align: right; }
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    .ta-#{$abbr}-center { text-align: center; }
+    .ta-#{$abbr}-left { text-align: left; }
+    .ta-#{$abbr}-right { text-align: right; }
+  }
 }
 
 // Calculate the font sizes by scale.

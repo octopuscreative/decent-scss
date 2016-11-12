@@ -1,5 +1,12 @@
-$default-transition: all 0.17s ease-in !default;
+// Defaults.
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+) !default;
 
+$default-transition: all 0.17s ease-in !default;
 $interactions: null !default;
 
 @mixin print-styles($map) {
@@ -9,37 +16,31 @@ $interactions: null !default;
 }
 
 @mixin interaction($interaction, $contexts, $state) {
-  
   &[class*='#{$interaction}'] {
-  
     @each $context, $styles in $contexts {
-
       @if $context == 'settings' {
         @include print-styles($styles);
       }
 
       @if $context == 'start' {
-          
         &[class*='target'],
         [class*='#{$interaction}-target'] {
-          transition: $default-transition;
           @include print-styles($styles);
+          transition: $default-transition;
         }
       }
-      
+
       @if $context == 'end' {
         &[class*='target']:#{$state},
         &:hover [class*='#{$interaction}-target'] {
           @include print-styles($styles);
         }
-      } 
+      }
     }
   }
 }
 
-
 @each $interaction, $contexts in $interactions {
-
   [class^='hover-'],
   [class*=' hover-'] { @include interaction($interaction, $contexts, 'hover'); }
 
@@ -48,5 +49,4 @@ $interactions: null !default;
 
   [class^='focus-'],
   [class*=' focus-'] { @include interaction($interaction, $contexts, 'focus'); }
-
 }
