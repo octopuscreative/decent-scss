@@ -40,6 +40,11 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
+    .relative-#{$abbr} { position: relative; }
+    .absolute-#{$abbr} { position: absolute; }
+    .fixed-#{$abbr} { position: fixed; }
+    .origin-#{$abbr}-center { transform: translate3d(-50%,-50%,0); }
+
     @for $i from 1 through 10 {
       .top-#{$abbr}-#{$i*10} { top: $i*10%; }
       .right-#{$abbr}-#{$i*10} { right: $i*10%; }
