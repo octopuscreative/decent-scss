@@ -20,6 +20,10 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 .absolute { position: absolute; }
 .fixed { position: fixed; }
 
+// Origin in middle.
+// Use this when centering an element with absolute/fixed positioning.
+.origin-center { transform: translate3d(-50%,-50%,0); }
+
 // Coordinates.
 @for $i from 1 through 10 {
   .top-#{$i*10} { top: $i*10%; }
@@ -27,6 +31,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
   .bottom-#{$i*10} { bottom: $i*10%; }
   .left-#{$i*10} { left: $i*10%; }
 
+  // Translate.
   .y-#{$i*10} { transform: translateY($i*10%); }
   .yn-#{$i*10} { transform: translateY(-$i*10%); }
   .x-#{$i*10} { transform: translateX($i*10%); }
