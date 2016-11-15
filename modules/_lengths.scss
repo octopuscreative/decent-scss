@@ -9,8 +9,8 @@ $breakpoints: (
 $percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
 $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the Golden Ratio – because it _feels_ good.
 
-@for $i from 1 through length($spacing-increments) {
-  $rem-value: nth($spacing-increments, $i) + rem;
+@for $i from 1 through length($length-increments) {
+  $rem-value: nth($length-increments, $i) + rem;
 
   .w-#{$i} { width: #{$rem-value}; }
   .w-auto { width: auto; }
