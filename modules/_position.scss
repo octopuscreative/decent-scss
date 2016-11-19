@@ -25,7 +25,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 .origin-center { transform: translate3d(-50%,-50%,0); }
 
 // Coordinates.
-@for $i from 1 through 10 {
+@for $i from 0 through 10 {
   .top-#{$i*10} { top: $i*10%; }
   .right-#{$i*10} { right: $i*10%; }
   .bottom-#{$i*10} { bottom: $i*10%; }
