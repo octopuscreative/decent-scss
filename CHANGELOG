@@ -1,3 +1,7 @@
+11.19.2016
+
+* Adds 0 to the position coordinates list. This gives us `.top-0`, `.left-0`, `.bottom-0`, and `.right-0`.
+
 11.14.2016
 
 * Adds `.origin-center` class for positioning elements by their center.
