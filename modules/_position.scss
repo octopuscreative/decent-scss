@@ -6,11 +6,6 @@ $breakpoints: (
   xl: '(min-width: 1440px)'
 ) !default;
 
-$breakpoint-sm: '(min-width: 600px)' !default;
-$breakpoint-md: '(min-width: 768px)' !default;
-$breakpoint-lg: '(min-width: 1280px)' !default;
-$breakpoint-xl: '(min-width: 1440px)' !default;
-
 // Apply relative positioning to an element.
 // Specifically a parent with absolutely positioned
 // children.
@@ -22,7 +17,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
 
 // Origin in middle.
 // Use this when centering an element with absolute/fixed positioning.
-.origin-center { transform: translate3d(-50%,-50%,0); }
+.origin-center { transform: translate3d(-50%, -50%, 0); }
 
 // Coordinates.
 @for $i from 0 through 10 {
@@ -43,7 +38,7 @@ $breakpoint-xl: '(min-width: 1440px)' !default;
     .relative-#{$abbr} { position: relative; }
     .absolute-#{$abbr} { position: absolute; }
     .fixed-#{$abbr} { position: fixed; }
-    .origin-#{$abbr}-center { transform: translate3d(-50%,-50%,0); }
+    .origin-#{$abbr}-center { transform: translate3d(-50%, -50%, 0); }
 
     @for $i from 1 through 10 {
       .top-#{$abbr}-#{$i*10} { top: $i*10%; }

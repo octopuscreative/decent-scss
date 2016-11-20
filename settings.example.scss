@@ -1,0 +1,73 @@
+/*
+ * Breakpoints.
+ */
+$breakpoints: (
+  sm: '(min-width: 600px)',
+  md: '(min-width: 768px)',
+  lg: '(min-width: 1280px)',
+  xl: '(min-width: 1440px)'
+);
+
+
+/*
+ * Container & Grid Settings.
+ */
+$container-width: 90rem;
+$columns:         12;
+
+
+/*
+ * Increments & Spacing.
+ */
+$percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100;
+$length-increments:            0.6 1.6 2.6 4.2 6.8 11 18 29 46 75;
+
+$spacing-increments:           0.6 1.6 2.6 4.2 6.8 11 18 29 46 75;
+
+/*
+ * Typography.
+ */
+$rem-base:              16px !default;
+$ratio:                 1.5 !default;
+
+$default-type-family:  'Proxima Nova', serif !default;
+$default-type-weight:   400 !default;
+$default-type-color:    #010101 !default;
+$default-line-height:   1.5 !default;
+$display-type-family:   'soleil', 'Helvetica', sans-serif !default;
+$display-type-weight:   700 !default;
+$display-line-height:   1.2 !default;
+$default-type-tracking: 0.1em !default;
+
+$tw-extra-light:        100 !default;
+$tw-light:              200 !default;
+$tw-regular:            300 !default;
+$tw-medium:             400 !default;
+$tw-semibold:           500 !default;
+$tw-bold:               600 !default;
+
+
+/* 
+ * Colors.
+ */
+$color-primary:     #0bf;
+$color-secondary:   #ff8740;
+$color-success:     #60aa53;
+$color-error:       #f00;
+$color-warning:     #e89414;
+
+$black:             #000;
+$white:             #fff;
+$greys:             lighten(#000, 10%)
+                    lighten(#000, 24%)
+                    lighten(#000, 38%)
+                    lighten(#000, 52%)
+                    lighten(#000, 64%)
+                    lighten(#000, 78%)
+                    lighten(#000, 92%)
+                    lighten(#000, 98%);
+
+/*
+ * Reset.
+ */
+$reset-inputs:      true;

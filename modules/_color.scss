@@ -6,14 +6,7 @@ $color-warning:     #e89414 !default;
 
 $black:             #000 !default;
 $white:             #fff !default;
-$greys:             lighten(#000, 10%)
-                    lighten(#000, 24%)
-                    lighten(#000, 38%)
-                    lighten(#000, 52%)
-                    lighten(#000, 64%)
-                    lighten(#000, 78%)
-                    lighten(#000, 92%)
-                    lighten(#000, 98%) !default;
+$greys:             lighten(#000, 10%) lighten(#000, 24%) lighten(#000, 38%) lighten(#000, 52%) lighten(#000, 64%) lighten(#000, 78%) lighten(#000, 92%) lighten(#000, 98%) !default;
 
 .c-primary { color: $color-primary; }
 .c-secondary { color: $color-secondary; }

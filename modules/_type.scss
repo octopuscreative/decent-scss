@@ -125,17 +125,11 @@ code {
 
   @if $i == 0 {
     .t-#{$i} { font-size: 1rem; }
-    .t-sm-#{$i} {
-      @media #{$breakpoint-sm} { font-size: 1rem; }
-    }
-    .t-md-#{$i} {
-      @media #{$breakpoint-md} { font-size: 1rem; }
-    }
-    .t-lg-#{$i} {
-      @media #{$breakpoint-lg} { font-size: 1rem; }
-    }
-    .t-xl-#{$i} {
-      @media #{$breakpoint-xl} { font-size: 1rem; }
+
+    @each $abbr, $breakpoint in $breakpoints {
+      .t-#{$abbr}-#{$i} {
+        @media #{$breakpoint} { font-size: 1rem; }
+      }
     }
   }
 
@@ -147,17 +141,11 @@ code {
     $rem-value: $value + rem;
 
     .tn-#{$i*-1} { font-size: $rem-value; }
-    .tn-sm-#{$i*-1} {
-      @media #{$breakpoint-sm} { font-size: $rem-value; }
-    }
-    .tn-md-#{$i*-1} {
-      @media #{$breakpoint-md} { font-size: $rem-value; }
-    }
-    .tn-lg-#{$i*-1} {
-      @media #{$breakpoint-lg} { font-size: $rem-value; }
-    }
-    .tn-xl-#{$i*-1} {
-      @media #{$breakpoint-xl} { font-size: $rem-value; }
+
+    @each $abbr, $breakpoint in $breakpoints {
+      .tn-#{$abbr}-#{$i*-1} {
+        @media #{$breakpoint} { font-size: 1rem; }
+      }
     }
   }
 
@@ -169,17 +157,11 @@ code {
     $rem-value: $value + rem;
 
     .t-#{$i} { font-size: $rem-value; }
-    .t-sm-#{$i} {
-      @media #{$breakpoint-sm} { font-size: $rem-value; }
-    }
-    .t-md-#{$i} {
-      @media #{$breakpoint-md} { font-size: $rem-value; }
-    }
-    .t-lg-#{$i} {
-      @media #{$breakpoint-lg} { font-size: $rem-value; }
-    }
-    .t-xl-#{$i} {
-      @media #{$breakpoint-xl} { font-size: $rem-value; }
+
+    @each $abbr, $breakpoint in $breakpoints {
+      .t-#{$abbr}-#{$i} {
+        @media #{$breakpoint} { font-size: 1rem; }
+      }
     }
   }
 }

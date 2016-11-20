@@ -1,0 +1,23 @@
+$interactions: (
+
+  scaleUp: (
+    settings: (
+    ),
+    start: (
+      transform: translate3d(0,0,0) scale(1)
+    ),
+    end: (
+      transform: translate3d(0,0,0) scale(1.025)
+    )
+  ),
+
+  fadeIn: (
+    start: (
+      opacity: 0
+    ),
+    end: (
+      opacity: 1
+    )
+  )
+
+);
