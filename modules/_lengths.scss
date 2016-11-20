@@ -23,14 +23,14 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the
 
   @each $abbr, $breakpoint in $breakpoints {
     @media #{$breakpoint} {
-      .w-#{$abbr}-#{$i} { width: #{$rem-value}; }
-      .w-#{$abbr}-auto { width: auto; }
-      .minw-#{$abbr}-#{$i} { min-width: #{$rem-value}; }
-      .maxw-#{$abbr}-#{$i} { max-width: #{$rem-value}; }
-      .h-#{$abbr}-#{$i} { height: #{$rem-value}; }
-      .h-#{$abbr}-auto { height: auto; }
-      .minh-#{$abbr}-#{$i} { min-height: #{$rem-value}; }
-      .maxh-#{$abbr}-#{$i} { max-height: #{$rem-value}; }
+      .#{$abbr}-w-#{$i} { width: #{$rem-value}; }
+      .#{$abbr}-w-auto { width: auto; }
+      .#{$abbr}-minw-#{$i} { min-width: #{$rem-value}; }
+      .#{$abbr}-maxw-#{$i} { max-width: #{$rem-value}; }
+      .#{$abbr}-h-#{$i} { height: #{$rem-value}; }
+      .#{$abbr}-h-auto { height: auto; }
+      .#{$abbr}-minh-#{$i} { min-height: #{$rem-value}; }
+      .#{$abbr}-maxh-#{$i} { max-height: #{$rem-value}; }
     }
   }
 }
@@ -43,8 +43,8 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the
 
   @each $abbr, $breakpoint in $breakpoints {
     @media #{$breakpoint} {
-      .hp-#{$abbr}-#{$increment} { height: $increment + 0%; }
-      .wp-#{$abbr}-#{$increment} { width: $increment + 0%; }
+      .#{$abbr}-hp-#{$increment} { height: $increment + 0%; }
+      .#{$abbr}-wp-#{$increment} { width: $increment + 0%; }
     }
   }
 }

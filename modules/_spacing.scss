@@ -93,35 +93,35 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
-    .p-sm-0 { padding: 0; }
-    .pt-sm-0 { padding-top: 0; }
-    .pr-sm-0 { padding-right: 0; }
-    .pb-sm-0 { padding-bottom: 0; }
-    .pl-sm-0 { padding-left: 0; }
-    .px-sm-0 {
+    .#{$abbr}-p-0 { padding: 0; }
+    .#{$abbr}-pt-0 { padding-top: 0; }
+    .#{$abbr}-pr-0 { padding-right: 0; }
+    .#{$abbr}-pb-0 { padding-bottom: 0; }
+    .#{$abbr}-pl-0 { padding-left: 0; }
+    .#{$abbr}-px-0 {
       padding-left: 0;
       padding-right: 0;
     }
-    .py-sm-0 {
+    .#{$abbr}-py-0 {
       padding-top: 0;
       padding-bottom: 0;
     }
 
-    .m-sm-0 { margin: 0; }
-    .mt-sm-0 { margin-top: 0; }
-    .mr-sm-0 { margin-right: 0; }
-    .mb-sm-0 { margin-bottom: 0; }
-    .ml-sm-0 { margin-left: 0; }
-    .mx-sm-0 {
+    .#{$abbr}-m-0 { margin: 0; }
+    .#{$abbr}-mt-0 { margin-top: 0; }
+    .#{$abbr}-mr-0 { margin-right: 0; }
+    .#{$abbr}-mb-0 { margin-bottom: 0; }
+    .#{$abbr}-ml-0 { margin-left: 0; }
+    .#{$abbr}-mx-0 {
       margin-left: 0;
       margin-right: 0;
     }
-    .my-sm-0 {
+    .#{$abbr}-my-0 {
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    .mx-sm-auto {
+    .#{$abbr}-mx-auto {
       margin-left: auto;
       margin-right: auto;
     }
@@ -130,43 +130,43 @@ $spacing-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default;
 
       $rem-value: nth($spacing-increments, $i) + rem;
 
-      .p-sm-#{$i} { padding: $rem-value; }
-      .pt-sm-#{$i} { padding-top: $rem-value; }
-      .pr-sm-#{$i} { padding-right: $rem-value; }
-      .pb-sm-#{$i} { padding-bottom: $rem-value; }
-      .pl-sm-#{$i} { padding-left: $rem-value; }
-      .px-sm-#{$i} {
+      .#{$abbr}-p-#{$i} { padding: $rem-value; }
+      .#{$abbr}-pt-#{$i} { padding-top: $rem-value; }
+      .#{$abbr}-pr-#{$i} { padding-right: $rem-value; }
+      .#{$abbr}-pb-#{$i} { padding-bottom: $rem-value; }
+      .#{$abbr}-pl-#{$i} { padding-left: $rem-value; }
+      .#{$abbr}-px-#{$i} {
         padding-left: $rem-value;
         padding-right: $rem-value;
       }
-      .py-sm-#{$i} {
+      .#{$abbr}-py-#{$i} {
         padding-top: $rem-value;
         padding-bottom: $rem-value;
       }
 
-      .m-sm-#{$i} { margin: $rem-value; }
-      .mn-sm-#{$i} { margin: -1*($rem-value); }
-      .mt-sm-#{$i} { margin-top: $rem-value; }
-      .mtn-sm-#{$i} { margin-top: -1*($rem-value); }
-      .mr-sm-#{$i} { margin-right: $rem-value; }
-      .mrn-sm-#{$i} { margin-right: -1*($rem-value); }
-      .mb-sm-#{$i} { margin-bottom: $rem-value; }
-      .mbn-sm-#{$i} { margin-bottom: -1*($rem-value); }
-      .ml-sm-#{$i} { margin-left: $rem-value; }
-      .mln-sm-#{$i} { margin-left: -1*($rem-value); }
-      .mx-sm-#{$i} {
+      .#{$abbr}-m-#{$i} { margin: $rem-value; }
+      .#{$abbr}-mn-#{$i} { margin: -1*($rem-value); }
+      .#{$abbr}-mt-#{$i} { margin-top: $rem-value; }
+      .#{$abbr}-mtn-#{$i} { margin-top: -1*($rem-value); }
+      .#{$abbr}-mr-#{$i} { margin-right: $rem-value; }
+      .#{$abbr}-mrn-#{$i} { margin-right: -1*($rem-value); }
+      .#{$abbr}-mb-#{$i} { margin-bottom: $rem-value; }
+      .#{$abbr}-mbn-#{$i} { margin-bottom: -1*($rem-value); }
+      .#{$abbr}-ml-#{$i} { margin-left: $rem-value; }
+      .#{$abbr}-mln-#{$i} { margin-left: -1*($rem-value); }
+      .#{$abbr}-mx-#{$i} {
         margin-left: $rem-value;
         margin-right: $rem-value;
       }
-      .mxn-sm-#{$i} {
+      .#{$abbr}-mxn-#{$i} {
         margin-left: -1*($rem-value);
         margin-right: -1*($rem-value);
       }
-      .my-sm-#{$i} {
+      .#{$abbr}-my-#{$i} {
         margin-top: $rem-value;
         margin-bottom: $rem-value;
       }
-      .myn-sm-#{$i} {
+      .#{$abbr}-myn-#{$i} {
         margin-top: -1*($rem-value);
         margin-bottom: -1*($rem-value);
       }

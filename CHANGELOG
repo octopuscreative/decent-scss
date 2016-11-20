@@ -1,5 +1,7 @@
 11.19.2016
 
+* Moves breakpoint abbreviations to the front of class names (ie `md-wp-100`) to make it easier to scan mobile styles.
+* Adds example settings and interaction settings files.
 * Adds 0 to the position coordinates list. This gives us `.top-0`, `.left-0`, `.bottom-0`, and `.right-0`.
 
 11.14.2016

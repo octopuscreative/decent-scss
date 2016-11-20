@@ -6,24 +6,24 @@ $breakpoints: (
   xl: '(min-width: 1440px)'
 ) !default;
 
-$rem-base: 16px !default;
-$ratio: 1.5 !default;
+$rem-base:             16px !default;
+$ratio:                1.5 !default;
 
-$default-type-family: 'Proxima Nova', serif !default;
-$default-type-weight: 400 !default;
-$default-type-color: #010101 !default;
-$default-line-height: 1.5 !default;
-$display-type-family: 'soleil', 'Helvetica', sans-serif !default;
-$display-type-weight: 700 !default;
-$display-line-height: 1.2 !default;
+$default-type-family:  'Proxima Nova', serif !default;
+$default-type-weight:   400 !default;
+$default-type-color:    #010101 !default;
+$default-line-height:   1.5 !default;
+$display-type-family:   'soleil', 'Helvetica', sans-serif !default;
+$display-type-weight:   700 !default;
+$display-line-height:   1.2 !default;
 $default-type-tracking: 0.1em !default;
 
-$tw-extra-light: 100 !default;
-$tw-light: 200 !default;
-$tw-regular: 300 !default;
-$tw-medium: 400 !default;
-$tw-semibold: 500 !default;
-$tw-bold: 600 !default;
+$tw-extra-light:        100 !default;
+$tw-light:              200 !default;
+$tw-regular:            300 !default;
+$tw-medium:             400 !default;
+$tw-semibold:           500 !default;
+$tw-bold:               600 !default;
 
 // Because browsers do their own thing with fonts, let's
 // be more explicit in setting the defaults.
@@ -113,9 +113,9 @@ code {
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
-    .ta-#{$abbr}-center { text-align: center; }
-    .ta-#{$abbr}-left { text-align: left; }
-    .ta-#{$abbr}-right { text-align: right; }
+    .#{$abbr}-ta-center { text-align: center; }
+    .#{$abbr}-ta-left { text-align: left; }
+    .#{$abbr}-ta-right { text-align: right; }
   }
 }
 
@@ -127,7 +127,7 @@ code {
     .t-#{$i} { font-size: 1rem; }
 
     @each $abbr, $breakpoint in $breakpoints {
-      .t-#{$abbr}-#{$i} {
+      .#{$abbr}-t-#{$i} {
         @media #{$breakpoint} { font-size: 1rem; }
       }
     }
@@ -143,7 +143,7 @@ code {
     .tn-#{$i*-1} { font-size: $rem-value; }
 
     @each $abbr, $breakpoint in $breakpoints {
-      .tn-#{$abbr}-#{$i*-1} {
+      .#{$abbr}-tn-#{$i*-1} {
         @media #{$breakpoint} { font-size: 1rem; }
       }
     }
@@ -159,7 +159,7 @@ code {
     .t-#{$i} { font-size: $rem-value; }
 
     @each $abbr, $breakpoint in $breakpoints {
-      .t-#{$abbr}-#{$i} {
+      .#{$abbr}-t-#{$i} {
         @media #{$breakpoint} { font-size: 1rem; }
       }
     }

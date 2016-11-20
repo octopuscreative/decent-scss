@@ -68,6 +68,16 @@ $greys:             lighten(#000, 10%)
                     lighten(#000, 98%);
 
 /*
+ * Borders & shadows.
+ */
+$default-border-radius: 2px !default;
+$default-border-weight: 1px !default;
+$thick-border-weight:   $default-border-weight*2 !default;
+
+$default-border-color:  #e8e9eb !default;
+$default-box-shadow:    0 1px 8px rgba(0, 0, 0, 0.1) !default;
+
+/*
  * Reset.
  */
 $reset-inputs:      true;

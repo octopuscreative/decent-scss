@@ -40,26 +40,26 @@ $breakpoints: (
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
-    .d-#{$abbr}-inline-block { display: inline-block; }
-    .d-#{$abbr}-block { display: block; }
-    .d-#{$abbr}-none { display: none; }
+    .#{$abbr}-d-inline-block { display: inline-block; }
+    .#{$abbr}-d-block { display: block; }
+    .#{$abbr}-d-none { display: none; }
 
-    .d-#{$abbr}-full {
+    .#{$abbr}-d-full {
       width: 100%;
       height: 100vh;
     }
 
-    .o-#{$abbr}-auto {
+    .#{$abbr}-o-auto {
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
-    .o-#{$abbr}-visible { overflow: visible; }
-    .o-#{$abbr}-hidden { overflow: hidden; }
+    .#{$abbr}-o-visible { overflow: visible; }
+    .#{$abbr}-o-hidden { overflow: hidden; }
 
     .#{$abbr}-no-wrap { white-space: nowrap; }
 
-    .va-#{$abbr}-middle { vertical-align: middle; }
-    .va-#{$abbr}-text-bottom { vertical-align: text-bottom; }
+    .#{$abbr}-va-middle { vertical-align: middle; }
+    .#{$abbr}-va-text-bottom { vertical-align: text-bottom; }
   }
 }
 

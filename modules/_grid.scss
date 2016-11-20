@@ -51,13 +51,13 @@ $columns: 12 !default;
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
     @for $i from 1 through $columns {
-      .col-#{$abbr}-#{$i} { width: ($i/$columns * 100%); }
-      .push-#{$abbr}-#{$i} { margin-left: ($i/$columns * 100%); }
-      .pull-#{$abbr}-#{$i} { margin-left: -($i/$columns * 100%); }
-      .pull-#{$abbr}-right-#{$i} { margin-right: -($i/$columns * 100%); }
+      .#{$abbr}-col-#{$i} { width: ($i/$columns * 100%); }
+      .#{$abbr}-push-#{$i} { margin-left: ($i/$columns * 100%); }
+      .#{$abbr}-pull-#{$i} { margin-left: -($i/$columns * 100%); }
+      .#{$abbr}-pull-right-#{$i} { margin-right: -($i/$columns * 100%); }
 
-      .push-#{$abbr}-0,
-      .pull-#{$abbr}-0 {
+      .#{$abbr}-push-0,
+      .#{$abbr}-pull-0 {
         margin-left: 0;
         margin-right: 0;
       }

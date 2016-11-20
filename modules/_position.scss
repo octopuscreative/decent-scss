@@ -35,21 +35,21 @@ $breakpoints: (
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
-    .relative-#{$abbr} { position: relative; }
-    .absolute-#{$abbr} { position: absolute; }
-    .fixed-#{$abbr} { position: fixed; }
-    .origin-#{$abbr}-center { transform: translate3d(-50%, -50%, 0); }
+    .#{$abbr}-relative { position: relative; }
+    .#{$abbr}-absolute { position: absolute; }
+    .#{$abbr}-fixed { position: fixed; }
+    .#{$abbr}-origin-center { transform: translate3d(-50%, -50%, 0); }
 
     @for $i from 1 through 10 {
-      .top-#{$abbr}-#{$i*10} { top: $i*10%; }
-      .right-#{$abbr}-#{$i*10} { right: $i*10%; }
-      .bottom-#{$abbr}-#{$i*10} { bottom: $i*10%; }
-      .left-#{$abbr}-#{$i*10} { left: $i*10%; }
+      .#{$abbr}-top-#{$i*10} { top: $i*10%; }
+      .#{$abbr}-right-#{$i*10} { right: $i*10%; }
+      .#{$abbr}-bottom-#{$i*10} { bottom: $i*10%; }
+      .#{$abbr}-left-#{$i*10} { left: $i*10%; }
 
-      .y-#{$abbr}-#{$i*10} { transform: translateY($i*10%); }
-      .yn-#{$abbr}-#{$i*10} { transform: translateY(-$i*10%); }
-      .x-#{$abbr}-#{$i*10} { transform: translateX($i*10%); }
-      .xn-#{$abbr}-#{$i*10} { transform: translateX(-$i*10%); }
+      .#{$abbr}-y-#{$i*10} { transform: translateY($i*10%); }
+      .#{$abbr}-yn-#{$i*10} { transform: translateY(-$i*10%); }
+      .#{$abbr}-x-#{$i*10} { transform: translateX($i*10%); }
+      .#{$abbr}-xn-#{$i*10} { transform: translateX(-$i*10%); }
     }
   }
 }

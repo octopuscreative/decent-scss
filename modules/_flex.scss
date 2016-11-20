@@ -66,16 +66,16 @@ $breakpoints: (
 
 @each $abbr, $breakpoint in $breakpoints {
   @media #{$breakpoint} {
-    .flex-#{$abbr} { display: flex; }
-    .flex-#{$abbr}-column { flex-direction: column; }
-    .flex-#{$abbr}-row { flex-direction: row; }
-    .flex-#{$abbr}-wrap { flex-wrap: wrap; }
-    .items-#{$abbr}-center { align-items: center; }
-    .items-#{$abbr}-end { align-items: flex-end; }
-    .item-#{$abbr}-right { margin-left: auto; }
-    .justify-#{$abbr}-between { justify-content: space-between; }
-    .justify-#{$abbr}-around { justify-content: space-around; }
-    .justify-#{$abbr}-center { justify-content: center; }
-    .justify-#{$abbr}-end { justify-content: flex-end; }
+    .#{$abbr}-flex { display: flex; }
+    .#{$abbr}-flex-column { flex-direction: column; }
+    .#{$abbr}-flex-row { flex-direction: row; }
+    .#{$abbr}-flex-wrap { flex-wrap: wrap; }
+    .#{$abbr}-items-center { align-items: center; }
+    .#{$abbr}-items-end { align-items: flex-end; }
+    .#{$abbr}-item-right { margin-left: auto; }
+    .#{$abbr}-justify-between { justify-content: space-between; }
+    .#{$abbr}-justify-around { justify-content: space-around; }
+    .#{$abbr}-justify-center { justify-content: center; }
+    .#{$abbr}-justify-end { justify-content: flex-end; }
   }
 }
