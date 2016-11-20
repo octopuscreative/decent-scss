@@ -149,7 +149,7 @@ code {
 
     @each $abbr, $breakpoint in $breakpoints {
       .#{$abbr}-tn-#{$i*-1} {
-        @media #{$breakpoint} { font-size: 1rem; }
+        @media #{$breakpoint} { font-size: $rem-value; }
       }
     }
   }
@@ -165,7 +165,7 @@ code {
 
     @each $abbr, $breakpoint in $breakpoints {
       .#{$abbr}-t-#{$i} {
-        @media #{$breakpoint} { font-size: 1rem; }
+        @media #{$breakpoint} { font-size: $rem-value; }
       }
     }
   }
