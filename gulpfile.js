@@ -73,7 +73,7 @@ gulp.task('html', function() {
     .on('error', gutil.log);
 });
 
-gulp.task('default', ['styles', 'stats', 'browserSync'], function() {
+gulp.task('default', ['styles', 'stats'], function() {
   gulp.watch(['./modules/**/*', './functions/**/*'], ['stylelint', 'styles', 'stats']);
   gulp.watch('src/*.html', ['html']);
   gulp.watch();

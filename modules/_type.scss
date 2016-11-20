@@ -6,17 +6,19 @@ $breakpoints: (
   xl: '(min-width: 1440px)'
 ) !default;
 
-$rem-base:             16px !default;
-$ratio:                1.5 !default;
+$rem-base:              16px !default;
+$ratio:                 1.5 !default;
 
-$default-type-family:  'Proxima Nova', serif !default;
-$default-type-weight:   400 !default;
-$default-type-color:    #010101 !default;
-$default-line-height:   1.5 !default;
-$display-type-family:   'soleil', 'Helvetica', sans-serif !default;
-$display-type-weight:   700 !default;
-$display-line-height:   1.2 !default;
-$default-type-tracking: 0.1em !default;
+$default-type-family:   'Proxima Nova', serif !default;
+$default-type-weight:    400 !default;
+$default-type-color:     #010101 !default;
+$default-line-height:    1.5 !default;
+$display-type-family:    'soleil', 'Helvetica', sans-serif !default;
+$display-type-transform: uppercase;
+$default-type-tracking:  0.1em !default;
+$display-type-weight:    700 !default;
+$display-line-height:    1.2 !default;
+$display-line-height:    1.2 !default;
 
 $tw-extra-light:        100 !default;
 $tw-light:              200 !default;
