@@ -15,9 +15,8 @@ $default-type-color:     #010101 !default;
 $default-line-height:    1.5 !default;
 $display-type-family:    'soleil', 'Helvetica', sans-serif !default;
 $display-type-transform: uppercase;
-$default-type-tracking:  0.1em !default;
+$display-type-tracking:  0.1em !default;
 $display-type-weight:    700 !default;
-$display-line-height:    1.2 !default;
 $display-line-height:    1.2 !default;
 
 $tw-extra-light:        100 !default;
@@ -106,6 +105,8 @@ code {
   font-family: $display-type-family;
   font-weight: $display-type-weight;
   line-height: $display-line-height;
+  text-transform: $display-type-transform;
+  letter-spacing: $display-type-tracking;
 }
 
 // Alignment modifiers.
