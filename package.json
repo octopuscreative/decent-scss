@@ -1,6 +1,6 @@
 {
   "name": "decent-scss",
-  "version": "0.36.0",
+  "version": "0.37.0",
   "description": "A functional CSS, f(css), framework for building anything on the web – works best with modular development",
   "scripts": {
     "prepublish": "gulp styles"
