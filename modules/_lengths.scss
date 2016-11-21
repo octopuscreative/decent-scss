@@ -20,9 +20,12 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the
   .h-auto { height: auto; }
   .minh-#{$i} { min-height: #{$rem-value}; }
   .maxh-#{$i} { max-height: #{$rem-value}; }
+}
 
-  @each $abbr, $breakpoint in $breakpoints {
-    @media #{$breakpoint} {
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    @for $i from 1 through length($length-increments) {
+      $rem-value: nth($length-increments, $i) + rem;
       .#{$abbr}-w-#{$i} { width: #{$rem-value}; }
       .#{$abbr}-w-auto { width: auto; }
       .#{$abbr}-minw-#{$i} { min-width: #{$rem-value}; }
