@@ -40,11 +40,14 @@ $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the
 @each $increment in $percentage-length-increments {
   .hp-#{$increment} { height: $increment + 0%; }
   .wp-#{$increment} { width: $increment + 0%; }
+}
 
-  @each $abbr, $breakpoint in $breakpoints {
-    @media #{$breakpoint} {
+@each $abbr, $breakpoint in $breakpoints {
+  @media #{$breakpoint} {
+    @each $increment in $percentage-length-increments {
       .#{$abbr}-hp-#{$increment} { height: $increment + 0%; }
       .#{$abbr}-wp-#{$increment} { width: $increment + 0%; }
     }
   }
 }
+
