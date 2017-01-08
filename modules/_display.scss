@@ -35,7 +35,9 @@ $breakpoints: (
 .no-wrap { white-space: nowrap; }
 
 // Vertical align.
+.va-top { vertical-align: top; }
 .va-middle { vertical-align: middle; }
+.va-bottom { vertical-align: bottom; }
 .va-text-bottom { vertical-align: text-bottom; }
 
 @each $abbr, $breakpoint in $breakpoints {
@@ -58,7 +60,9 @@ $breakpoints: (
 
     .#{$abbr}-no-wrap { white-space: nowrap; }
 
+    .#{$abbr}-va-top { vertical-align: top; }
     .#{$abbr}-va-middle { vertical-align: middle; }
+    .#{$abbr}-va-bottom { vertical-align: bottom; }
     .#{$abbr}-va-text-bottom { vertical-align: text-bottom; }
   }
 }

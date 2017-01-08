@@ -20,11 +20,11 @@ $greys:             lighten(#000, 10%) lighten(#000, 24%) lighten(#000, 38%) lig
 .cbg-warning { background-color: $color-warning; }
 .cbg-error { background-color: $color-error; }
 
-.c-black { color: $black; }
-.c-white { color: $white; }
+.cg-black { color: $black; }
+.cg-white { color: $white; }
 
-.cbg-black { background-color: black; }
-.cbg-white { background-color: white; }
+.cbgg-black { background-color: black; }
+.cbgg-white { background-color: white; }
 
 // Greys.
 @each $grey in $greys {

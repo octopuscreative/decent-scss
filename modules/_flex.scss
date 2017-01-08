@@ -12,13 +12,6 @@ $breakpoints: (
 .flex-row { flex-direction: row; }
 .flex-wrap { flex-wrap: wrap; }
 
-// Item alignment - Maybe remove eventually since these are covered by Item Alignment
-.flex-center { align-items: center; }
-.flex-baseline { align-items: baseline; }
-.flex-stretch { align-items: stretch; }
-.flex-start { align-items: flex-start; }
-.flex-end { align-items: flex-end; }
-
 // Items alignment
 .items-center { align-items: center; }
 .items-baseline { align-items: baseline; }

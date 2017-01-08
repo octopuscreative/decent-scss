@@ -6,7 +6,7 @@ $breakpoints: (
   xl: '(min-width: 1440px)'
 ) !default;
 
-$percentage-length-increments: 0 10 20 25 40 50 60 75 80 90 100 !default;
+$percentage-length-increments: 0 10 20 25 33 40 50 60 66 75 80 90 100 !default;
 $length-increments: 0.6 1.6 2.6 4.2 6.8 11 18 29 46 75 !default; // Based on the Golden Ratio – because it _feels_ good.
 
 @for $i from 1 through length($length-increments) {
